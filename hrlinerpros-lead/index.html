@@ -8,39 +8,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --navy: #12222F; --navy2: #1B3346; --gold: #D9A441; --gold-soft: #E9C77E; --teal: #4FA791; --paper: #F4EFE4; --ink: #12222F; --muted: #5A6B7A; --font-display: 'Fraunces', Georgia, 'Times New Roman', serif; --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  :root { --navy: #0A1626; --navy2: #0E2240; --blue: #0163C6; --cyan: #03BAFC; --orange: #F37F04; --paper: #F5F7FA; --ink: #0A1626; --muted: #5A6B7A; --font-display: 'Fraunces', Georgia, 'Times New Roman', serif; --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.7; }
   .top-bar { background: var(--navy); color: #fff; padding: .75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; font-size: .9rem; }
-  .top-bar a { color: var(--gold); text-decoration: none; font-weight: 600; }
-  .top-bar .phone { font-weight: 600; font-size: 1rem; }
-  header { background: linear-gradient(165deg, var(--navy) 0%, var(--navy2) 100%); color: #fff; padding: 3rem 1.5rem 2rem; text-align: center; }
-  header .logo { font-family: var(--font-display); font-size: 1.6rem; color: var(--gold); margin-bottom: 1.5rem; font-weight: 600; }
+  .top-bar a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+  .top-bar .phone { font-weight: 700; color: var(--orange); }
+  header { background: linear-gradient(135deg, #0A1626 0%, #0E2240 50%, #0163C6 100%); color: #fff; padding: 3rem 1.5rem 2rem; text-align: center; }
+  header .logo { font-family: var(--font-display); font-size: 1.7rem; margin-bottom: 1.5rem; font-weight: 700; background: linear-gradient(90deg, #03BAFC, #FFFFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   header h1 { font-family: var(--font-display); font-size: 2rem; margin-bottom: .5rem; color: #fff; }
-  header p { color: #9FB2BF; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+  header p { color: #cfe8ff; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
   main { max-width: 780px; margin: 2rem auto; padding: 0 1.5rem 3rem; }
-  .score-card { background: #fff; border: 1px solid #ddd; border-radius: 16px; padding: 2.5rem 2rem; margin-bottom: 1.5rem; text-align: center; box-shadow: 0 4px 16px rgba(18,34,47,.08); }
-  .score-card .big-grade { font-family: var(--font-display); font-size: 6rem; font-weight: 700; line-height: 1; margin-bottom: .25rem; color: #D9A441; }
+  .score-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2.5rem 2rem; margin-bottom: 1.5rem; text-align: center; box-shadow: 0 4px 16px rgba(10,22,38,.08); }
+  .score-card .big-grade { font-family: var(--font-display); font-size: 6rem; font-weight: 700; line-height: 1; margin-bottom: .25rem; color: #F37F04; }
   .score-card .score-num { font-size: 1.4rem; color: var(--muted); }
   .score-card .domain { font-size: 1rem; color: var(--muted); margin-top: .5rem; font-family: monospace; }
-  section { background: #fff; border: 1px solid #e2e0da; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
+  section { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
   h2 { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: .75rem; color: var(--navy); }
   ul { list-style: none; }
-  li { padding: .45rem 0; border-bottom: 1px solid #f5f3ed; font-size: .95rem; }
+  li { padding: .45rem 0; border-bottom: 1px solid #f1f5f9; font-size: .95rem; }
   li:last-child { border-bottom: none; }
-  .cta { background: linear-gradient(165deg, var(--navy) 0%, var(--navy2) 100%); color: #fff; text-align: center; padding: 2.5rem 2rem; border-radius: 14px; margin-top: 1.5rem; }
-  .cta h2 { font-family: var(--font-display); color: var(--gold); }
-  .cta p { color: #9FB2BF; margin: .75rem 0; }
-  .cta a { display: inline-block; background: var(--gold); color: var(--navy); padding: .85rem 2.2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem; margin-top: .5rem; transition: background .2s; }
-  .cta a:hover { background: var(--gold-soft); }
+  .cta { background: linear-gradient(135deg, #0A1626 0%, #0163C6 100%); color: #fff; text-align: center; padding: 2.5rem 2rem; border-radius: 14px; margin-top: 1.5rem; }
+  .cta h2 { font-family: var(--font-display); color: #fff; }
+  .cta p { color: #cfe8ff; margin: .75rem 0; }
+  .cta a { display: inline-block; background: var(--orange); color: #fff; padding: .85rem 2.2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.05rem; margin-top: .5rem; transition: transform .15s, box-shadow .15s; box-shadow: 0 2px 8px rgba(243,127,4,.4); }
+  .cta a:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(243,127,4,.55); }
   footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1.5rem; }
-  footer a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  footer a { color: var(--blue); text-decoration: none; font-weight: 600; }
 </style>
 </head>
 <body>
 
 <div class="top-bar">
-  <span class="phone">📞 Call or Text Jeff Wilson Direct: <a href="tel:7573227171">(757) 322-7171</a></span>
+  <span>📞 Call or Text Jeff Wilson Direct: <a href="tel:7573227171">(757) 322-7171</a></span>
   <span>Market Boss AI &mdash; Virginia Beach, VA</span>
 </div>
 
@@ -94,7 +94,7 @@
   <h2>Want to See What Your Site Could Look Like?</h2>
   <p>We'll do a full audit of your website and Google Business Profile — no cost, no pitch, just the data.</p>
   <a href="https://marketbossai.com/contact">Get Your Free Audit →</a>
-  <p style="margin-top:1rem; font-size:.9rem; color:var(--gold-soft);">Or call Jeff directly: (757) 322-7171</p>
+  <p style="margin-top:1rem; font-size:.9rem; color:#cfe8ff;">Or call Jeff directly: (757) 322-7171</p>
 </div>
 
 </main>
