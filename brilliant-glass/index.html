@@ -6,69 +6,86 @@
 <title>Brilliant Glass — SEO Audit | Market Boss AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
-  :root { --navy: #0A1626; --navy2: #0E2240; --gold: #F37F04; --gold-soft: #03BAFC; --teal: #16A34A; --paper: #F5F7FA; --ink: #0A1626; --muted: #5A6B7A; --good: #16A34A; --bad: #E22600; --warn: #F37F04; --font-display: 'Fraunces', Georgia, 'Times New Roman', serif; --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  :root { --night: #0D0433; --card: #131827; --border: #1F2937; --text: #F1F5F9; --muted: #6B7280; --accent: #37B5FF; --gold: #F59E0B; --green: #10B981; --red: #EF4444; --orange: #F97316; --blue: #37B5FF; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.65; }
-  .top-bar { background: var(--navy); color: #fff; padding: .75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; font-size: .9rem; }
-  .top-bar a { color: var(--gold); text-decoration: none; font-weight: 600; }
-  header { background: linear-gradient(165deg, var(--navy) 0%, var(--navy2) 100%); color: #fff; padding: 3rem 1.5rem 2rem; }
-  header .wrap { max-width: 820px; margin: 0 auto; }
-  header h1 { font-family: var(--font-display); font-size: 1.9rem; margin-bottom: .4rem; }
-  header .meta { color: #9FB2BF; font-size: .95rem; }
-  .grade-banner { max-width: 820px; margin: -2.2rem auto 0; padding: 0 1.5rem; position: relative; }
-  .grade { background: #fff; border: 1px solid #e2e0da; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 4px 12px rgba(18,34,47,.1); display: flex; align-items: center; gap: 1rem; }
-  .grade .letter { font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: var(--bad); line-height: 1; }
-  .grade .txt strong { display: block; font-size: 1.05rem; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--night); color: var(--text); line-height: 1.7; }
+  .top-bar { background: #0D0433; border-bottom: 1px solid var(--border); padding: .5rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; font-size: .9rem; color: var(--muted); }
+  .top-bar a { color: var(--blue); text-decoration: none; font-weight: 600; }
+  .hero { background: linear-gradient(135deg, #0D0433 0%, #1a0a5e 50%, #2563EB 100%); padding: 4rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 50%, rgba(55,181,255,.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(37,99,235,.06) 0%, transparent 60%); pointer-events: none; }
+  .hero .wrap { position: relative; max-width: 820px; margin: 0 auto; }
+  .hero .badge { display: inline-block; background: rgba(55,181,255,.15); color: var(--blue); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: .35rem .85rem; border-radius: 20px; margin-bottom: 1.25rem; border: 1px solid rgba(55,181,255,.2); }
+  .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.6rem; font-weight: 800; margin-bottom: .5rem; background: linear-gradient(135deg, #F1F5F9, #93C5FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero .sub { color: var(--muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+  .hero .meta { color: var(--muted); font-size: .85rem; margin-top: 1rem; }
+  .grade-banner { max-width: 820px; margin: -2.5rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10; }
+  .grade { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 32px rgba(0,0,0,.3); display: flex; align-items: center; gap: 1.5rem; }
+  .grade .letter { font-family: 'Playfair Display', Georgia, serif; font-size: 4.5rem; font-weight: 800; line-height: 1; background: linear-gradient(135deg, #EF4444, #F97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .grade .txt { flex: 1; }
+  .grade .txt strong { display: block; font-size: 1.15rem; margin-bottom: .25rem; }
+  .grade .txt p { color: var(--muted); font-size: .95rem; margin: 0; }
   main { max-width: 820px; margin: 2rem auto; padding: 0 1.5rem 3rem; }
-  section { background: #fff; border: 1px solid #e2e0da; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
-  h2 { font-family: var(--font-display); font-size: 1.25rem; margin-bottom: .9rem; color: var(--navy); border-bottom: 2px solid var(--paper); padding-bottom: .5rem; }
-  table { width: 100%; border-collapse: collapse; }
-  td { padding: .4rem .5rem; vertical-align: top; font-size: .95rem; border-bottom: 1px solid var(--paper); }
-  td:first-child { font-weight: 600; white-space: nowrap; color: #334155; width: 30%; }
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; margin-bottom: 1.25rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; color: var(--text); display: flex; align-items: center; gap: .5rem; }
+  h2 .icon { font-size: 1.1rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+  .stat-card { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+  .stat-card .num { font-family: 'JetBrains Mono', monospace; font-size: 1.8rem; font-weight: 700; color: var(--blue); }
+  .stat-card .lbl { font-size: .8rem; color: var(--muted); margin-top: .25rem; }
+  .stat-card.good .num { color: var(--green); }
+  .stat-card.bad .num { color: var(--red); }
+  .stat-card.warn .num { color: var(--orange); }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  td { padding: .5rem .5rem; vertical-align: top; border-bottom: 1px solid rgba(255,255,255,.05); }
+  td:first-child { font-weight: 600; color: var(--muted); white-space: nowrap; width: 30%; }
   ul { list-style: none; }
-  li { padding: .45rem 0; border-bottom: 1px solid var(--paper); font-size: .95rem; }
+  li { padding: .5rem 0; border-bottom: 1px solid rgba(255,255,255,.04); font-size: .9rem; display: flex; align-items: flex-start; gap: .5rem; }
   li:last-child { border-bottom: none; }
-  .bad { color: var(--bad); font-weight: 700; }
-  .good { color: var(--good); font-weight: 700; }
-  .lbl { display: inline-block; font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .3px; margin-right: .5rem; }
-  .immediate { color: #b91c1c; }
-  .week { color: var(--warn); }
-  .ongoing { color: var(--navy); }
-  .pitch { background: #fff; border: 1px solid var(--gold); border-radius: 12px; padding: 1.5rem; font-size: 1.05rem; }
-  .pitch .quote { font-style: italic; font-size: 1.1rem; margin: .5rem 0; color: var(--navy); }
-  .tier { display: inline-block; background: var(--navy); color: var(--gold); padding: .2rem .7rem; border-radius: 20px; font-size: .85rem; font-weight: 700; margin-bottom: .6rem; }
-  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1.5rem; }
-  footer a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  .good { color: var(--green); font-weight: 700; }
+  .warn { color: var(--orange); font-weight: 700; }
+  .bad { color: var(--red); font-weight: 700; }
+  .lbl { display: inline-block; font-weight: 700; font-size: .75rem; text-transform: uppercase; letter-spacing: .5px; margin-right: .5rem; }
+  .lbl-immediate { color: var(--red); }
+  .lbl-week { color: var(--orange); }
+  .lbl-ongoing { color: var(--blue); }
+  .pitch { background: linear-gradient(135deg, rgba(55,181,255,.08), rgba(37,99,235,.08)); border: 1px solid rgba(55,181,255,.2); border-radius: 14px; padding: 2rem; text-align: center; }
+  .pitch .quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; color: var(--text); font-style: italic; margin: .75rem 0; line-height: 1.5; }
+  .pitch .attribution { color: var(--muted); font-size: .85rem; }
+  .tier-badge { display: inline-block; background: rgba(55,181,255,.15); color: var(--blue); padding: .25rem .75rem; border-radius: 20px; font-size: .8rem; font-weight: 600; margin-bottom: .5rem; border: 1px solid rgba(55,181,255,.2); }
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1.5rem; border-top: 1px solid var(--border); }
+  footer a { color: var(--blue); text-decoration: none; font-weight: 600; }
+  .hr { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+  .review-quote { background: rgba(255,255,255,.03); border-left: 3px solid var(--gold); padding: .75rem 1rem; margin: .5rem 0; border-radius: 0 8px 8px 0; font-size: .85rem; color: var(--muted); }
 </style>
 </head>
 <body>
 
-<div class="top-bar" style="display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.5rem;">
+<div class="top-bar">
   <div style="display:flex;align-items:center;gap:1rem;">
     <img src="/marketboss-reports/assets/audit-logo.jpg" alt="Market Boss AI" style="height:32px;width:auto;">
-    <span style="color:#6B7280;font-size:.85rem;">📞 Call or Text Jeff Wilson Direct: <a href="tel:7573227171" style="color:#37B5FF;text-decoration:none;font-weight:600;">(757) 322-7171</a></span>
+    <span>📞 Call or Text Jeff Wilson Direct: <a href="tel:7573227171">(757) 322-7171</a></span>
   </div>
-  <span style="color:#6B7280;font-size:.85rem;">Market Boss AI — Virginia Beach, VA</span>
+  <span>Market Boss AI — Virginia Beach, VA</span>
 </div>
 
-<header>
-  <div class="logo-header" style="text-align:center; padding:1.5rem 0 0;"><img src="/marketboss-reports/assets/marketbossai-logo.png" alt="Market Boss AI" style="max-width:180px; height:auto; display:block; margin:0 auto 1.25rem;"></div>
+<div class="hero">
   <div class="wrap">
+    <div class="badge">Local Authority Blueprint Audit</div>
     <h1>Brilliant Glass — SEO Audit</h1>
-    <div class="meta">
-      URL: https://www.brilliantglass.net/ &nbsp;·&nbsp; Platform: Duda (multiscreensite.com) &nbsp;·&nbsp; Date: August 23, 2026
-    </div>
+    <p class="sub">A full audit of brilliantglass.net with live Google Places API data. 4.9★ across 51 reviews — but the website is completely invisible. Classic disconnect.</p>
+    <p class="meta">brilliantglass.net &nbsp;·&nbsp; Custom Glass &amp; Shower Enclosures &nbsp;·&nbsp; August 25, 2026</p>
   </div>
-</header>
+</div>
 
 <div class="grade-banner">
   <div class="grade">
     <div class="letter">D</div>
     <div class="txt">
-      <strong>OVERALL GRADE: D</strong>
-      SEVERE — The site has zero search engine visibility in its current state. Every foundational SEO element is broken or missing.
+      <strong>Stellar reputation. Invisible website. Textbook rebuild opportunity.</strong>
+      <p>4.9 stars, 51 reviews on Google — but the website has no title tags, no meta descriptions, no H1s, no schema, and roughly 222 words of visible text on a 6-page Duda site. Meanwhile, the GBP category is "building materials store" when they should be classified as a glass contractor or shower door installer. The reputation is there. The infrastructure is not.</p>
     </div>
   </div>
 </div>
@@ -76,91 +93,114 @@
 <main>
 
 <section>
-  <h2>Business Snapshot</h2>
+  <h2><span class="icon">📊</span> Key Metrics at a Glance</h2>
+  <div class="grid-2">
+    <div class="stat-card good"><div class="num">4.9★</div><div class="lbl">GBP Rating</div></div>
+    <div class="stat-card good"><div class="num">51</div><div class="lbl">Google Reviews</div></div>
+    <div class="stat-card bad"><div class="num">D</div><div class="lbl">Website Grade</div></div>
+    <div class="stat-card warn"><div class="num">6</div><div class="lbl">Website Pages</div></div>
+    <div class="stat-card bad"><div class="num">0</div><div class="lbl">Schema Blocks</div></div>
+    <div class="stat-card bad"><div class="num">222</div><div class="lbl">Homepage Words</div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="icon">🔍</span> Live GBP Data (from Google Places API)</h2>
   <table>
-    <tr><td>Business</td><td>Brilliant Glass</td></tr>
-    <tr><td>Services</td><td>Shower enclosures, office glass partitions, custom glass/mirrors, glass etching</td></tr>
-    <tr><td>Location</td><td>1461 London Bridge Rd #216, Virginia Beach, VA 23453</td></tr>
-    <tr><td>Phone</td><td>(757) 271-3060 (office), (804) 687-4699 (cell)</td></tr>
-    <tr><td>Fax</td><td>(757) 390-4664</td></tr>
-    <tr><td>Email</td><td>brilliant@brilliantglass.net</td></tr>
-    <tr><td>Hours</td><td>Mon–Fri 9am–5pm, Sat–Sun closed</td></tr>
-    <tr><td>Pages</td><td>6 (home, about, services, portfolio, contact, reviews)</td></tr>
-    <tr><td>Last updated</td><td>March 2025 (homepage), June 2025 (portfolio), August 2022 (contact)</td></tr>
+    <tr><td>Business Name</td><td>Brilliant Glass LLC</td></tr>
+    <tr><td>Address</td><td>1461 London Bridge Rd #216, Virginia Beach, VA 23453</td></tr>
+    <tr><td>Phone</td><td>(804) 687-4699</td></tr>
+    <tr><td>Website</td><td>http://www.brilliantglass.net/</td></tr>
+    <tr><td>GBP Category</td><td><span class="warn">⚠ "building_materials_store"</span><br><span style="color:var(--muted);font-size:.85rem;">Should be something like "Glass Contractor" or "Shower Door Installer" for better local ranking.</span></td></tr>
+    <tr><td>Rating</td><td>4.9 stars (51 reviews)</td></tr>
+    <tr><td>Hours</td><td>Mon–Fri 9:00 AM – 5:00 PM, Sat–Sun closed</td></tr>
+    <tr><td>Status</td><td><span class="good">OPERATIONAL</span></td></tr>
+    <tr><td>Place ID</td><td>ChIJ4cCraTKVuokRXB-JuHwX2xo</td></tr>
+  </table>
+  <div class="review-quote">★5 — "I highly recommend Brilliant Glass! I asked them to add a shower door to my walk-in shower. It is beautiful and functional..."</div>
+  <div class="review-quote">★5 — "Javier was the second company I interviewed for a shower glass installation on my new home. Javier was extremely knowledgeable..."</div>
+  <div class="review-quote">★5 — "Brilliant Glass is an awesome company! From the initial site visit for a quote to the install the entire team..."</div>
+</section>
+
+<section>
+  <h2><span class="icon">✅</span> What's Working</h2>
+  <ul>
+    <li><span class="good">✓</span> <strong>GBP PRESENCE</strong> — 4.9 stars, 51 reviews. Strong social proof. Customers clearly love the work.</li>
+    <li><span class="good">✓</span> <strong>SSL / SECURITY</strong> — Valid HTTPS with HSTS preload, X-Frame-Options, X-Content-Type-Options, CSP headers present.</li>
+    <li><span class="good">✓</span> <strong>SITEMAP</strong> — sitemap.xml exists and is properly formatted.</li>
+    <li><span class="good">✓</span> <strong>ROBOTS.TXT</strong> — Clean, no blocking directives.</li>
+    <li><span class="good">✓</span> <strong>CANONICAL</strong> — Proper canonical URL on homepage.</li>
+    <li><span class="good">✓</span> <strong>MOBILE</strong> — Responsive design (Duda platform).</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="icon">⚠️</span> What's Broken</h2>
+  <ul>
+    <li><span class="bad">❌</span> <strong>TITLE TAGS</strong> — Every page is missing a &lt;title&gt; tag. This is the single most important on-page SEO element.</li>
+    <li><span class="bad">❌</span> <strong>META DESCRIPTIONS</strong> — Every page is missing a meta description.</li>
+    <li><span class="bad">❌</span> <strong>H1 HEADINGS</strong> — No page has a single H1. Zero heading hierarchy.</li>
+    <li><span class="bad">❌</span> <strong>STRUCTURED DATA</strong> — No JSON-LD, no schema of any kind. Zero.</li>
+    <li><span class="bad">❌</span> <strong>CONTENT</strong> — Homepage has ~222 characters of visible text — essentially nothing. 6 total pages for a business serving all of Hampton Roads.</li>
+    <li><span class="bad">❌</span> <strong>JS RENDERING</strong> — All content depends on Duda's JavaScript loader.</li>
+    <li><span class="bad">❌</span> <strong>NO BLOG</strong> — Zero blog posts, zero articles, zero content strategy.</li>
+    <li><span class="bad">❌</span> <strong>STALE CONTENT</strong> — Contact page untouched since August 2022 (4 years).</li>
+    <li><span class="bad">❌</span> <strong>NO LOCATION PAGES</strong> — Serves entire Hampton Roads, zero location-specific pages.</li>
+    <li><span class="bad">❌</span> <strong>NO ALT TEXT</strong> — Images have no alt attributes.</li>
+    <li><span class="bad">❌</span> <strong>NO EMAIL CAPTURE</strong> — No newsletter, no lead magnet, no conversion mechanism.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="icon">🏛️</span> GBP ↔ Website Alignment</h2>
+  <table>
+    <tr><td>Primary Category</td><td><span class="warn">⚠ MISMATCH</span> — GBP says "building_materials_store." Website targets "shower doors" and "custom glass." Should be "Glass Contractor" or "Shower Door Installer."</td></tr>
+    <tr><td>Services</td><td><span class="bad">❌ NOT ALIGNED</span> — 5 services on GBP/services page. None has a dedicated service page on the website. Everything is lumped into one "Services" page.</td></tr>
+    <tr><td>Service Areas</td><td><span class="bad">❌ NOT ALIGNED</span> — Serves all Hampton Roads but has zero city pages. Each city needs its own URL.</td></tr>
+    <tr><td>NAP</td><td><span class="good">✓ MATCH</span> — Name, address, and phone numbers are consistent between GBP and website.</td></tr>
+    <tr><td>Reviews</td><td><span class="good">✓ PRESENT</span> — 51 reviews at 4.9 stars. Excellent reputation. But zero reviews appear on the website with schema markup.</td></tr>
+    <tr><td>Verdict</td><td><span class="bad">MISALIGNED</span> — The reputation is 10/10. The infrastructure is 0/10. This is a textbook rebuild case.</td></tr>
   </table>
 </section>
 
 <section>
-  <h2>What's Missing / Broken</h2>
+  <h2><span class="icon">🔧</span> The Fix List</h2>
   <ul>
-    <li><span class="bad">❌ TITLE TAGS</span> — Every page is missing a &lt;title&gt; tag. This is the single most important on-page SEO element.</li>
-    <li><span class="bad">❌ META DESCRIPTIONS</span> — Every page is missing a meta description.</li>
-    <li><span class="bad">❌ H1 HEADINGS</span> — No page has a single H1. Zero heading hierarchy.</li>
-    <li><span class="bad">❌ STRUCTURED DATA</span> — No JSON-LD, no schema of any kind. Zero.</li>
-    <li><span class="bad">❌ TEXT CONTENT</span> — Homepage has ~222 characters of visible text — essentially nothing.</li>
-    <li><span class="bad">❌ JS RENDERING</span> — All content depends on Duda's JavaScript loader.</li>
-    <li><span class="bad">❌ NO BLOG / CONTENT</span> — Zero blog posts, zero articles, zero content strategy.</li>
-    <li><span class="bad">❌ REVIEWS NOT VISIBLE</span> — Reviews are JS-rendered and not schema-marked up.</li>
-    <li><span class="bad">❌ STALE CONTENT</span> — Contact page untouched since August 2022 (4 years).</li>
-    <li><span class="bad">❌ ONLY 6 PAGES</span> — Tiny site footprint. Competitors with 20+ pages will dominate.</li>
-    <li><span class="bad">❌ NO LOCATION PAGES</span> — Serves entire Hampton Roads, zero location-specific pages.</li>
-    <li><span class="bad">❌ NO ALT TEXT</span> — Images have no alt attributes.</li>
-    <li><span class="bad">❌ NO SOCIAL PROOF</span> — No embedded Google reviews, no testimonial schema.</li>
+    <li><span class="lbl lbl-immediate">Immediate</span><strong>Title Tags</strong> — Every page needs a unique, keyword-rich title tag. Homepage: "Shower Doors &amp; Custom Glass | Brilliant Glass | Virginia Beach, VA"</li>
+    <li><span class="lbl lbl-immediate">Immediate</span><strong>Meta Descriptions</strong> — 150-160 char description with CTA on every page.</li>
+    <li><span class="lbl lbl-immediate">Immediate</span><strong>H1 Headings</strong> — Exactly one H1 per page, H2s for every sub-section.</li>
+    <li><span class="lbl lbl-immediate">Immediate</span><strong>LocalBusiness Schema</strong> — Add JSON-LD with name, address, phone, hours, service area.</li>
+    <li><span class="lbl lbl-week">This Week</span><strong>Update GBP Category</strong> — Change from "building_materials_store" to "Glass Contractor" or "Shower Door Installer."</li>
+    <li><span class="lbl lbl-week">This Week</span><strong>Service Pages</strong> — Individual pages for each service with 300+ words, unique title, Service schema, photos.</li>
+    <li><span class="lbl lbl-week">This Week</span><strong>City Pages</strong> — Pages for each city in the service area with unique content and local schema.</li>
+    <li><span class="lbl lbl-week">This Week</span><strong>Review Schema</strong> — Embed Google reviews on the website with AggregateRating and Review schema markup.</li>
+    <li><span class="lbl lbl-ongoing">Ongoing</span><strong>Content Strategy</strong> — Blog posts: shower door types, glass etching, commercial partitions. 1-2/month.</li>
+    <li><span class="lbl lbl-ongoing">Ongoing</span><strong>Image SEO</strong> — Descriptive alt text, compressed images, keyword-rich filenames.</li>
   </ul>
 </section>
 
 <section>
-  <h2>What Works</h2>
-  <ul>
-    <li><span class="good">✓ SSL</span> — Valid HTTPS with HSTS preload.</li>
-    <li><span class="good">✓ SECURITY</span> — X-Frame-Options, X-Content-Type-Options, CSP headers present.</li>
-    <li><span class="good">✓ SITEMAP</span> — sitemap.xml exists and is properly formatted.</li>
-    <li><span class="good">✓ ROBOTS.TXT</span> — Clean, no blocking directives.</li>
-    <li><span class="good">✓ CANONICAL</span> — Proper canonical URL on homepage.</li>
-    <li><span class="good">✓ MOBILE</span> — Responsive design (Duda handles this).</li>
-  </ul>
-</section>
-
-<section>
-  <h2>The Fix List</h2>
-  <ul>
-    <li><span class="lbl immediate">Immediate</span><strong>Title Tags</strong> — Every page needs a unique, keyword-rich title tag (55-65 chars). Homepage example: "Shower Doors &amp; Custom Glass Etching | Brilliant Glass | Virginia Beach, VA"</li>
-    <li><span class="lbl immediate">Immediate</span><strong>Meta Descriptions</strong> — Compelling 150-160 char description with CTA on every page.</li>
-    <li><span class="lbl immediate">Immediate</span><strong>H1 + Heading Structure</strong> — Exactly one H1 per page, H2s for sub-sections.</li>
-    <li><span class="lbl immediate">Immediate</span><strong>LocalBusiness Schema</strong> — Add JSON-LD with name, address, phone, hours, service area.</li>
-    <li><span class="lbl week">This Week</span><strong>Service Pages</strong> — Individual pages for each service with 300+ words, unique title, schema, photos.</li>
-    <li><span class="lbl week">This Week</span><strong>Location Pages</strong> — Pages for each city served with unique content and local schema.</li>
-    <li><span class="lbl week">This Week</span><strong>Review Strategy</strong> — Claim GBP, embed reviews, add Review schema, generate 2-3 reviews/month.</li>
-    <li><span class="lbl ongoing">Ongoing</span><strong>Content Strategy</strong> — Blog posts: shower doors, glass etching, commercial partitions. 1-2/month.</li>
-    <li><span class="lbl ongoing">Ongoing</span><strong>Image SEO</strong> — Descriptive alt text, compressed images, keyword-rich filenames.</li>
-    <li><span class="lbl ongoing">Ongoing</span><strong>Portfolio Expansion</strong> — Captions with descriptions and location, before/after galleries.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Market Boss AI Opportunity</h2>
-  <span class="tier">Growth — $1,750 setup / $875/mo</span> <span class="tier">Complete — $4,500 / $1,250</span>
-  <p style="margin-top:.7rem;">This is a textbook case of a business that does great work but is completely invisible online. Every SEO fundamental is broken.</p>
-  <h3 style="font-family:var(--font-display);margin:1rem 0 .4rem;font-size:1.05rem;color:var(--navy);">Pillar Assessment</h3>
+  <h2><span class="icon">📋</span> Pillar Assessment (Local Authority Blueprint)</h2>
   <table>
-    <tr><td>GBP</td><td>Likely unclaimed or under-optimized. No Google reviews found in search.</td></tr>
-    <tr><td>Website</td><td>Grade D. Needs complete SEO overhaul. 6 pages &rarr; 20+ pages.</td></tr>
-    <tr><td>Social</td><td>Accounts exist but likely inactive.</td></tr>
-    <tr><td>Email</td><td>No email capture, no newsletter, no lead magnet.</td></tr>
+    <tr><td>GBP</td><td>4.9★, 51 reviews. Hours set. Category wrong ("building_materials_store"). GBP is doing the heavy lifting — without it, they'd have zero online presence.</td></tr>
+    <tr><td>Website</td><td><span class="bad">Grade D</span> — 6 pages, no SEO fundamentals. Every on-page element is broken or missing.</td></tr>
+    <tr><td>Social</td><td>Not evaluated. Likely inactive.</td></tr>
+    <tr><td>Email</td><td>Zero capture mechanism. No email, no newsletter, no lead magnet.</td></tr>
   </table>
 </section>
 
 <section class="pitch">
-  <strong style="font-family:var(--font-display);color:var(--navy);">Pitch Angle</strong>
-  <p class="quote">"Your glass work is in homes and offices all over Hampton Roads. But when someone searches 'shower door installer near me' tonight, do they find you or the guy with 50 Google reviews and a real website?"</p>
-  <p>The before/after results on this one would be dramatic — there's nowhere to go but up.</p>
+  <span class="tier-badge">Growth — $1,750 setup / $875/mo</span>
+  <p class="quote">"Your glass work is in homes and offices all over Hampton Roads. You have 51 five-star reviews. But when someone searches 'shower door installer near me' tonight, do they find you or a competitor with a worse reputation and a better website? We fix that gap."</p>
+  <hr class="hr">
+  <p style="font-size:.95rem;color:var(--muted);margin-top:1rem;">The before/after on this one would be dramatic. Strong GBP reputation + proper local SEO website = market leader.</p>
 </section>
 
 </main>
 
 <footer>
-  Prepared by <a href="https://marketbossai.com">Market Boss AI</a> — Local Authority Blueprint<br>
-  &copy; 2026 Market Boss AI &nbsp;·&nbsp; Month-to-month, no contracts.
+  <a href="https://marketbossai.com">Market Boss AI</a> — Local SEO &amp; Website Design for Hampton Roads<br>
+  Virginia Beach, VA &nbsp;·&nbsp; Month-to-month, no contracts.
 </footer>
 
 </body>
