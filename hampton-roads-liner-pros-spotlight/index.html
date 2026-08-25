@@ -8,21 +8,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --navy: #0A1626; --navy2: #0E2240; --gold: #F37F04; --gold-soft: #03BAFC; --teal: #16A34A; --paper: #F5F7FA; --ink: #0A1626; --muted: #5A6B7A; --font-display: 'Fraunces', Georgia, 'Times New Roman', serif; --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  :root { --light-bg: #FFFFFF; --cream: #F5F0E8; --ink: #1A1A2E; --muted: #5A6B7A; --accent: #0163C6; --gold: #C8943E; --font-display: 'Fraunces', Georgia, 'Times New Roman', serif; --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.8; }
-  .top-bar { background: var(--navy); color: #fff; padding: .75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; font-size: .9rem; }
+  body { font-family: var(--font-body); background: var(--light-bg); color: var(--ink); line-height: 1.8; }
+  .top-bar { background: #1A1A2E; color: #fff; padding: .75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; font-size: .9rem; }
   .top-bar a { color: var(--gold); text-decoration: none; font-weight: 600; }
-  header { background: linear-gradient(165deg, var(--navy) 0%, var(--navy2) 100%); color: #fff; padding: 3rem 1.5rem; text-align: center; }
-  header .logo { font-family: var(--font-display); font-size: 1.6rem; color: var(--gold); margin-bottom: 1.5rem; font-weight: 600; }
-  header h1 { font-family: var(--font-display); font-size: 2.2rem; margin-bottom: .25rem; }
-  header .sub { color: #9FB2BF; font-size: 1.1rem; }
+  header { background: #FFFFFF; color: var(--ink); padding: 1.5rem 1.5rem 0; text-align: center; border-bottom: 1px solid #e2e0da; }
+  header .logo { margin-bottom: 1rem; }
+  header .logo img { max-width: 320px; height: auto; display: block; margin: 0 auto; }
+  header h1 { font-family: var(--font-display); font-size: 2.2rem; margin: 1.5rem 0 .25rem; color: var(--ink); }
+  header .sub { color: var(--muted); font-size: 1.1rem; }
   main { max-width: 780px; margin: 2rem auto; padding: 0 1.5rem 3rem; }
-  h2 { font-family: var(--font-display); font-size: 1.35rem; margin: 2rem 0 .75rem; color: var(--navy); }
+  h2 { font-family: var(--font-display); font-size: 1.35rem; margin: 2rem 0 .75rem; color: var(--ink); }
   p { margin-bottom: 1rem; }
-  .highlight { background: #fff; border-left: 4px solid var(--gold); padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+  .highlight { background: var(--cream); border-left: 4px solid var(--gold); padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
   footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1.5rem; border-top: 1px solid #e2e0da; }
-  footer a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -33,7 +34,7 @@
 </div>
 
 <header>
-  <div class="logo"><img src="/marketboss-reports/assets/vbspotlight-logo.jpg" alt="Virginia Beach Spotlight" style="max-width:320px; height:auto; display:block; margin:0 auto;"></div>
+  <img src="/marketboss-reports/assets/vbspotlight-logo.jpg" alt="Virginia Beach Spotlight" style="max-width:320px; height:auto; display:block; margin:0 auto; padding:1rem 0;">
   <h1>Hampton Roads Liner Pros</h1>
   <div class="sub">Your Hampton Roads Pool Liner and Pool Building Experts</div>
 </header>
@@ -78,12 +79,13 @@
 </main>
 
 <div style="max-width:780px; margin:0 auto 2rem; padding:0 1.5rem;">
-  <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:1.5rem; text-align:center; font-size:.95rem; color:#5A6B7A;">
-    <p style="margin-bottom:.5rem;"><em>This is a draft of your Virginia Beach Spotlight feature. We'd love your feedback before we publish it.</em></p>
-    <hr style="border:none; border-top:1px solid #e2e8f0; margin:1rem 0;">
-    <p style="margin-bottom:.5rem;"><strong>Virginia Beach Spotlight</strong> is powered by <strong>Market Boss AI</strong>, a full-service local marketing agency in Hampton Roads. If your business could use more visibility online — a Google Business Profile that actually works, a website built with real local SEO structure, or a system that brings in leads instead of just hoping for referrals — we'd love to talk.</p>
-    <p style="margin-bottom:0;">We call it the <strong>Local Authority Blueprint</strong>: four pillars that work together so you show up where your customers are searching. No long-term contracts. Just a proven system that starts working from day one.</p>
-    <p style="margin-top:.75rem; margin-bottom:0;"><a href="https://marketbossai.com/contact" style="color:#0163C6; font-weight:600; text-decoration:none;">Learn more at MarketBossAI.com →</a></p>
+  <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:2rem 1.5rem; text-align:center; color:#1A1A2E;">
+    <p style="font-size:1.05rem; font-weight:600; margin-bottom:.5rem;"><em>This is a draft of your Virginia Beach Spotlight feature. We'd love your feedback before we publish it.</em></p>
+    <hr style="border:none; border-top:1px solid #e2e8f0; margin:1.25rem 0;">
+    <p style="font-weight:600; font-size:1rem; margin-bottom:.5rem;">Not happy with your current marketing? There's an affordable way to start being recognized online — with a proven system.</p>
+    <p style="margin-bottom:.5rem;"><strong>Virginia Beach Spotlight</strong> is powered by <strong>Market Boss AI</strong>, a full-service local marketing agency in Hampton Roads. We can run a complete <strong>SEO audit</strong> of your website and Google Business Profile so you know exactly where you stand, what's holding you back, and the clear path to getting in front of more customers.</p>
+    <p style="margin-bottom:.5rem;">We call it the <strong>Local Authority Blueprint</strong>: four pillars — Google Business Profile, website, email, and social — all working together to put your business where your customers are searching. No long-term contracts. Just a system built to get results.</p>
+    <p style="margin-top:.75rem; margin-bottom:0;"><a href="https://marketbossai.com/contact" style="color:#0163C6; font-weight:700; text-decoration:none; font-size:1.05rem;">Get a Free SEO Audit at MarketBossAI.com →</a></p>
   </div>
 </div>
 
