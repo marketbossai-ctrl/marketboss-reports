@@ -12,7 +12,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: var(--font-body); background: var(--paper); color: var(--ink); line-height: 1.7; }
   .top-bar { background: var(--navy); color: #fff; padding: .75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; font-size: .9rem; }
-  .top-bar a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+  .top-bar a { color: var(--blue); text-decoration: none; font-weight: 600; }
   .top-bar .phone { font-weight: 700; color: var(--orange); }
   header { background: linear-gradient(135deg, #0A1626 0%, #0E2240 50%, #0163C6 100%); color: #fff; padding: 3rem 1.5rem 2rem; text-align: center; }
   header .logo { font-family: var(--font-display); font-size: 1.7rem; margin-bottom: 1.5rem; font-weight: 700; background: linear-gradient(90deg, #03BAFC, #FFFFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -39,9 +39,12 @@
 </head>
 <body>
 
-<div class="top-bar">
-  <span>📞 Call or Text Jeff Wilson Direct: <a href="tel:7573227171">(757) 322-7171</a></span>
-  <span>Market Boss AI &mdash; Virginia Beach, VA</span>
+<div class="top-bar" style="display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.5rem;">
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <img src="/marketboss-reports/assets/audit-logo.jpg" alt="Market Boss AI" style="height:32px;width:auto;">
+    <span style="color:#6B7280;font-size:.85rem;">📞 Call or Text Jeff Wilson Direct: <a href="tel:7573227171" style="color:#37B5FF;text-decoration:none;font-weight:600;">(757) 322-7171</a></span>
+  </div>
+  <span style="color:#6B7280;font-size:.85rem;">Market Boss AI — Virginia Beach, VA</span>
 </div>
 
 <header>
