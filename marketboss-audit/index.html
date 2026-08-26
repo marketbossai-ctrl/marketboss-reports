@@ -79,203 +79,38 @@
   .comp-cta { margin-top: .75rem !important; }
   .comp-card .warn { color: var(--orange); }
 
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .hero { padding: 2rem 1rem !important; }
+    main { padding: 0 1rem 2rem !important; }
+    section { padding: 1rem !important; }
+    .grade { flex-direction: column !important; text-align: center !important; }
+    .grade .letter { font-size: 3rem !important; }
+    .comp-table { font-size: .75rem !important; }
+    .comp-table th, .comp-table td { padding: .3rem .3rem !important; }
+    .comp-table td:first-child { white-space: normal !important; }
+    .grid-2 { grid-template-columns: 1fr !important; }
+    .grid-3 { grid-template-columns: 1fr !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .stat-card .num { font-size: 1.3rem !important; }
+    .pitch .quote { font-size: 1rem !important; }
+    .grade-banner { margin-top: -1.5rem !important; }
+    .grade-card-inner { flex-direction: column !important; text-align: center !important; }
+    .grade-card-inner .letter { font-size: 3rem !important; }
+    .aln-label { min-width: 80px !important; font-size: .8rem !important; }
+    .review-quote { font-size: .8rem !important; }
+  }
+  @media (max-width: 480px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; gap: .5rem !important; }
+    .comp-name { font-size: .75rem !important; }
+    .comp-rating { font-size: 1rem !important; }
+    body { font-size: 14px !important; }
+    .top-bar { flex-direction: column !important; text-align: center !important; font-size: .8rem !important; }
+    .hero h1 { font-size: 1.3rem !important; }
+    .comp-table { font-size: .7rem !important; display: block !important; overflow-x: auto !important; }
+  }
+
 </style>
-</head>
-<body>
-
-<div class="logo-bar">
-  <img src="/marketboss-reports/assets/audit-logo.jpg" alt="Market Boss AI">
-</div>
-  <span style="color:#6B7280;font-size:.85rem;">Market Boss AI — Virginia Beach, VA</span>
-</div>
-
-<div class="hero">
-  <div class="wrap">
-    <div class="badge">Practicing What We Preach</div>
-    <h1>Market Boss AI<br>Own-Site SEO Audit</h1>
-    <p class="sub">A full, honest audit of marketbossai.com — graded by the same methodology we use for every client. 122 pages, 22 Google reviews, and a Map Pack calculator that converts.</p>
-    <p class="meta">marketbossai.com &nbsp;·&nbsp; August 25, 2026</p>
-  </div>
-</div>
-
-<div class="grade-banner">
-  <div class="grade">
-    <div class="letter">B+</div>
-    <div class="txt">
-      <strong>Strong local SEO infrastructure. Real content depth. Genuine lead capture.</strong>
-      <p>122 pages, 12 service pages, 85 area pages, 19 blog posts, and a Map Pack Revenue Calculator that's a genuine competitive moat. The path from B+ to A is about consistency and polish — not a rebuild.</p>
-    <span class="phone">📞 Call or Text Jeff Wilson Direct: (757) 322-7171</span>
-  </div>
-</div>
-
-<main>
-
-<section class="principle">
-  <h2><span class="icon">📌</span> The Principle: Your GBP Is Your New Homepage</h2>
-  <div style="background:rgba(55,181,255,.06); border-left:4px solid var(--blue); padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin-bottom:1rem;">
-    <p style="font-size:1rem; font-weight:600; margin-bottom:.5rem;">"Google looks at your Business Profile first. Then it checks your website. If they don't match — what you call yourself, what services you offer, where you work — Google can't trust either of them. Your GBP is your front door. Your website is what's inside. They have to say the same thing."</p>
-    <p style="color:var(--muted); font-size:.85rem;">— Market Boss AI • Local Authority Blueprint</p>
-  </div>
-  <p style="color:var(--muted); font-size:.9rem;">This audit measures every gap between the two. Where they match, you're building trust with Google. Where they don't, you're leaving ranking potential on the table.</p>
-</section>
-
-<section>
-  <h2><span class="icon">📊</span> Key Metrics at a Glance</h2>
-  <div class="grid-2">
-    <div class="stat-card"><div class="num">122</div><div class="lbl">Total Pages</div></div>
-    <div class="stat-card"><div class="num">12</div><div class="lbl">Service Pages</div></div>
-    <div class="stat-card"><div class="num">85</div><div class="lbl">Area Pages</div></div>
-    <div class="stat-card"><div class="num">5.0★</div><div class="lbl">GBP Rating (22 reviews)</div></div>
-    <div class="stat-card"><div class="num">19</div><div class="lbl">Blog Posts</div></div>
-    <div class="stat-card"><div class="num">5</div><div class="lbl">Days Since Last Post</div></div>
-  </div>
-</section>
-
-<section>
-  <h2><span class="icon">🔍</span> Live GBP Data (from Google Places API)</h2>
-  <table>
-    <tr><td>Business Name</td><td>Market Boss AI</td></tr>
-    <tr><td>Address</td><td>3804 Chimney Creek Dr, Virginia Beach, VA 23462</td></tr>
-    <tr><td>Phone</td><td>(757) 916-7077</td></tr>
-    <tr><td>Website</td><td>https://marketbossai.com/</td></tr>
-    <tr><td>GBP Category</td><td><span class="warn">⚠ "service" — generic</span><br><span style="color:var(--muted);font-size:.85rem;">Should be something like "Marketing Agency" or "SEO Service" for better local ranking signals.</span></td></tr>
-    <tr><td>Rating</td><td>5.0 stars (22 reviews)</td></tr>
-    <tr><td>Hours</td><td>Mon–Sat 6:30 AM – 10:00 PM, Sun closed</td></tr>
-    <tr><td>Status</td><td><span class="good">OPERATIONAL</span></td></tr>
-  </table>
-  <div class="review-quote">★5 — "I was really impressed with Market Boss AI. Their creativity and flexibility really stood out, and the team was professional..."</div>
-  <div class="review-quote">★5 — "Working with MarketBoss AI was a great experience from start to finish. They took the time to learn about my business..."</div>
-  <div class="review-quote">★5 — "I've had the opportunity to work with Jeff Wilson at Market Boss AI, and I can confidently say he's one of the most genuine..."</div>
-  <p style="color:var(--muted);font-size:.85rem;margin-top:.5rem;">Note: Website says "13+ reviews" — GBP actually shows 22. Update the site to reflect the real number.</p>
-</section>
-
-<section>
-  <h2><span class="icon">✅</span> What's Working</h2>
-  <ul>
-    <li><span class="good">✓</span> <strong>TITLE TAGS</strong> — Every page has a unique, keyword-rich title tag. Homepage: "Virginia Beach SEO Company | 5.0★ Rated, No Contracts" (53 chars, excellent).</li>
-    <li><span class="good">✓</span> <strong>META DESCRIPTIONS</strong> — Every page has a unique, compelling meta description with a call to action.</li>
-    <li><span class="good">✓</span> <strong>H1 STRUCTURE</strong> — Exactly one H1 per page. Clean heading hierarchy throughout.</li>
-    <li><span class="good">✓</span> <strong>LOCAL SEO ARCHITECTURE</strong> — 12 service pages, 7 city area pages, 77 area+service combo pages. Each with unique title, meta, H1, and content. Matches what we recommend to clients.</li>
-    <li><span class="good">✓</span> <strong>STRUCTURED DATA</strong> — ProfessionalService schema on homepage with NAP. Service and area pages each have schema blocks.</li>
-    <li><span class="good">✓</span> <strong>CONTENT DEPTH</strong> — Service pages average 500-600 words. Area pages average 700+ words. Blog posts are substantive and locally targeted.</li>
-    <li><span class="good">✓</span> <strong>LEAD CAPTURE</strong> — Map Pack Revenue Calculator is a standout conversion tool. Educates, qualifies, and captures email in 60 seconds.</li>
-    <li><span class="good">✓</span> <strong>IMAGE SEO</strong> — All 15 homepage images have descriptive alt text.</li>
-    <li><span class="good">✓</span> <strong>SSL / SECURITY</strong> — HTTPS with HSTS (max-age=31536000), X-Frame-Options: SAMEORIGIN, X-Content-Type-Options: nosniff. Clean security posture.</li>
-    <li><span class="good">✓</span> <strong>SITEMAP & ROBOTS</strong> — Both present, properly formatted, and regularly updated.</li>
-    <li><span class="good">✓</span> <strong>CANONICAL</strong> — Proper canonical URL on every page.</li>
-    <li><span class="good">✓</span> <strong>SOCIAL PROOF</strong> — 5.0 stars, 22 reviews prominently displayed. Strong trust signal.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">⚠️</span> What Needs Work — Refinements</h2>
-  <ul>
-    <li><span class="warn">⚠</span> <strong>Homepage H1</strong> — "Marketing Agency in Virginia Beach, VA" is accurate but generic. It doesn't say what makes Market Boss AI different. Try: "Local SEO & Google Business Profile Agency in Virginia Beach, VA"</li>
-    <li><span class="warn">⚠</span> <strong>Packages Page</strong> — 398 words with no schema markup and a thin meta description ("Market Boss AI packages and pricing"). This is the page that closes the sale. Expand to 800+ words, add FAQ schema, testimonials, and a clear "who each tier is for."</li>
-    <li><span class="warn">⚠</span> <strong>Blog Cadence</strong> — Last post was August 5. It's now August 25 (20 days). Google rewards consistency. Aim for 1 post per week minimum.</li>
-    <li><span class="warn">⚠</span> <strong>Pillar Content</strong> — 19 blog posts with no hub-and-spoke structure. The "Hampton Roads Local SEO Guide" should be expanded into a 2,500+ word pillar page, with every blog post internally linking to it.</li>
-    <li><span class="warn">⚠</span> <strong>Review Count Mismatch</strong> — Website says "13+ reviews." GBP actually has 22 reviews. Update the site to reflect the real number. This is a credibility gap.</li>
-    <li><span class="warn">⚠</span> <strong>GBP Category</strong> — Currently set to "service" (generic). Update to "Marketing Agency" or "SEO Service" for stronger local ranking signals.</li>
-    <li><span class="warn">⚠</span> <strong>Area+Service Combo Pages</strong> — 77 pages is impressive, but volume creates risk of duplicative content. Spot-check 5-10 for uniqueness.</li>
-    <li><span class="warn">⚠</span> <strong>No Video Content</strong> — Video is the fastest-growing content format for local SEO. A 2-minute "What is the Map Pack?" video on the homepage would increase dwell time.</li>
-    <li><span class="warn">⚠</span> <strong>Email Nurture</strong> — The calculator captures email addresses, but there's no automated follow-up sequence. A 5-email nurture sequence would convert signups into consultations.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">🔧</span> The Fix List</h2>
-  <ul>
-    <li><span class="lbl lbl-immediate">Immediate</span><strong>Rewrite Homepage H1</strong> — Make it specific to local SEO and GBP optimization, not generic "Marketing Agency."</li>
-    <li><span class="lbl lbl-immediate">Immediate</span><strong>Update Review Count</strong> — Change "13+ reviews" to "22+ reviews" across the site. Match reality.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Rebuild Packages Page</strong> — Expand to 800+ words. Add: who each tier is for, testimonials per tier, FAQ schema, and a direct "Book a Call" CTA.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Update GBP Category</strong> — Change from "service" to "Marketing Agency" or "SEO Service" in the Google Business Profile dashboard.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Resume Blog Cadence</strong> — Publish 1 post this week. Even a 500-word post on a current local SEO topic beats silence.</li>
-    <li><span class="lbl lbl-ongoing">Next 30 Days</span><strong>Build Pillar Page</strong> — Expand the Hampton Roads Local SEO Guide into a 2,500+ word pillar. Add internal links from every existing blog post back to it.</li>
-    <li><span class="lbl lbl-ongoing">Next 30 Days</span><strong>Add Video</strong> — Record 2-3 short educational videos. Embed on relevant service pages.</li>
-    <li><span class="lbl lbl-ongoing">Next 30 Days</span><strong>Build Email Nurture</strong> — 5-email sequence triggered by calculator signup. Day 1: revenue report. Day 3: case study. Day 5: GBP tip. Day 7: free audit offer. Day 10: "ready to talk?"</li>
-    <li><span class="lbl lbl-ongoing">Ongoing</span><strong>Spot-Check Combo Pages</strong> — Randomly audit 5 area+service pages for content uniqueness.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">🏛️</span> GBP ↔ Website Alignment</h2>
-  <table>
-    <tr><td>Primary Category</td><td><span class="warn">⚠ MISMATCH</span> — GBP says "service." Website targets "Marketing Agency" and "SEO Service." These should match.</td></tr>
-    <tr><td>Services</td><td><span class="good">✓ ALIGNED</span> — 12 service pages on the website. All should be listed on GBP. Verify in GBP dashboard.</td></tr>
-    <tr><td>Service Areas</td><td><span class="good">✓ ALIGNED</span> — 7 cities with dedicated pages, plus 77 area+service combos. Strong alignment.</td></tr>
-    <tr><td>NAP</td><td><span class="good">✓ MATCH</span> — Phone (757-916-7077) and address consistent between GBP and website.</td></tr>
-    <tr><td>Reviews</td><td><span class="warn">⚠ COUNT MISMATCH</span> — Website says 13+. GBP shows 22. Update the website to match.</td></tr>
-    <tr><td>Verdict</td><td><span class="good">✓ WELL ALIGNED</span> — The architecture is built correctly. Fix the category and review count for a clean sweep.</td></tr>
-  </table>
-</section>
-
-<section>
-  <h2><span class="icon">📋</span> Pillar Assessment (Local Authority Blueprint)</h2>
-  <table>
-    <tr><td>GBP</td><td>5.0 stars, 22 reviews. Hours set. Category too generic — needs updating to "Marketing Agency" or "SEO Service."</td></tr>
-    <tr><td>Website</td><td><span class="good">B+</span> — 122 pages, strong local SEO architecture, unique content, solid schema. Packages page is the weakest link.</td></tr>
-    <tr><td>Social</td><td>Not evaluated in this audit. Facebook, Instagram, LinkedIn should be assessed for activity and consistency.</td></tr>
-    <tr><td>Email</td><td>Strong lead capture (calculator). Missing: automated nurture sequence to convert leads into consultations.</td></tr>
-  </table>
-</section>
-
-
-<section class="comp-section">
-  <h2><span class="icon">🏆</span> Competitor Comparison</h2>
-  <div class="comp-grid">
-    
-    <div class="comp-card highlight">
-      <div class="comp-name">⭐ Market Boss AI</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 5</div>
-      <div class="comp-stat">22 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Fitness Together VB</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 5</div>
-      <div class="comp-stat">27 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Orange Theory VB</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
-      <div class="comp-stat">234 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Iron Asylum</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
-      <div class="comp-stat">380 reviews</div>
-    </div>
-
-  </div>
-  
-  <table class="comp-table">
-    <tr><th>Metric</th><th>⭐ Market Boss AI</th><th>Fitness Together VB</th><th>Orange Theory VB</th><th>Iron Asylum</th></tr>
-<tr><td>GBP Rating</td><td><strong>5</strong></td><td>5</td><td>4.8</td><td>4.8</td></tr>
-<tr><td>Google Reviews</td><td><strong>22</strong></td><td>27</td><td>234</td><td>380</td></tr>
-<tr><td>GBP Category</td><td><strong>service</strong></td><td>health</td><td>gym</td><td>gym</td></tr>
-</table>
-  
-  <div class="comp-verdict">
-    <p><strong class="warn">The Gap:</strong> Iron Asylum has 380 reviews and a 4.8-star rating. Your customers are finding them first. The Local Authority Blueprint closes this gap — starting with your GBP, then your website, then your content strategy.</p><p class="comp-cta"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;">Get a full competitor analysis from Market Boss AI →</a></p>
-  </div>
-</section>
-
-<section class="pitch">
-  <span class="tier-badge">Not Happy With Your Current Marketing?</span>
-  <p class="quote">"We can run a complete SEO audit of your website and Google Business Profile so you know exactly where you stand, what's holding you back, and the clear path to getting in front of more customers."</p>
-  <hr class="hr">
-  <p style="font-size:.95rem;color:var(--muted);margin-top:1rem;">We call it the <strong>Local Authority Blueprint</strong>: four pillars — Google Business Profile, website, email, and social — all working together to put your business where your customers are searching. No long-term contracts. Just a system built to get results.</p>
-  <p style="margin-top:.75rem;"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;text-decoration:none;font-size:1.05rem;">Get a Free SEO Audit at MarketBossAI.com →</a></p>
-</section>
-
-</main>
-
-<footer>
-  <a href="https://marketbossai.com">Market Boss AI</a> — Local SEO &amp; Website Design for Hampton Roads<br>
-  Virginia Beach, VA &nbsp;·&nbsp; Month-to-month, no contracts.
-</footer>
-
-</body>
-</html>

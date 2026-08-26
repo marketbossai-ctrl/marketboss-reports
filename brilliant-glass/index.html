@@ -92,215 +92,38 @@
   .comp-cta { margin-top: .75rem !important; }
   .comp-card .warn { color: var(--orange); }
 
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .hero { padding: 2rem 1rem !important; }
+    main { padding: 0 1rem 2rem !important; }
+    section { padding: 1rem !important; }
+    .grade { flex-direction: column !important; text-align: center !important; }
+    .grade .letter { font-size: 3rem !important; }
+    .comp-table { font-size: .75rem !important; }
+    .comp-table th, .comp-table td { padding: .3rem .3rem !important; }
+    .comp-table td:first-child { white-space: normal !important; }
+    .grid-2 { grid-template-columns: 1fr !important; }
+    .grid-3 { grid-template-columns: 1fr !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .stat-card .num { font-size: 1.3rem !important; }
+    .pitch .quote { font-size: 1rem !important; }
+    .grade-banner { margin-top: -1.5rem !important; }
+    .grade-card-inner { flex-direction: column !important; text-align: center !important; }
+    .grade-card-inner .letter { font-size: 3rem !important; }
+    .aln-label { min-width: 80px !important; font-size: .8rem !important; }
+    .review-quote { font-size: .8rem !important; }
+  }
+  @media (max-width: 480px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; gap: .5rem !important; }
+    .comp-name { font-size: .75rem !important; }
+    .comp-rating { font-size: 1rem !important; }
+    body { font-size: 14px !important; }
+    .top-bar { flex-direction: column !important; text-align: center !important; font-size: .8rem !important; }
+    .hero h1 { font-size: 1.3rem !important; }
+    .comp-table { font-size: .7rem !important; display: block !important; overflow-x: auto !important; }
+  }
+
 </style>
-</head>
-<body>
-
-<div class="logo-bar">
-  <img src="/marketboss-reports/assets/audit-logo.jpg" alt="Market Boss AI">
-</div>
-
-<div class="hero">
-  <div class="wrap">
-    <div class="badge">One-Page SEO Report</div>
-    <h1>Brilliant Glass</h1>
-    <p class="sub">Custom shower doors, glass partitions, mirrors & etching — serving all of Hampton Roads</p>
-    <p class="meta">brilliantglass.net &nbsp;·&nbsp; August 25, 2026</p>
-    <span class="phone">📞 Call or Text Jeff Wilson Direct: (757) 322-7171</span>
-  </div>
-</div>
-
-<div class="grade-card">
-  <div class="grade-card-inner">
-    <div class="letter">D</div>
-    <div class="txt">
-      <strong>4.9★ reputation. 51 reviews. But the website is invisible.</strong>
-      <p>Zero title tags, zero meta descriptions, zero schema, zero H1s, 6 thin pages on a Duda platform. The Google Business Profile is doing all the heavy lifting — and the GBP category isn't even right.</p>
-    </div>
-  </div>
-</div>
-
-<main>
-
-<section class="principle">
-  <h2><span class="icon">📌</span> The Principle: Your GBP Is Your New Homepage</h2>
-  <div style="background:rgba(55,181,255,.06); border-left:4px solid var(--blue); padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin-bottom:1rem;">
-    <p style="font-size:1rem; font-weight:600; margin-bottom:.5rem;">"Google looks at your Business Profile first. Then it checks your website. If they don't match — what you call yourself, what services you offer, where you work — Google can't trust either of them. Your GBP is your front door. Your website is what's inside. They have to say the same thing."</p>
-    <p style="color:var(--muted); font-size:.85rem;">— Market Boss AI • Local Authority Blueprint</p>
-  </div>
-  <p style="color:var(--muted); font-size:.9rem;">This audit measures every gap between the two. Where they match, you're building trust with Google. Where they don't, you're leaving ranking potential on the table.</p>
-</section>
-
-<section>
-  <h2><span class="icon">🔍</span> Live GBP Data</h2>
-  <table>
-    <tr><td>Business Name</td><td>Brilliant Glass LLC</td></tr>
-    <tr><td>Address</td><td>1461 London Bridge Rd #216, Virginia Beach, VA 23453</td></tr>
-    <tr><td>Phone</td><td>(804) 687-4699</td></tr>
-    <tr><td>GBP Category</td><td><span class="warn">⚠ "building_materials_store"</span> — should be "Glass Contractor" or "Shower Door Installer"</td></tr>
-    <tr><td>Rating</td><td><span class="good">4.9 stars (51 reviews)</span></td></tr>
-    <tr><td>Hours</td><td>Mon–Fri 9:00 AM – 5:00 PM, Sat–Sun closed</td></tr>
-    <tr><td>Status</td><td><span class="good">OPERATIONAL</span></td></tr>
-  </table>
-</section>
-
-<section>
-  <h2><span class="icon">🔄</span> GBP ↔ Website Alignment Score</h2>
-  <p style="color:var(--muted); font-size:.85rem; margin-bottom:.75rem;">Every mismatch below is a signal to Google that the business data is unreliable. Fixing these is the highest-leverage SEO work you can do.</p>
-
-  <div class="aln-row">
-    <span class="aln-label">Primary Category</span>
-    <span class="aln-check warn">⚠ MISMATCH</span>
-    <span class="aln-note">GBP says "building_materials_store" — website targets "shower doors &amp; custom glass." Should be "Glass Contractor" or "Shower Door Installer."</span>
-  </div>
-  <div class="aln-row">
-    <span class="aln-label">Services Listed</span>
-    <span class="aln-check fail">❌ MISSING</span>
-    <span class="aln-note">5+ services on GBP. Zero dedicated service pages on the website. Everything crammed into one "Services" page.</span>
-  </div>
-  <div class="aln-row">
-    <span class="aln-label">Service Areas</span>
-    <span class="aln-check fail">❌ MISSING</span>
-    <span class="aln-note">Serves all Hampton Roads. Zero city pages on the website. Each city needs its own URL.</span>
-  </div>
-  <div class="aln-row">
-    <span class="aln-label">NAP (Name/Address/Phone)</span>
-    <span class="aln-check pass">✅ MATCH</span>
-    <span class="aln-note">Phone, address, and business name are consistent between GBP and website.</span>
-  </div>
-  <div class="aln-row">
-    <span class="aln-label">Reviews on Website</span>
-    <span class="aln-check fail">❌ MISSING</span>
-    <span class="aln-note">51 reviews at 4.9★ on Google. Zero appear on the website with schema markup.</span>
-  </div>
-  <div class="aln-row">
-    <span class="aln-label">Hours of Operation</span>
-    <span class="aln-check pass">✅ MATCH</span>
-    <span class="aln-note">Both show Mon–Fri 9-5, closed weekends.</span>
-  </div>
-  <div class="aln-row">
-    <span class="aln-label">Website on GBP</span>
-    <span class="aln-check pass">✅ MATCH</span>
-    <span class="aln-note">brilliantglass.net listed correctly on GBP.</span>
-  </div>
-
-  <div style="margin-top:1rem; padding:1rem; background:rgba(239,68,68,.06); border-radius:8px; text-align:center;">
-    <strong style="color:var(--red); font-size:1.1rem;">Alignment Score: 3 of 7</strong>
-    <p style="color:var(--muted); font-size:.85rem; margin-top:.25rem;">The reputation is there. The infrastructure is not. Fixing the 4 gaps below would transform this business's local visibility.</p>
-  </div>
-</section>
-
-<section>
-  <h2><span class="icon">✅</span> What Works</h2>
-  <ul>
-    <li><span class="good">✓</span> <strong>GBP REPUTATION</strong> — 4.9 stars, 51 reviews. Customers are thrilled with the work. This is gold.</li>
-    <li><span class="good">✓</span> <strong>NAP CONSISTENCY</strong> — Name, address, phone, and hours all match between GBP and website.</li>
-    <li><span class="good">✓</span> <strong>SSL &amp; SECURITY</strong> — HTTPS with HSTS, X-Frame-Options, CSP headers. Secure.</li>
-    <li><span class="good">✓</span> <strong>SITEMAP &amp; ROBOTS</strong> — Both present and correctly formatted.</li>
-    <li><span class="good">✓</span> <strong>CANONICAL</strong> — Proper canonical URL on homepage.</li>
-    <li><span class="good">✓</span> <strong>MOBILE RESPONSIVE</strong> — Duda platform handles mobile well.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">⚠️</span> What's Broken</h2>
-  <ul>
-    <li><span class="bad">❌</span> <strong>TITLE TAGS</strong> — Every page is missing a &lt;title&gt; tag. This is the single most important SEO element.</li>
-    <li><span class="bad">❌</span> <strong>META DESCRIPTIONS</strong> — Every page is missing a description.</li>
-    <li><span class="bad">❌</span> <strong>H1 HEADINGS</strong> — No page has a single H1. Zero heading hierarchy.</li>
-    <li><span class="bad">❌</span> <strong>STRUCTURED DATA</strong> — No JSON-LD. No LocalBusiness, Service, FAQ, or Review schema.</li>
-    <li><span class="bad">❌</span> <strong>CONTENT DEPTH</strong> — ~222 characters of visible text on homepage. 6 pages total.</li>
-    <li><span class="bad">❌</span> <strong>NO SERVICE PAGES</strong> — Shower doors, glass partitions, mirrors, etching — each needs its own URL.</li>
-    <li><span class="bad">❌</span> <strong>NO CITY PAGES</strong> — Virginia Beach, Norfolk, Chesapeake, Portsmouth — each needs its own page.</li>
-    <li><span class="bad">❌</span> <strong>NO REVIEW SCHEMA</strong> — 51 reviews but none marked up on the website. No stars in search results.</li>
-    <li><span class="bad">❌</span> <strong>STALE CONTENT</strong> — Contact page untouched since August 2022.</li>
-    <li><span class="bad">❌</span> <strong>NO EMAIL CAPTURE</strong> — No newsletter, no lead magnet, no follow-up system.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">🔧</span> Fix List (Priority Order)</h2>
-  <ul>
-    <li><span class="lbl lbl-immediate">Immediate</span><strong>Update GBP Category</strong> — Change from "building_materials_store" to "Glass Contractor" or "Shower Door Installer." Minutes of work, immediate impact on who Google shows you to.</li>
-    <li><span class="lbl lbl-immediate">Immediate</span><strong>Add Title Tags</strong> — Every page needs a unique, keyword-rich title (55-65 chars). Homepage: "Shower Doors &amp; Custom Glass | Brilliant Glass | Virginia Beach, VA"</li>
-    <li><span class="lbl lbl-immediate">Immediate</span><strong>Add LocalBusiness Schema</strong> — JSON-LD with name, address, phone, hours, service area, SameAs links.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Meta Descriptions + H1s</strong> — Every page gets a 150-160 char meta description and exactly one H1.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Embed Reviews on Website</strong> — Add a reviews section with AggregateRating and Review schema. Put those 51 five-star reviews to work.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Service Pages</strong> — Build dedicated pages for shower doors, glass partitions, custom mirrors, and glass etching. Each gets unique content, Service schema, and photos.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>City Pages</strong> — Pages for Virginia Beach, Norfolk, Chesapeake, Portsmouth with local schema and map.</li>
-    <li><span class="lbl lbl-ongoing">Ongoing</span><strong>Blog Content</strong> — Shower door design tips, glass care, before/after showcases. 1-2/month.</li>
-    <li><span class="lbl lbl-ongoing">Ongoing</span><strong>Image SEO</strong> — Alt text, compressed images, keyword-rich filenames on every photo.</li>
-    <li><span class="lbl lbl-ongoing">Ongoing</span><strong>Review Generation</strong> — Keep building on that 4.9★ average. 2-3 new reviews/month. Respond to every one.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">📋</span> Four-Pillar Assessment</h2>
-  <table>
-    <tr><td>GBP</td><td><span class="good">4.9★</span> — 51 reviews. Hours correct. <span class="warn">Category wrong.</span> Doing the heavy lifting but leaving opportunity on the table.</td></tr>
-    <tr><td>Website</td><td><span class="bad">Grade D</span> — 6 pages, zero SEO fundamentals. Every element broken or missing. Textbook rebuild case.</td></tr>
-    <tr><td>Social</td><td><span class="warn">Not evaluated</span> — likely inactive or inconsistent.</td></tr>
-    <tr><td>Email</td><td><span class="bad">Missing</span> — zero capture mechanism. No way to follow up with interested customers.</td></tr>
-  </table>
-</section>
-
-
-<section class="comp-section">
-  <h2><span class="icon">🏆</span> Competitor Comparison</h2>
-  <div class="comp-grid">
-    
-    <div class="comp-card highlight">
-      <div class="comp-name">⭐ Brilliant Glass</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.9</div>
-      <div class="comp-stat">51 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Virginia Beach Glass &amp; Mirror</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
-      <div class="comp-stat">78 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Atlantic Glass &amp; Mirror</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.1</div>
-      <div class="comp-stat">50 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Shower Door VB</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
-      <div class="comp-stat">78 reviews</div>
-    </div>
-
-  </div>
-  
-  <table class="comp-table">
-    <tr><th>Metric</th><th>⭐ Brilliant Glass</th><th>Virginia Beach Glass</th><th>Atlantic Glass &amp; Mir</th><th>Shower Door VB</th></tr>
-<tr><td>GBP Rating</td><td><strong>4.9</strong></td><td>4.8</td><td>4.1</td><td>4.8</td></tr>
-<tr><td>Google Reviews</td><td><strong>51</strong></td><td>78</td><td>50</td><td>78</td></tr>
-<tr><td>GBP Category</td><td><strong>building_materials_store</strong></td><td>building_materials_store</td><td>N/A</td><td>building_materials_store</td></tr>
-</table>
-  
-  <div class="comp-verdict">
-    <p><strong class="warn">The Gap:</strong> Virginia Beach Glass &amp; Mirror has 78 reviews and a 4.8-star rating. Your customers are finding them first. The Local Authority Blueprint closes this gap — starting with your GBP, then your website, then your content strategy.</p><p class="comp-cta"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;">Get a full competitor analysis from Market Boss AI →</a></p>
-  </div>
-</section>
-
-<section class="pitch">
-  <span class="tier-badge">Not Happy With Your Current Marketing?</span>
-  <p class="quote">"Your glass work is in homes and offices all over Hampton Roads. You have 51 five-star reviews. But when someone searches 'shower door installer near me' tonight, do they find you or a competitor with a worse reputation and a better website?"</p>
-  <hr class="hr">
-  <p style="font-size:.95rem;color:var(--muted);margin-top:1rem;">We call it the <strong>Local Authority Blueprint</strong>: four pillars — Google Business Profile, website, email, and social — all working together to put your business where your customers are searching. No long-term contracts. Just a system built to get results.</p>
-  <p style="margin-top:.75rem;"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;text-decoration:none;font-size:1.05rem;">Get a Free SEO Audit at MarketBossAI.com →</a></p>
-</section>
-
-</main>
-
-<footer>
-  <a href="https://marketbossai.com">Market Boss AI</a> — Local SEO &amp; Website Design for Hampton Roads<br>
-  Virginia Beach, VA &nbsp;·&nbsp; Month-to-month, no contracts.
-</footer>
-
-</body>
-</html>

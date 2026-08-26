@@ -59,7 +59,42 @@
   .comp-cta { margin-top: .75rem !important; }
   .comp-card .warn { color: var(--orange); }
 
-</style>
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .hero { padding: 2rem 1rem !important; }
+    main { padding: 0 1rem 2rem !important; }
+    section { padding: 1rem !important; }
+    .grade { flex-direction: column !important; text-align: center !important; gap: .5rem !important; }
+    .grade .letter { font-size: 3rem !important; }
+    .comp-table { font-size: .75rem !important; }
+    .comp-table th, .comp-table td { padding: .3rem .3rem !important; }
+    .comp-table td:first-child { white-space: normal !important; width: auto !important; }
+    .grid-2 { grid-template-columns: 1fr !important; }
+    .grid-3 { grid-template-columns: 1fr !important; }
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.15rem !important; }
+    .stat-card .num { font-size: 1.3rem !important; }
+    .pitch .quote { font-size: 1rem !important; }
+    .grade-banner { margin-top: -1.5rem !important; }
+    .grade-card-inner { flex-direction: column !important; text-align: center !important; }
+    .grade-card-inner .letter { font-size: 3rem !important; }
+    .aln-label { min-width: 80px !important; font-size: .8rem !important; }
+    .review-quote { font-size: .8rem !important; }
+  }
+  @media (max-width: 480px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; gap: .5rem !important; }
+    .comp-name { font-size: .75rem !important; }
+    .comp-rating { font-size: 1rem !important; }
+    body { font-size: 14px !important; }
+    .top-bar { flex-direction: column !important; text-align: center !important; font-size: .8rem !important; }
+    .hero h1 { font-size: 1.3rem !important; }
+    .comp-table { font-size: .7rem !important; display: block !important; overflow-x: auto !important; }
+  }
+
+  </style>
 </head>
 <body>
 

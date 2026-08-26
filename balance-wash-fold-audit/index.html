@@ -76,181 +76,38 @@
   .comp-cta { margin-top: .75rem !important; }
   .comp-card .warn { color: var(--orange); }
 
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .hero { padding: 2rem 1rem !important; }
+    main { padding: 0 1rem 2rem !important; }
+    section { padding: 1rem !important; }
+    .grade { flex-direction: column !important; text-align: center !important; }
+    .grade .letter { font-size: 3rem !important; }
+    .comp-table { font-size: .75rem !important; }
+    .comp-table th, .comp-table td { padding: .3rem .3rem !important; }
+    .comp-table td:first-child { white-space: normal !important; }
+    .grid-2 { grid-template-columns: 1fr !important; }
+    .grid-3 { grid-template-columns: 1fr !important; }
+    .hero h1 { font-size: 1.5rem !important; }
+    .stat-card .num { font-size: 1.3rem !important; }
+    .pitch .quote { font-size: 1rem !important; }
+    .grade-banner { margin-top: -1.5rem !important; }
+    .grade-card-inner { flex-direction: column !important; text-align: center !important; }
+    .grade-card-inner .letter { font-size: 3rem !important; }
+    .aln-label { min-width: 80px !important; font-size: .8rem !important; }
+    .review-quote { font-size: .8rem !important; }
+  }
+  @media (max-width: 480px) {
+    .comp-grid { grid-template-columns: 1fr 1fr !important; gap: .5rem !important; }
+    .comp-name { font-size: .75rem !important; }
+    .comp-rating { font-size: 1rem !important; }
+    body { font-size: 14px !important; }
+    .top-bar { flex-direction: column !important; text-align: center !important; font-size: .8rem !important; }
+    .hero h1 { font-size: 1.3rem !important; }
+    .comp-table { font-size: .7rem !important; display: block !important; overflow-x: auto !important; }
+  }
+
 </style>
-</head>
-<body>
-
-<div class="logo-bar">
-  <img src="/marketboss-reports/assets/audit-logo.jpg" alt="Market Boss AI">
-</div>
-  <span style="color:#6B7280;font-size:.85rem;">Market Boss AI — Virginia Beach, VA</span>
-</div>
-
-<div class="hero">
-  <div class="wrap">
-    <div class="badge">Before Your Spotlight Call Tonight</div>
-    <h1>Balance Wash and Fold<br>SEO Audit</h1>
-    <p class="sub">A full audit of Desiree's website and Google Business Profile — so you walk into tonight's Spotlight call knowing exactly where she stands and how you can help.</p>
-    <p class="meta">bwf757.com &nbsp;·&nbsp; Laundry Pickup &amp; Delivery &nbsp;·&nbsp; August 25, 2026</p>
-  </div>
-</div>
-
-<div class="grade-banner">
-  <div class="grade">
-    <div class="letter">C+</div>
-    <div class="txt">
-      <strong>Solid content — but invisible for local search.</strong>
-      <p>2,477 words of well-written content, good title/meta/H1, and real customer reviews on the page. But: 💀 No Google Business Profile at all. No structured data. One single page trying to rank across 3 cities and 5+ service lines. This is the definition of a "good foundation, missing the engine."</p>
-    <span class="phone">📞 Call or Text Jeff Wilson Direct: (757) 322-7171</span>
-  </div>
-</div>
-
-<main>
-
-<section class="principle">
-  <h2><span class="icon">📌</span> The Principle: Your GBP Is Your New Homepage</h2>
-  <div style="background:rgba(55,181,255,.06); border-left:4px solid var(--blue); padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin-bottom:1rem;">
-    <p style="font-size:1rem; font-weight:600; margin-bottom:.5rem;">"Google looks at your Business Profile first. Then it checks your website. If they don't match — what you call yourself, what services you offer, where you work — Google can't trust either of them. Your GBP is your front door. Your website is what's inside. They have to say the same thing."</p>
-    <p style="color:var(--muted); font-size:.85rem;">— Market Boss AI • Local Authority Blueprint</p>
-  </div>
-  <p style="color:var(--muted); font-size:.9rem;">This audit measures every gap between the two. Where they match, you're building trust with Google. Where they don't, you're leaving ranking potential on the table.</p>
-</section>
-
-<section>
-  <h2><span class="icon">📊</span> Key Metrics at a Glance</h2>
-  <div class="grid-2">
-    <div class="stat-card"><div class="num">85</div><div class="lbl">Website Score/100</div></div>
-    <div class="stat-card danger"><div class="num">0</div><div class="lbl">GBP Rating</div></div>
-    <div class="stat-card"><div class="num">2,477</div><div class="lbl">Words of Content</div></div>
-    <div class="stat-card dangeer"><div class="num">0</div><div class="lbl">Service Pages</div></div>
-    <div class="stat-card"><div class="num">1</div><div class="lbl">H1 / Page</div></div>
-    <div class="stat-card danger"><div class="num">0</div><div class="lbl">Schema Block</div></div>
-  </div>
-</section>
-
-<section>
-  <h2><span class="icon">🔍</span> Live GBP Data (from Google Places API)</h2>
-  <div class="review-quote" style="border-left-color:var(--red);">
-    <strong style="color:var(--red);">NO GOOGLE BUSINESS PROFILE FOUND</strong>
-    <p style="margin-top:.5rem;color:var(--muted);">We searched Google's Places API for "Balance Wash and Fold" and multiple variants. No listing exists. That means when someone searches "laundry service near me" in Virginia Beach, Desiree's business does not appear in the Map Pack at all. This is the biggest single opportunity for improvement.</p>
-  </div>
-  <table>
-    <tr><td>Business Name</td><td>Balance Wash and Fold</td></tr>
-    <tr><td>GBP Status</td><td><span class="bad">❌ NOT FOUND — Must be claimed</span></td></tr>
-    <tr><td>Impact</td><td>Every 'laundry near me' search in Hampton Roads shows competitors that have a complete GBP. Desiree gets zero visibility from the most important local search feature.</td></tr>
-  </table>
-</section>
-
-<section>
-  <h2><span class="icon">✅</span> What's Working</h2>
-  <ul>
-    <li><span class="good">✓</span> <strong>TITLE TAG</strong> — "Balance Wash and Fold | Laundry Pickup & Delivery in Hampton Roads" — 70 chars. Well-optimized, includes business name + service + location.</li>
-    <li><span class="good">✓</span> <strong>META DESCRIPTION</strong> — Long, detailed, includes SWAM certification, multiple service types, and a call to action.</li>
-    <li><span class="good">✓</span> <strong>H1 STRUCTURE</strong> — Exactly 1 H1 per page. Clean.</li>
-    <li><span class="good">✓</span> <strong>HEADING HIERARCHY</strong> — 7 H2 subheadings covering services, Airnb, commercial, FAQ, reviews, contact. Good topical structure.</li>
-    <li><span class="good">✓</span> <strong>CONTENT DEPTH</strong> — ~2,477 words. Exceptionally thorough for a single-page site. Actually covers everything — pricing, process, FAQ, reviews.</li>
-    <li><span class="good">✓</span> <strong>REAL CUSTOMER REVIEWS</strong> — 20+ customer reviews embedded on the page wwith names and locations. Strong social proof.</li>
-    <li><span class="good">✓</span> <strong>FAQ SECTION</strong> — Comprehensive 20+ question FAQ that answers every objection. This is excellent for conversion.</li>
-    <li><span class="good">✓</span> <strong>IMAGE ALT TEXT</strong> — 16 of 20 images (80%) have descriptive alt text. Good.</li>
-    <li><span class="good">✓</span> <strong>SSL / HTTPS</strong> — Site serves over HTTPS. Clean security.</li>
-    <li><span class="good">✓</span> <strong>SITEMAP</strong> — Present and properly formatted. Helps Google find pages.</li>
-    <li><span class="good">✓</span> <strong>CANONICAL</strong> — Proper canonical URL on homepage.</li>
-    <li><span class="good">✓</span> <strong>KEYWORDS META</strong> — Present wwith highly relevant local keywords (laundry service Virginia Beach, wash and fold Virginia Beach, etc.).</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">⚠️</span> What's Missin</h2>
-  <ul>
-    <li><span class="bad">❌</span> <strong>NO GOOGLE BUSINESS PROFILE</strong> — This is urgent. A local service business wwith no GBP is invisible on Google Maps and the Map Pack. Everything else is secondary to fixing this.</li>
-    <li><span class="bad">❌</span> <strong>NO STRUCTURED DATA</strong> — Zero JSON-LD. No LocalBussiness schema, no Service schema, no FAQ schema, no Review schema. Google cannot show rich results (star ratings, hours, FAQ snippets) in search.</li>
-    <li><span class="bad">❌</span> <strong>SINGLE-PAGE SITE</strong> — Everything lives on one URL. No dedicated services pages for: standard laundry, commercial towel service, Airnb linens, or baby/onth trimester packages. No city pages for Virginia Beach, Norfolk, or Chesapeake.</li>
-    <li><span class="warn">⚠</span> <strong>NO FAQ SCHEMA</strong> — The site has a fantastic 20+ question FAQ section but no FAQ schema markup. This could earn featured snippets in Google search results.</li>
-    <li><span class="warn">⚠</span> <strong>NO REVIEW SCHEMA</strong> — Customer reviews displayed on the page but not marked up wwith Review schema. No star ratings visible in search results.</li>
-    <li><span class="warn">⚠</span> <strong>PLATFORM: SOLOIST</strong> — Built on a Next.js platform (Soloist). Heavy JS-rendered content. Goodgle CAN render it, but it's slower and SEO tools may not index deeply.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">🔧</span> The Fix List</h2>
-  <ul>
-    <li><span class="lbl lbl-immediate">Immediate</span><strong>Claim & Optimize Google Business Profile<strong> — This needs to happen tonight or tomorrow. Go to google.com/business and claim "Balance Wash and Fold." Set category to "Laundry Service." Add all services, photos, hours, and service area (Virginia Beach, Norfolk, Chesapeake). This is the single highest-impact change.</li>
-    <li><span class="lbl lbl-immediate">Immediate</span><strong>Add LocalBusiness Schema</strong> — Add JSON-LD wwith: business name, address, phone, hours, service area, and SameAs links. I can provide the code.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Add FAQ Schema</strong> — 20+ questions already exist on the site. Wrap them in FAQPage schema. This could earn multiple featured snippets.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Add Review Schema</strong> — Mark up customer reviews with AggregateRating and Review schema for star ratings in search.</li>
-    <li><span class="lbl lbl-week">This Week</span><strong>Build City Pages</strong> — Create dedicated pages for /laundry-service-virginia-beach, /laundry-service-norolk, /laundry-service-chesapeake. Even if simple 300-word pages wwith unique copy and local schema.</li>
-    <li><span class="lbl lbl-ongoing">Next 30 Days</span><strong>Build Service Pages<strong> — Break into: standard wash-fold, commercial towel service, Airb linen turnover, baby/postpartum packages. Each gets its own URL, unique title/meta, and Service schema.</li>
-    <li><span class="lbl lbl-ongoing">Ongoing</span><strong>Review Strategy</strong> — After GBP is claimed, start generating reviews. Aim for 2-3 per month. Respond to every single one.</li>
-  </ul>
-</section>
-
-<section>
-  <h2><span class="icon">🎯</span> Your Pitch Angle for Tonight's Call</h2>
-  <div class="pitch">
-    <span class="tier">MarketBoss AI — Core ($750 setup / $375/mo)</span>
-    <p class="quote">"Desiree, your website content is reallygood — you've told the whole story, your pricing is clear, and your reviews are real. But I ran an SEO audit, and here's what I found: you don't have a GoogleBusiness Profile at all. When someone in Norfolk searches 'laundry pickup near me,' they see three competitors in the Map Pack — and you're not one of them. That's customers you you earned but never got a chance to serve."</p>
-    <hr class="hr">
-    <p style="font-size:.95rem;color:var(--muted);margin-top:1rem;">Start wwith the GBP. That's free, takes 20 minutes, and will iimmediately start capturing searches. Then add schema markup andcity pages to back it up. The content is already there — it just needs structure.</p>
-  </div>
-</section>
-
-
-
-<section class="comp-section">
-  <h2><span class="icon">🏆</span> Competitor Comparison</h2>
-  <div class="comp-grid">
-    
-    <div class="comp-card highlight">
-      <div class="comp-name">⭐ Balance Wash and Fold</div>
-      <div class="comp-rating" style="color:var(--gold);">★ N/A</div>
-      <div class="comp-stat">0 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">HappyNest</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.2</div>
-      <div class="comp-stat">106 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Virginia Beach Laundry</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.6</div>
-      <div class="comp-stat">163 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Clean Laundry VB</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.6</div>
-      <div class="comp-stat">163 reviews</div>
-    </div>
-
-  </div>
-  
-  <table class="comp-table">
-    <tr><th>Metric</th><th>⭐ Balance Wash and Fold</th><th>HappyNest</th><th>Virginia Beach Laund</th><th>Clean Laundry VB</th></tr>
-<tr><td>GBP Rating</td><td><strong>N/A</strong></td><td>4.2</td><td>4.6</td><td>4.6</td></tr>
-<tr><td>Google Reviews</td><td><strong>0</strong></td><td>106</td><td>163</td><td>163</td></tr>
-<tr><td>GBP Category</td><td><strong>N/A</strong></td><td>laundry</td><td>restaurant</td><td>restaurant</td></tr>
-</table>
-  
-  <div class="comp-verdict">
-    <p><strong class="warn">The Gap:</strong> Virginia Beach Laundry has 163 reviews and a 4.6-star rating. Your customers are finding them first. The Local Authority Blueprint closes this gap — starting with your GBP, then your website, then your content strategy.</p><p class="comp-cta"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;">Get a full competitor analysis from Market Boss AI →</a></p>
-  </div>
-</section>
-
-<section class="pitch">
-  <span class="tier-badge">Not Happy With Your Current Marketing?</span>
-  <p class="quote">"We can run a complete SEO audit of your website and Google Business Profile so you know exactly where you stand, what's holding you back, and the clear path to getting in front of more customers."</p>
-  <hr class="hr">
-  <p style="font-size:.95rem;color:var(--muted);margin-top:1rem;">We call it the <strong>Local Authority Blueprint</strong>: four pillars — Google Business Profile, website, email, and social — all working together to put your business where your customers are searching. No long-term contracts. Just a system built to get results.</p>
-  <p style="margin-top:.75rem;"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;text-decoration:none;font-size:1.05rem;">Get a Free SEO Audit at MarketBossAI.com →</a></p>
-</section>
-</main>
-
-<footer>
-  <a href="https://marketbossai.com">Market Boss AI</a> — Local SEO &amp; Website Design for Hampton Roads<br>
-  Virginia Beach, VA &nbsp;·&nbsp; Month-to-month, no contracts.
-</footer>
-
-</body>
-</html>
