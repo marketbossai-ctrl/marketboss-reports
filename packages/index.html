@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Boss AI — Packages & Pricing | Local Authority Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --night: #0D0433; --card: #131827; --border: #1F2937; --text: #F1F5F9; --muted: #6B7280; --accent: #37B5FF; --gold: #F59E0B; --green: #10B981; --red: #EF4444; --orange: #F97316; --blue: #37B5FF; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--night); color: var(--text); line-height: 1.7; }
+  .logo-bar { text-align: center; padding: 2rem 1.5rem 0; background: #0D0433; }
+  .logo-bar img { max-width: 280px; height: auto; display: block; margin: 0 auto; }
+  .hero { background: linear-gradient(135deg, #0D0433, #1a0a5e, #2563EB); padding: 3rem 1.5rem; text-align: center; }
+  .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.2rem; margin-bottom: .5rem; }
+  .hero .sub { color: #BFDBFE; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+  .hero .phone { color: var(--gold); font-weight: 700; font-size: .9rem; margin-top: .75rem; display: block; }
+  main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem 3rem; }
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; margin-bottom: 1.25rem; }
+  h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; }
+  .pillar-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .pillar-card { background: rgba(55,181,255,.04); border: 1px solid rgba(55,181,255,.15); border-radius: 10px; padding: 1.25rem; text-align: center; }
+  .pillar-icon { font-size: 1.8rem; margin-bottom: .5rem; }
+  .pillar-name { font-weight: 700; font-size: .9rem; }
+  .package-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+  .package-card { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; text-align: center; position: relative; display: flex; flex-direction: column; }
+  .package-card.featured { border-color: var(--blue); background: rgba(55,181,255,.06); box-shadow: 0 0 0 1px rgba(55,181,255,.2); }
+  .package-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--blue); color: #fff; padding: .2rem 1rem; border-radius: 20px; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .package-name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 800; margin-bottom: .25rem; }
+  .package-setup { font-size: .85rem; color: var(--muted); margin-bottom: .5rem; }
+  .package-price { font-size: 2.2rem; font-weight: 800; }
+  .package-price .dollar { font-size: 1.2rem; vertical-align: super; }
+  .package-price .per { font-size: .85rem; color: var(--muted); font-weight: 400; }
+  .package-desc { font-size: .85rem; color: #d1d5db; margin: .75rem 0; }
+  .package-includes { text-align: left; list-style: none; margin: 1rem 0; flex-grow: 1; }
+  .package-includes li { padding: .35rem 0; font-size: .82rem; display: flex; align-items: flex-start; gap: .5rem; }
+  .package-includes li .check { color: var(--green); font-weight: 700; }
+  .package-cta { display: block; background: var(--orange); color: #fff; padding: .85rem; border-radius: 8px; font-weight: 700; font-size: .95rem; text-decoration: none; margin-top: auto; transition: .2s; }
+  .package-cta:hover { background: #E07000; }
+  .faq-grid { max-width: 650px; margin: 0 auto; }
+  .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: .5rem; overflow: hidden; }
+  .faq-item summary { padding: .85rem 1rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,.03); font-size: .9rem; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-answer { padding: 0 1rem 1rem; color: var(--muted); font-size: .85rem; }
+  .cta-section { background: linear-gradient(135deg, rgba(55,181,255,.08), rgba(37,99,235,.08)); border: 1px solid rgba(55,181,255,.15); text-align: center; }
+  .cta-section a { display: inline-block; background: var(--orange); color: #fff; padding: .85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none; margin: .5rem; }
+  .cta-section .phone-link { background: transparent; border: 2px solid rgba(255,255,255,.2); }
+  footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 2rem; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); text-decoration: none; }
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.6rem; }
+    .package-grid { grid-template-columns: 1fr; }
+    .pillar-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="logo-bar">
+  <img src="/marketboss-reports/assets/audit-logo.jpg" alt="Market Boss AI">
+</div>
+
+<div class="hero">
+  <h1>Local Authority Blueprint — Packages</h1>
+  <p class="sub">One system. Three speeds. One result: your business found on Google.</p>
+  <span class="phone">📞 {PHONE.replace('📞 ', '')}</span>
+</div>
+
+<main>
+
+<section>
+  <h2>The Four Pillars of Local Authority</h2>
+  <div class="pillar-grid">
+    <div class="pillar-card"><div class="pillar-icon">📍</div><div class="pillar-name">Google Business Profile</div></div>
+    <div class="pillar-card"><div class="pillar-icon">🌐</div><div class="pillar-name">Professionally Built Website</div></div>
+    <div class="pillar-card"><div class="pillar-icon">✉️</div><div class="pillar-name">Ongoing Email Marketing</div></div>
+    <div class="pillar-card"><div class="pillar-icon">📣</div><div class="pillar-name">Facebook Presence &amp; Posts</div></div>
+  </div>
+  <p style="text-align:center;color:var(--muted);font-size:.9rem;"><strong style="color:var(--gold);">Every plan includes complete GBP Review &amp; Profile Optimization</strong> — reviews answered, photos uploaded, GBP posts, video creation. No upgrades needed.</p>
+</section>
+
+<section>
+  <h2>Choose Your Speed</h2>
+  <div class="package-grid">
+    <div class="package-card">
+      <div class="package-name">Starter</div>
+      <div class="package-setup">Setup: <strong>$500</strong></div>
+      <div class="package-price"><span class="dollar">$</span>375<span class="per">/mo</span></div>
+      <p class="package-desc">The easiest way to get started. We lay the foundation and build your site out one page at a time each month. Upgrade anytime as your business grows.</p>
+      <ul class="package-includes">
+        <li><span class="check">✓</span> GBP Review &amp; Profile Optimization</li>
+        <li><span class="check">✓</span> Website — built progressively</li>
+        <li><span class="check">✓</span> Email marketing</li>
+        <li><span class="check">✓</span> Facebook presence &amp; posts</li>
+        <li><span class="check">✓</span> Month-to-month, no contract</li>
+      </ul>
+      <a href="https://marketbossai.com/contact" class="package-cta">Get Started →</a>
+    </div>
+
+    <div class="package-card featured">
+      <div class="package-badge">Most Popular</div>
+      <div class="package-name">Growth</div>
+      <div class="package-setup">Setup: <strong>$1,750</strong></div>
+      <div class="package-price"><span class="dollar">$</span>875<span class="per">/mo</span></div>
+      <p class="package-desc">The best balance of speed and affordability. Your site launches with a strong core set of pages, built out further each month — while your marketing is already working.</p>
+      <ul class="package-includes">
+        <li><span class="check">✓</span> GBP Review &amp; Profile Optimization</li>
+        <li><span class="check">✓</span> Website — core pages at launch</li>
+        <li><span class="check">✓</span> Email marketing</li>
+        <li><span class="check">✓</span> Facebook presence &amp; posts</li>
+        <li><span class="check">✓</span> Month-to-month, no contract</li>
+      </ul>
+      <a href="https://marketbossai.com/contact" class="package-cta">Get Started →</a>
+    </div>
+
+    <div class="package-card">
+      <div class="package-name">Complete</div>
+      <div class="package-setup">Setup: <strong>$4,500</strong></div>
+      <div class="package-price"><span class="dollar">$</span>1,250<span class="per">/mo</span></div>
+      <p class="package-desc">The fastest path to your full local marketing system. Everything is built out right away, with the full monthly service active from day one.</p>
+      <ul class="package-includes">
+        <li><span class="check">✓</span> GBP Review &amp; Profile Optimization</li>
+        <li><span class="check">✓</span> Website — fully built at launch</li>
+        <li><span class="check">✓</span> Email marketing</li>
+        <li><span class="check">✓</span> Facebook presence &amp; posts</li>
+        <li><span class="check">✓</span> Month-to-month, no contract</li>
+      </ul>
+      <a href="https://marketbossai.com/contact" class="package-cta">Get Started →</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-grid">
+  <h2>Questions We Often Get</h2>
+  <details class="faq-item">
+    <summary>If I start with Starter, will I ever get the full website? <span style="color:var(--orange);">+</span></summary>
+    <div class="faq-answer">Yes — every plan builds toward the exact same complete system. Starting smaller just means it's built out gradually instead of all at once.</div>
+  </details>
+  <details class="faq-item">
+    <summary>Can I upgrade later? <span style="color:var(--orange);">+</span></summary>
+    <div class="faq-answer">Absolutely. If you move to a faster plan, we simply adjust your monthly payment and pick up the pace — nothing you've already built is lost or wasted.</div>
+  </details>
+  <details class="faq-item">
+    <summary>Is there a contract? <span style="color:var(--orange);">+</span></summary>
+    <div class="faq-answer">No. Every plan is month-to-month. Cancel anytime. No penalties, no paperwork.</div>
+  </details>
+</section>
+
+<section class="cta-section">
+  <h2 style="margin-bottom:.5rem;">Ready to Build Your Local Authority?</h2>
+  <p style="color:var(--muted);margin-bottom:1rem;">Book a free 30-minute call. No pitch. No pressure. Just honest advice.</p>
+  <div>
+    <a href="https://marketbossai.com/contact">Book Your Free Call →</a>
+    <a href="tel:7573227171" class="phone-link">📞 (757) 322-7171</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <a href="https://marketbossai.com">Market Boss AI</a> — Local SEO &amp; Website Design for Hampton Roads<br>
+  Virginia Beach, VA · Month-to-month, no contracts.
+</footer>
+
+</body>
+</html>
