@@ -96,7 +96,7 @@
     <div class="letter bad">F</div>
     <div>
       <div class="score">28/100</div>
-      <p style="color:var(--muted);font-size:.85rem;margin-top:.25rem;">Duda-built site with several SEO gaps. No title tag, no schema markup, and no clickable phone number. The Places API didn't find a GBP under this business name — may need verification or listing under a different name. The content is decent (~3,500 words) but needs technical infrastructure. A focused rebuild would transform visibility.</p>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:.25rem;">Duda-built site with major SEO gaps. No title tag, no schema markup, and no clickable phone number. The GBP exists and is actively used, but Google's own API cannot find it — indicating a discoverability issue. The website and GBP are disconnected. Fixing the GBP setup and adding schema to the website would be the fastest path to improved rankings.</p>
     </div>
   </div>
 </section>
@@ -115,15 +115,23 @@
   <h2><span class="icon">📌</span> The Principle: Your GBP Is Your New Homepage</h2>
   <div style="background:rgba(55,181,255,.06); border-left:4px solid var(--blue); padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin-bottom:1rem;">
     <p style="font-size:1rem; font-weight:600; margin-bottom:.5rem;">Your Google Business Profile is the new front door of your business.</p>
-    <p style="font-size:.85rem; color:var(--muted);">Places API search did not return a GBP under "Ocean View Heating and Cooling." The profile may be listed under a different business name, address, or may need verification. Jeff confirms a GBP exists — this finding should be updated with the correct listing details.</p>
+    <p style="font-size:.85rem; color:var(--muted);">The website at oceanviewhvac.com has no LocalBusiness schema, no clickable phone number, and no title tag. Meanwhile, the GBP is actively used for reviews but Google's own API can't find it. This means the website and GBP are operating as two separate systems instead of one unified presence. The fix is to connect them — add schema to the website, verify the GBP details, and make sure the business name, address, and phone match perfectly across both.</p>
   </div>
 </section>
 
 <section>
   <h2><span class="icon">🔍</span> Live GBP Data</h2>
-  <div class="review-quote" style="border-left:3px solid var(--red);padding:1rem;background:rgba(239,68,68,.06);border-radius:0 8px 8px 0;">
-    <strong style="color:var(--orange);">GBP NOT FOUND BY API SEARCH</strong>
-    <p style="margin-top:.5rem;color:var(--muted);font-size:.85rem;">The Google Places API did not return a listing under "Ocean View Heating and Cooling." Jeff confirms a GBP exists — it may be under a different business name or address. Once located, this section should be updated with the live data.</p>
+  <div class="review-quote" style="border-left:3px solid var(--orange);padding:1rem;background:rgba(249,115,22,.06);border-radius:0 8px 8px 0;">
+    <strong style="color:var(--orange);">⚠️ GBP EXISTS BUT NOT FOUND BY GOOGLE'S OWN API</strong>
+    <p style="margin-top:.5rem;color:var(--muted);font-size:.85rem;">Jeff confirms the business is actively using their Google Business Profile to capture and respond to reviews. However, Google's own Places API — the same system Google uses to match businesses to search queries — <strong>cannot find this listing</strong> under any variation of the business name, address, or website. This is a significant finding.</p>
+    <p style="margin-top:.5rem;color:var(--muted);font-size:.85rem;"><strong>What this means:</strong> The GBP exists but is not properly discoverable by Google's own systems. Possible causes:</p>
+    <ul style="margin-top:.5rem;padding-left:1.25rem;color:var(--muted);font-size:.85rem;">
+      <li>The business name on the GBP doesn't match what customers search for</li>
+      <li>Primary category is wrong or too generic</li>
+      <li>Address or service area fields are incomplete</li>
+      <li>Profile may not be fully verified or claimed under the correct Google account</li>
+    </ul>
+    <p style="margin-top:.5rem;color:var(--muted);font-size:.85rem;"><strong>Fix:</strong> Log into Google Business Profile Manager, verify the business name, address, category, and service area all match your actual business. Add the website URL <strong>oceanviewhvac.com</strong> to the profile so Google can connect them. This is a 30-minute fix that will immediately improve discoverability.</p>
   </div>
 </section>
 
@@ -155,13 +163,13 @@
 <section>
   <h2><span class="icon">🔧</span> The Fix List (Priority Order)</h2>
   <ul class="issues-list">
-    <li><span style="color:var(--red);font-weight:700;">1.</span> <strong>Claim / create a Google Business Profile</strong> — This is the #1 priority. No GBP = no map pack presence. Search for the business or create a new listing and verify it.</li>
+    <li><span style="color:var(--red);font-weight:700;">1.</span> <strong>Diagnose and fix the GBP discoverability issue</strong> — Log into Google Business Profile Manager. Verify the business name, address, phone, and website URL (oceanviewhvac.com) are all correct and consistent. Check that the primary category is set to "HVAC Contractor" not "General Contractor." This is the #1 priority because Google's own API can't find the profile.</li>
     <li><span style="color:var(--orange);font-weight:700;">2.</span> <strong>Add a proper title tag</strong> — "Ocean View Heating and Cooling | HVAC Services in Norfolk, VA" — include the city and primary service.</li>
     <li><span style="color:var(--orange);font-weight:700;">3.</span> <strong>Add LocalBusiness schema</strong> — Include name, address, phone, hours, service area, and business type (HVACBusiness).</li>
     <li><span style="color:var(--orange);font-weight:700;">4.</span> <strong>Make the phone number clickable</strong> — Add <code>&lt;a href="tel:757..."&gt;</code> so mobile users can tap to call.</li>
     <li><span style="color:var(--orange);font-weight:700;">5.</span> <strong>Fix heading hierarchy</strong> — Use proper &lt;h1&gt; and &lt;h2&gt; tags instead of divs with inline styles.</li>
     <li><span style="color:var(--orange);font-weight:700;">6.</span> <strong>Add service pages</strong> — Create dedicated pages for HVAC repair, installation, maintenance, commercial services.</li>
-    <li><span style="color:var(--orange);font-weight:700;">7.</span> <strong>Collect and display reviews</strong> — Add testimonials with schema markup to build trust.</li>
+    <li><span style="color:var(--orange);font-weight:700;">7.</span> <strong>Collect and display reviews on the website</strong> — Add testimonials with schema markup to build trust.</li>
     <li><span style="color:var(--gold);font-weight:700;">8.</span> <strong>Consider migrating off Duda</strong> — The platform limits SEO customization. A static site or Astro build would give full control.</li>
   </ul>
 </section>
@@ -195,11 +203,11 @@
     <tr><th>Metric</th><th>⭐ Ocean View H&amp;C</th><th>Ocean Air HVAC</th></tr>
     <tr><td>GBP Rating</td><td><strong style="color:var(--orange);">API not found</strong></td><td>4.4</td></tr>
     <tr><td>Google Reviews</td><td><strong style="color:var(--orange);">?</strong></td><td>13</td></tr>
-    <tr><td>GBP Category</td><td><strong style="color:var(--red);">NONE</strong></td><td>General Contractor</td></tr>
+    <tr><td>GBP Category</td><td><strong style="color:var(--orange);">API not found</strong></td><td>General Contractor</td></tr>
   </table>
   
   <div class="comp-verdict">
-    <p><strong class="warn">The Gap:</strong> Ocean Air HVAC has a verified GBP with 13 reviews and a 4.4-star rating. Ocean View Heating and Cooling's GBP was not found by the Places API search — it may be listed under a different name. Verifying and optimizing the GBP is the first step to closing the gap.</p>
+    <p><strong class="warn">The Gap:</strong> Ocean Air HVAC has a discoverable GBP with 13 reviews. Ocean View's GBP is active but not discoverable by Google's own API — meaning the profile needs attention. The fix is straightforward: verify the GBP details, add the correct website URL, and set the right category. Once connected, the website just needs schema and a title tag to start competing.</p>
   </div>
 </section>
 
