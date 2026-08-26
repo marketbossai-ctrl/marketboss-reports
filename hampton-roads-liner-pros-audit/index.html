@@ -42,6 +42,23 @@
   .tier { display: inline-block; background: var(--navy); color: var(--gold); padding: .2rem .7rem; border-radius: 20px; font-size: .85rem; font-weight: 700; margin-bottom: .6rem; }
   footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1.5rem; }
   footer a { color: var(--navy); text-decoration: none; font-weight: 600; }
+
+  .comp-section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; margin-bottom: 1.25rem; }
+  .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: .75rem; margin-bottom: 1rem; }
+  .comp-card { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+  .comp-card.highlight { border-color: var(--blue); background: rgba(55,181,255,.06); }
+  .comp-name { font-weight: 700; font-size: .85rem; margin-bottom: .25rem; }
+  .comp-rating { font-size: 1.2rem; font-weight: 700; }
+  .comp-stat { font-size: .75rem; color: var(--muted); }
+  .comp-table { width: 100%; border-collapse: collapse; font-size: .85rem; margin: 1rem 0; }
+  .comp-table th { text-align: left; color: var(--muted); font-weight: 600; padding: .5rem; border-bottom: 1px solid var(--border); font-size: .8rem; }
+  .comp-table td { padding: .4rem .5rem; border-bottom: 1px solid rgba(255,255,255,.05); }
+  .comp-table td:first-child { font-weight: 600; color: var(--muted); white-space: nowrap; }
+  .comp-verdict { background: rgba(55,181,255,.06); border-left: 3px solid var(--blue); padding: 1rem; border-radius: 0 8px 8px 0; margin-top: 1rem; }
+  .comp-verdict p { font-size: .9rem; margin: 0; }
+  .comp-cta { margin-top: .75rem !important; }
+  .comp-card .warn { color: var(--orange); }
+
 </style>
 </head>
 <body>
@@ -168,6 +185,49 @@
     <tr><td>Social</td><td>Facebook and Twitter links found. Activity level unknown.</td></tr>
     <tr><td>Email</td><td>No capture, no newsletter, no lead magnet.</td></tr>
   </table>
+</section>
+
+
+<section class="comp-section">
+  <h2><span class="icon">🏆</span> Competitor Comparison</h2>
+  <div class="comp-grid">
+    
+    <div class="comp-card highlight">
+      <div class="comp-name">⭐ Hampton Roads Liner Pros</div>
+      <div class="comp-rating" style="color:var(--gold);">★ N/A</div>
+      <div class="comp-stat">0 reviews</div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-name">Pools by Andrews</div>
+      <div class="comp-rating" style="color:var(--gold);">★ 5</div>
+      <div class="comp-stat">7 reviews</div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-name">Aqua Leisure Pools</div>
+      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
+      <div class="comp-stat">41 reviews</div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-name">Virginia Beach Pool Co</div>
+      <div class="comp-rating" style="color:var(--gold);">★ 4.7</div>
+      <div class="comp-stat">176 reviews</div>
+    </div>
+
+  </div>
+  
+  <table class="comp-table">
+    <tr><th>Metric</th><th>⭐ Hampton Roads Liner Pros</th><th>Pools by Andrews</th><th>Aqua Leisure Pools</th><th>Virginia Beach Pool </th></tr>
+<tr><td>GBP Rating</td><td><strong>N/A</strong></td><td>5</td><td>4.8</td><td>4.7</td></tr>
+<tr><td>Google Reviews</td><td><strong>0</strong></td><td>7</td><td>41</td><td>176</td></tr>
+<tr><td>GBP Category</td><td><strong>N/A</strong></td><td>swimming_pool</td><td>sporting_goods_store</td><td>service</td></tr>
+</table>
+  
+  <div class="comp-verdict">
+    <p><strong class="warn">The Gap:</strong> Virginia Beach Pool Co has 176 reviews and a 4.7-star rating. Your customers are finding them first. The Local Authority Blueprint closes this gap — starting with your GBP, then your website, then your content strategy.</p><p class="comp-cta"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;">Get a full competitor analysis from Market Boss AI →</a></p>
+  </div>
 </section>
 
 <section class="pitch">

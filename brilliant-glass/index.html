@@ -75,6 +75,23 @@
   footer a { color: var(--blue); text-decoration: none; font-weight: 600; }
   .hr { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
   .review-quote { background: rgba(255,255,255,.03); border-left: 3px solid var(--gold); padding: .75rem 1rem; margin: .5rem 0; border-radius: 0 8px 8px 0; font-size: .85rem; color: var(--muted); }
+
+  .comp-section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; margin-bottom: 1.25rem; }
+  .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: .75rem; margin-bottom: 1rem; }
+  .comp-card { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+  .comp-card.highlight { border-color: var(--blue); background: rgba(55,181,255,.06); }
+  .comp-name { font-weight: 700; font-size: .85rem; margin-bottom: .25rem; }
+  .comp-rating { font-size: 1.2rem; font-weight: 700; }
+  .comp-stat { font-size: .75rem; color: var(--muted); }
+  .comp-table { width: 100%; border-collapse: collapse; font-size: .85rem; margin: 1rem 0; }
+  .comp-table th { text-align: left; color: var(--muted); font-weight: 600; padding: .5rem; border-bottom: 1px solid var(--border); font-size: .8rem; }
+  .comp-table td { padding: .4rem .5rem; border-bottom: 1px solid rgba(255,255,255,.05); }
+  .comp-table td:first-child { font-weight: 600; color: var(--muted); white-space: nowrap; }
+  .comp-verdict { background: rgba(55,181,255,.06); border-left: 3px solid var(--blue); padding: 1rem; border-radius: 0 8px 8px 0; margin-top: 1rem; }
+  .comp-verdict p { font-size: .9rem; margin: 0; }
+  .comp-cta { margin-top: .75rem !important; }
+  .comp-card .warn { color: var(--orange); }
+
 </style>
 </head>
 <body>
@@ -225,6 +242,49 @@
     <tr><td>Social</td><td><span class="warn">Not evaluated</span> — likely inactive or inconsistent.</td></tr>
     <tr><td>Email</td><td><span class="bad">Missing</span> — zero capture mechanism. No way to follow up with interested customers.</td></tr>
   </table>
+</section>
+
+
+<section class="comp-section">
+  <h2><span class="icon">🏆</span> Competitor Comparison</h2>
+  <div class="comp-grid">
+    
+    <div class="comp-card highlight">
+      <div class="comp-name">⭐ Brilliant Glass</div>
+      <div class="comp-rating" style="color:var(--gold);">★ 4.9</div>
+      <div class="comp-stat">51 reviews</div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-name">Virginia Beach Glass &amp; Mirror</div>
+      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
+      <div class="comp-stat">78 reviews</div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-name">Atlantic Glass &amp; Mirror</div>
+      <div class="comp-rating" style="color:var(--gold);">★ 4.1</div>
+      <div class="comp-stat">50 reviews</div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-name">Shower Door VB</div>
+      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
+      <div class="comp-stat">78 reviews</div>
+    </div>
+
+  </div>
+  
+  <table class="comp-table">
+    <tr><th>Metric</th><th>⭐ Brilliant Glass</th><th>Virginia Beach Glass</th><th>Atlantic Glass &amp; Mir</th><th>Shower Door VB</th></tr>
+<tr><td>GBP Rating</td><td><strong>4.9</strong></td><td>4.8</td><td>4.1</td><td>4.8</td></tr>
+<tr><td>Google Reviews</td><td><strong>51</strong></td><td>78</td><td>50</td><td>78</td></tr>
+<tr><td>GBP Category</td><td><strong>building_materials_store</strong></td><td>building_materials_store</td><td>N/A</td><td>building_materials_store</td></tr>
+</table>
+  
+  <div class="comp-verdict">
+    <p><strong class="warn">The Gap:</strong> Virginia Beach Glass &amp; Mirror has 78 reviews and a 4.8-star rating. Your customers are finding them first. The Local Authority Blueprint closes this gap — starting with your GBP, then your website, then your content strategy.</p><p class="comp-cta"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;">Get a full competitor analysis from Market Boss AI →</a></p>
+  </div>
 </section>
 
 <section class="pitch">
