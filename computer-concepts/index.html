@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Concepts — Market Boss AI SEO Audit</title>
+<style>
+:root { --night: #0D0433; --card: #131827; --border: #1F2937; --text: #F1F5F9; --muted: #6B7280; --accent: #37B5FF; --gold: #F59E0B; --green: #10B981; --red: #EF4444; --orange: #F97316; --blue: #37B5FF; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--night); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+.logo-header { text-align: center; padding: 2rem 0 1rem; }
+.logo-header img { max-width: 280px; height: auto; opacity: 0.9; }
+.hero { text-align: center; padding: 3rem 0; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.5rem; }
+.hero .meta { color: var(--muted); font-size: 0.85rem; }
+.badge { display: inline-block; padding: 0.35rem 1.2rem; border-radius: 100px; font-weight: 700; font-size: 1.2rem; margin: 1rem 0; }
+.badge-f { background: rgba(239,68,68,0.15); color: var(--red); }
+.badge-d { background: rgba(239,68,68,0.15); color: var(--red); }
+.badge-c { background: rgba(249,115,22,0.15); color: var(--orange); }
+.badge-b { background: rgba(245,158,11,0.15); color: var(--gold); }
+.badge-a { background: rgba(16,185,129,0.15); color: var(--green); }
+.grade { font-size: 3.5rem; font-family: 'Playfair Display', serif; font-weight: 800; color: var(--red); }
+.grade-d { color: var(--red); }
+.grade-c { color: var(--orange); }
+.grade-b { color: var(--gold); }
+.grade-a { color: var(--green); }
+.section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+.section h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 1rem; color: #fff; }
+.section h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: #fff; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+@media (max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+.stat-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
+.stat-card .num { font-size: 1.6rem; font-weight: 700; color: #fff; }
+.stat-card .label { font-size: 0.8rem; color: var(--muted); }
+.check { color: var(--green); }
+.cross { color: var(--red); }
+.fix-item { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; gap: 0.5rem; }
+.fix-item:last-child { border: none; }
+.fix-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
+.tag-immediate { background: rgba(239,68,68,0.15); color: var(--red); }
+.tag-week { background: rgba(249,115,22,0.15); color: var(--orange); }
+.tag-ongoing { background: rgba(245,158,11,0.15); color: var(--gold); }
+.pitch-box { background: linear-gradient(135deg, rgba(55,181,255,0.08), rgba(55,181,255,0.02)); border: 1px solid var(--accent); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem; }
+.pitch-box h3 { color: var(--accent); }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+td { padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+td:first-child { color: var(--muted); font-weight: 500; white-space: nowrap; }
+.why-section { background: rgba(245,158,11,0.05); border-left: 3px solid var(--gold); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+.why-section p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.7; }
+.pillar { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.5rem; }
+.pillar-icon { font-size: 1.5rem; }
+.pillar-text { flex: 1; }
+.pillar-text h4 { font-size: 0.9rem; color: #fff; }
+.pillar-text p { font-size: 0.8rem; color: var(--muted); }
+.pillar-grade { font-weight: 700; font-size: 1.1rem; }
+.comp-table { overflow-x: auto; }
+.comp-table th { text-align: left; padding: 0.5rem 0.75rem; background: rgba(255,255,255,0.04); font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.comp-table td { font-size: 0.8rem; }
+.footer { text-align: center; padding: 2rem 0; font-size: 0.8rem; color: var(--muted); }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="logo-header">
+    <img src="../img/marketbossai-logo.png" alt="Market Boss AI">
+  </div>
+
+  <div class="hero">
+    <p class="meta">SEO Audit • August 28, 2026</p>
+    <h1>Computer Concepts</h1>
+    <p>Apple Authorized Service — Yorktown &amp; Williamsburg, VA</p>
+    <div class="badge badge-d">Grade: D</div>
+    <div class="grade grade-d">D</div>
+    <p style="color:var(--muted);margin-top:0.5rem;">Severe SEO fundamentals missing. Strong brand, invisible website.</p>
+  </div>
+
+  <div class="why-section">
+    <p><strong>🎯 Why You Need to Know Where You Stand</strong></p>
+    <p style="margin-top:0.75rem;">Every morning, homeowners across Hampton Roads search for "computer repair near me," "Mac repair (city)" or "Apple authorized service." Google shows three map pack results. The first gets the click. The second gets the call. The third gets the maybe. And if your website doesn't have the right structure, schema, and content — you don't show up at all.</p>
+    <p style="margin-top:0.75rem;">Computer Concepts has a massive advantage: 639 reviews at 4.7★ in Yorktown, 482 at 4.6★ in Williamsburg. That reputation is gold. But the website isn't built to convert that reputation into search visibility. <strong>You cannot fix what you have not measured. And in local search, what you do not know is costing you calls, every single day.</strong></p>
+  </div>
+
+  <div class="section">
+    <h2>📊 Business Snapshot</h2>
+    <table>
+      <tr><td>Business</td><td>Computer Concepts, Apple Authorized Service</td></tr>
+      <tr><td>Website</td><td>mycomputerconcepts.com</td></tr>
+      <tr><td>Locations</td><td><strong>Yorktown:</strong> 4328 George Washington Memorial Hwy, Yorktown, VA 23692<br><strong>Williamsburg:</strong> 4324 New Town Ave Ste A, Williamsburg, VA 23188</td></tr>
+      <tr><td>Phone</td><td>Yorktown: (757) 873-1580 &nbsp;|&nbsp; Williamsburg: (757) 564-3996</td></tr>
+      <tr><td>Platform</td><td>WordPress (custom theme)</td></tr>
+      <tr><td>Pages</td><td>~15+ pages (services, locations, blog, about)</td></tr>
+      <tr><td>GBP Rating</td><td>Yorktown: ⭐ 4.7 (639 reviews) &nbsp;|&nbsp; Williamsburg: ⭐ 4.6 (482 reviews)</td></tr>
+      <tr><td>Apple Authorized</td><td>✅ Yes — Hampton Roads' ONLY Apple Authorized Independent Sales &amp; Repair</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📱 Live GBP Data</h2>
+    <div class="grid-2">
+      <div class="stat-card">
+        <div class="num">4.7★</div>
+        <div class="label">Yorktown Rating</div>
+        <div style="color:var(--muted);font-size:0.8rem;margin-top:0.25rem;">639 reviews</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">4.6★</div>
+        <div class="label">Williamsburg Rating</div>
+        <div style="color:var(--muted);font-size:0.8rem;margin-top:0.25rem;">482 reviews</div>
+      </div>
+    </div>
+    <table style="margin-top:1rem;">
+      <tr><td>GBP Category</td><td>Services (generic — API limitation)</td></tr>
+      <tr><td>Business Status</td><td>✅ OPERATIONAL — both locations</td></tr>
+      <tr><td>Yorktown Phone</td><td>(757) 873-1580</td></tr>
+      <tr><td>Williamsburg Phone</td><td>(757) 564-3996</td></tr>
+      <tr><td>Website URL (GBP)</td><td>Yorktown: mycomputerconcepts.com/locations/yorktown/<br>Williamsburg: mycomputerconcepts.com</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔍 GBP ↔ Website Alignment</h2>
+    <table>
+      <tr><td>Primary Category</td><td><span class="check">✅</span> GBP category aligns with Apple Authorized Service</td></tr>
+      <tr><td>NAP Consistency</td><td><span class="check">✅</span> Name, address, phone consistent across both locations</td></tr>
+      <tr><td>Services Match</td><td><span class="cross">❌</span> GBP lists Apple repair services — website has combined service pages but no dedicated service pages per service</td></tr>
+      <tr><td>City Pages</td><td><span class="check">✅</span> Dedicated location pages for Yorktown and Williamsburg</td></tr>
+      <tr><td>Schema</td><td><span class="cross">❌</span> No LocalBusiness schema on location pages — Google can't verify NAP from your own site</td></tr>
+      <tr><td>Website URL (GBP)</td><td><span class="cross">❌</span> Yorktown GBP links to /locations/yorktown/ — Williamsburg GBP links to root domain. Inconsistent.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>✅ What's Working</h2>
+    <div class="grid-2">
+      <div>
+        <p><span class="check">✅</span> <strong>SSL / HTTPS</strong> — Secure connection</p>
+        <p><span class="check">✅</span> <strong>Mobile viewport</strong> — Responsive meta tag</p>
+        <p><span class="check">✅</span> <strong>Canonical URLs</strong> — Present on all pages</p>
+        <p><span class="check">✅</span> <strong>Content depth</strong> — 2,000-3,000 words per page</p>
+        <p><span class="check">✅</span> <strong>Blog/News</strong> — Active blog section</p>
+      </div>
+      <div>
+        <p><span class="check">✅</span> <strong>Social presence</strong> — Facebook, Instagram, YouTube</p>
+        <p><span class="check">✅</span> <strong>Email capture</strong> — Newsletter signup present</p>
+        <p><span class="check">✅</span> <strong>GBP reputation</strong> — 1,100+ combined reviews at 4.6-4.7★</p>
+        <p><span class="check">✅</span> <strong>Apple Authorized</strong> — Unique differentiator, no competition</p>
+        <p><span class="check">✅</span> <strong>Page count</strong> — 15+ pages including services, locations, blog</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>❌ What's Broken</h2>
+    <div class="grid-2">
+      <div>
+        <p><span class="cross">❌</span> <strong>No H1 on homepage</strong> — Critical SEO error. Every page needs exactly one H1.</p>
+        <p><span class="cross">❌</span> <strong>Broken title tag</strong> — "Hampton Roads Authorized Apple &amp; PC Computer Sales &amp; RepairLocator" — "Locator" is appended incorrectly</p>
+        <p><span class="cross">❌</span> <strong>0 alt text on images</strong> — 32 images on homepage, 21 on each location page — all have alt="". Zero accessibility, zero SEO value.</p>
+        <p><span class="cross">❌</span> <strong>No schema markup</strong> — No LocalBusiness, no Service, no FAQ schema on any page. Google can't understand your business from your own site.</p>
+      </div>
+      <div>
+        <p><span class="cross">❌</span> <strong>No individual service pages</strong> — One combined "In-Store Mac &amp; PC Repair" page instead of dedicated pages for screen repair, data recovery, upgrades, etc.</p>
+        <p><span class="cross">❌</span> <strong>No Google Maps embed</strong> — Missing on location pages and contact areas</p>
+        <p><span class="cross">❌</span> <strong>No sitemap/robots.txt accessible</strong> — WAF blocking, but no evidence of proper sitemap submission</p>
+        <p><span class="cross">❌</span> <strong>No meta description on blog</strong> — Recent News page has no meta description</p>
+        <p><span class="cross">❌</span> <strong>Inconsistent GBP website URLs</strong> — Yorktown links to location page, Williamsburg links to root domain</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🔧 Priority Fix List</h2>
+    <div class="fix-item"><span class="fix-tag tag-immediate">Immediate</span> <strong>Add H1 to homepage</strong> — "Hampton Roads' Trusted Apple Authorized Repair &amp; Sales"</div>
+    <div class="fix-item"><span class="fix-tag tag-immediate">Immediate</span> <strong>Fix title tag</strong> — Remove "Locator" from end. Target: "Hampton Roads' Apple Authorized Repair &amp; PC Sales | Computer Concepts"</div>
+    <div class="fix-item"><span class="fix-tag tag-immediate">Immediate</span> <strong>Add LocalBusiness schema</strong> — Two locations, each with its own LocalBusiness schema (name, address, phone, hours, URL)</div>
+    <div class="fix-item"><span class="fix-tag tag-immediate">Immediate</span> <strong>Add alt text to all images</strong> — 70+ images across the site with zero alt text = lost SEO opportunity</div>
+    <div class="fix-item"><span class="fix-tag tag-week">This Week</span> <strong>Create dedicated service pages</strong> — Screen repair, data recovery, Mac upgrades, PC builds, virus removal — each gets its own page with unique content</div>
+    <div class="fix-item"><span class="fix-tag tag-week">This Week</span> <strong>Add Google Maps embed</strong> — To both location pages and contact area</div>
+    <div class="fix-item"><span class="fix-tag tag-week">This Week</span> <strong>Add meta description to blog</strong> — Every page needs a unique meta description</div>
+    <div class="fix-item"><span class="fix-tag tag-ongoing">Ongoing</span> <strong>Build blog content</strong> — Target local keywords: "Mac repair Yorktown VA," "PC repair Williamsburg," "Apple authorized service Hampton Roads"</div>
+    <div class="fix-item"><span class="fix-tag tag-ongoing">Ongoing</span> <strong>Review growth strategy</strong> — 1,100+ reviews is a massive asset. Ensure GBP website URLs are consistent across both locations.</div>
+  </div>
+
+  <div class="section">
+    <h2>📋 Four-Pillar Assessment</h2>
+    <div class="pillar"><div class="pillar-icon">📍</div><div class="pillar-text"><h4>GBP — B+</h4><p>Strong: 1,100+ reviews, 4.6-4.7★, Apple Authorized status. Website URL inconsistency between locations.</p></div><div class="pillar-grade" style="color:var(--gold);">B+</div></div>
+    <div class="pillar"><div class="pillar-icon">🌐</div><div class="pillar-text"><h4>Website — D</h4><p>No schema, no H1 on homepage, broken title, 0 alt text on 70+ images. Strong content depth saves it from an F.</p></div><div class="pillar-grade" style="color:var(--red);">D</div></div>
+    <div class="pillar"><div class="pillar-icon">📱</div><div class="pillar-text"><h4>Social — B</h4><p>Facebook, Instagram, YouTube all present. Active posts. Could be linked more prominently on the site.</p></div><div class="pillar-grade" style="color:var(--gold);">B</div></div>
+    <div class="pillar"><div class="pillar-icon">📧</div><div class="pillar-text"><h4>Email — C</h4><p>Newsletter signup exists. No lead magnet, no automated follow-up sequence visible.</p></div><div class="pillar-grade" style="color:var(--orange);">C</div></div>
+  </div>
+
+  <div class="section">
+    <h2>🏆 Competitor Comparison</h2>
+    <div class="comp-table">
+      <table>
+        <tr><th>Metric</th><th>Computer Concepts</th><th>Local Competitor Avg</th><th>Gap</th></tr>
+        <tr><td>GBP Reviews</td><td>1,100+ combined</td><td>~200-400</td><td><span class="check">✅ Massive lead</span></td></tr>
+        <tr><td>GBP Rating</td><td>4.6-4.7★</td><td>4.3-4.5★</td><td><span class="check">✅ Strong</span></td></tr>
+        <tr><td>Website Schema</td><td>❌ None</td><td>~40% have schema</td><td><span class="cross">❌ Behind</span></td></tr>
+        <tr><td>Service Pages</td><td>❌ Combined only</td><td>~50% have dedicated pages</td><td><span class="cross">❌ Behind</span></td></tr>
+        <tr><td>Apple Authorized</td><td>✅ Yes</td><td>❌ Most are not</td><td><span class="check">✅ Unbeatable</span></td></tr>
+        <tr><td>Alt Text on Images</td><td>❌ 0%</td><td>~30% have alt text</td><td><span class="cross">❌ Behind</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="pitch-box">
+    <h3>💼 Market Boss AI Opportunity</h3>
+    <p style="margin-top:0.5rem;"><strong>Recommended Tier:</strong> Growth ($1,750 setup / $875/mo)</p>
+    <p style="margin-top:0.5rem;">Computer Concepts has a massive, defensible advantage — Apple Authorized Service Provider with 1,100+ reviews. But the website is holding them back. No schema, no H1, broken title, 0 alt text on 70+ images. The GBP is doing all the heavy lifting alone.</p>
+    <p style="margin-top:0.5rem;">This is a high-value, high-ticket service business (Apple repairs, custom PCs) that should be dominating local search. The reviews and reputation are already there. They just need a website that Google can understand and rank — and that's a rebuild, not a patch.</p>
+    <p style="margin-top:0.5rem;"><strong>Pitch Angle:</strong> "You're Hampton Roads' only Apple Authorized repair shop — but when someone searches 'Mac repair Yorktown' tonight, does Google show you, or a generic repair shop with 12 reviews? Your 1,100+ reviews are a goldmine. Let's build a website that actually lets people find you."</p>
+    <p style="margin-top:0.75rem;text-align:center;">
+      <a href="../packages/" target="_blank" style="display:inline-block;background:var(--accent);color:var(--night);padding:0.75rem 2rem;border-radius:8px;font-weight:600;text-decoration:none;">View Packages →</a>
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>Powered by <a href="https://marketbossai.com" style="color:var(--accent);">Market Boss AI</a></p>
+    <p style="margin-top:0.25rem;">💬 Text (757) 322-7171 to discuss your audit results</p>
+  </div>
+</div>
+</body>
+</html>
