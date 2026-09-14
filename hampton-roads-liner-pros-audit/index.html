@@ -3,312 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hampton Roads Liner Pros — SEO Audit | Market Boss AI</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<title>Local SEO Audit — Hampton Roads Liner Pros | Market Boss AI</title>
+<meta name="description" content="4-driver local SEO audit for Hampton Roads Liner Pros, Poquoson, VA. Grade N/A — GBP not found via API.">
 <style>
-  :root { --night: #0D0433; --card: #131827; --border: #1F2937; --text: #F1F5F9; --muted: #6B7280; --accent: #37B5FF; --gold: #F59E0B; --green: #10B981; --red: #EF4444; --orange: #F97316; --blue: #37B5FF; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--night); color: var(--text); line-height: 1.7; }
-  .logo-bar { text-align: center; padding: 2rem 1.5rem 0; background: #0D0433; }
-  .logo-bar img { max-width: 280px; height: auto; display: block; margin: 0 auto; }
-  .hero { background: linear-gradient(135deg, #0D0433, #1a0a5e, #2563EB); padding: 2.5rem 1.5rem; text-align: center; }
-  .hero .wrap { max-width: 800px; margin: 0 auto; }
-  .hero .badge { display: inline-block; background: rgba(55,181,255,.15); border: 1px solid rgba(55,181,255,.25); color: var(--accent); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: .25rem .75rem; border-radius: 20px; margin-bottom: .75rem; }
-  .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: .4rem; }
-  .hero .sub { color: #BFDBFE; font-size: 1rem; margin-bottom: .25rem; }
-  .hero .meta { color: #93C5FD; font-size: .8rem; }
-  .hero .phone { color: var(--gold); font-weight: 700; font-size: .9rem; margin-top: .75rem; }
-  main { max-width: 860px; margin: 2rem auto; padding: 0 1.5rem 3rem; }
-  section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; }
-  h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
-  .grade { display: flex; align-items: center; gap: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; }
-  .grade .letter { font-family: 'Playfair Display', Georgia, serif; font-size: 3.5rem; font-weight: 800; line-height: 1; }
-  .grade .letter.good { color: var(--green); }
-  .grade .letter.warn { color: var(--orange); }
-  .grade .letter.bad { color: var(--red); }
-  .grade .score { font-size: .85rem; color: var(--muted); }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
-  .stat-card { text-align: center; background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
-  .stat-card .num { font-size: 1.5rem; font-weight: 800; font-family: 'Playfair Display', Georgia, serif; }
-  .stat-card .num.good { color: var(--green); }
-  .stat-card .num.warn { color: var(--orange); }
-  .stat-card .num.bad { color: var(--red); }
-  .stat-card .label { font-size: .75rem; color: var(--muted); }
-  .issues-list { list-style: none; }
-  .issues-list li { padding: .4rem 0; font-size: .85rem; display: flex; align-items: flex-start; gap: .5rem; border-bottom: 1px solid rgba(255,255,255,.04); }
-  .issues-list li:last-child { border-bottom: none; }
-  .aln-row { display: flex; align-items: center; padding: .5rem 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: .85rem; }
-  .aln-row:last-child { border-bottom: none; }
-  .aln-label { min-width: 100px; font-weight: 600; color: var(--muted); font-size: .8rem; }
-  .aln-good { color: var(--green); font-weight: 700; }
-  .aln-warn { color: var(--orange); font-weight: 700; }
-  .aln-bad { color: var(--red); font-weight: 700; }
-  .review-quote { color: #d1d5db; font-size: .85rem; font-style: italic; margin-bottom: .25rem; }
-  .review-author { color: var(--muted); font-size: .75rem; }
-  .pitch { text-align: center; background: linear-gradient(135deg, rgba(55,181,255,.06), rgba(37,99,235,.06)); border: 1px solid rgba(55,181,255,.15); }
-  .tier-badge { display: inline-block; background: rgba(55,181,255,.12); border: 1px solid rgba(55,181,255,.2); color: var(--accent); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: .25rem .75rem; border-radius: 20px; margin-bottom: .5rem; }
-  .pitch .quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; margin: .5rem 0; }
-  .pitch p { font-size: .9rem; color: #d1d5db; margin-bottom: .5rem; }
-  .pitch-cta { display: inline-block; background: #F37F04; color: #fff; padding: .75rem 1.5rem; border-radius: 8px; font-weight: 700; font-size: .9rem; text-decoration: none; margin-top: .5rem; transition: .2s; }
-  .pitch-cta:hover { background: #E07000; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(243,127,4,.3); }
-  footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 2rem; border-top: 1px solid var(--border); }
-  footer a { color: var(--accent); text-decoration: none; }
-  .hr { border: none; border-top: 1px solid var(--border); margin: .75rem 0; }
-  .comp-section { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; }
-  .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: .75rem; margin-bottom: .75rem; }
-  .comp-card { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 10px; padding: .85rem; text-align: center; }
-  .comp-card.highlight { border-color: var(--blue); background: rgba(55,181,255,.06); }
-  .comp-name { font-weight: 700; font-size: .8rem; margin-bottom: .2rem; }
-  .comp-rating { font-size: 1.1rem; font-weight: 700; }
-  .comp-stat { font-size: .7rem; color: var(--muted); }
-  .comp-table { width: 100%; border-collapse: collapse; font-size: .8rem; margin: .75rem 0; }
-  .comp-table th { text-align: left; color: var(--muted); font-weight: 600; padding: .4rem; border-bottom: 1px solid var(--border); font-size: .75rem; }
-  .comp-table td { padding: .35rem .4rem; border-bottom: 1px solid rgba(255,255,255,.05); }
-  .comp-table td:first-child { font-weight: 600; color: var(--muted); white-space: nowrap; }
-  .comp-verdict { background: rgba(55,181,255,.06); border-left: 3px solid var(--blue); padding: .85rem; border-radius: 0 8px 8px 0; margin-top: .75rem; }
-  .comp-verdict p { font-size: .85rem; margin: 0; }
-  .comp-cta { margin-top: .5rem !important; }
-  .comp-card .warn { color: var(--orange); }
-  @media (max-width: 768px) {
-    .comp-grid { grid-template-columns: 1fr 1fr !important; }
-    .hero h1 { font-size: 1.4rem !important; }
-    .hero { padding: 1.5rem 1rem !important; }
-    main { padding: 0 1rem 2rem !important; }
-    main section { padding: 1rem !important; }
-    .grade { flex-direction: column !important; text-align: center !important; }
-    .grade .letter { font-size: 2.8rem !important; }
-    .comp-table { font-size: .72rem !important; }
-    .comp-table th, .comp-table td { padding: .25rem !important; }
-    .grid-2 { grid-template-columns: 1fr !important; }
-    .grid-3 { grid-template-columns: 1fr !important; }
-    .stat-card .num { font-size: 1.2rem !important; }
-    .pitch .quote { font-size: .95rem !important; }
-  }
-  @media (max-width: 480px) {
-    body { font-size: 14px !important; }
-    .comp-grid { grid-template-columns: 1fr 1fr !important; gap: .4rem !important; }
-    .comp-name { font-size: .7rem !important; }
-    .comp-rating { font-size: .95rem !important; }
-    .hero h1 { font-size: 1.2rem !important; }
-    .comp-table { font-size: .65rem !important; display: block !important; overflow-x: auto !important; }
-    .logo-bar img { max-width: 200px !important; }
-  }
-
-  .why-audit { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; }
-  .why-audit h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
-  .why-content p { font-size: .88rem; color: #d1d5db; margin-bottom: .75rem; line-height: 1.7; }
-  .why-content p:last-child { margin-bottom: 0; font-weight: 600; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a2e;line-height:1.6;background:#f0f2f5}
+.header{background:#1a1a2e;color:#fff;padding:32px 24px;text-align:center}
+.header h1{font-size:1.5rem;margin-bottom:4px}
+.header .sub{color:#94a3b8;font-size:0.9rem}
+.container{max-width:800px;margin:0 auto;padding:24px}
+.grade-card{background:#fff;border-radius:12px;padding:32px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,0.06);text-align:center}
+.grade-badge{display:inline-block;width:100px;height:100px;border-radius:50%;line-height:100px;font-size:2.5rem;font-weight:700;margin-bottom:12px}
+.grade-na{background:#e2e8f0;color:#64748b}
+.grade-text{font-size:1.1rem;color:#475569;margin-bottom:16px}
+.grade-text span{font-weight:700;color:#1a1a2e}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat-box{padding:12px;background:#f8fafc;border-radius:8px;text-align:center}
+.stat-num{font-size:1.3rem;font-weight:700;color:#2563eb}
+.stat-lbl{font-size:0.75rem;color:#64748b;margin-top:2px}
+.section{background:#fff;border-radius:12px;padding:28px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.section h2{font-size:1.2rem;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #f1f5f9}
+.working-item{display:flex;gap:10px;padding:8px 0;align-items:flex-start}
+.working-item .icon{color:#15803d;font-weight:700;min-width:20px}
+.missing-item{display:flex;gap:10px;padding:8px 0;align-items:flex-start}
+.missing-item .icon{color:#b91c1c;font-weight:700;min-width:20px}
+.pillar-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pillar-card{background:#f8fafc;border-radius:8px;padding:16px;border:1px solid #e2e8f0}
+.pillar-card h3{font-size:0.9rem;color:#2563eb;margin-bottom:4px}
+.pillar-card p{font-size:0.82rem;color:#64748b}
+.review-banner{background:#dcfce7;border:1px solid #86efac;border-radius:8px;padding:14px 18px;margin-bottom:24px;font-size:0.88rem;color:#166534;display:flex;align-items:center;gap:8px}
+.review-banner a{color:#15803d;font-weight:600}
+.pricing-card{background:#fff;border-radius:12px;padding:28px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,0.06);text-align:center}
+.btn{display:inline-block;background:#2563eb;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem}
+.cta-box{background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:24px;text-align:center;margin-bottom:24px}
+.cta-box h2{font-size:1.1rem;margin-bottom:8px}
+.cta-box p{color:#475569;font-size:0.9rem;margin-bottom:16px}
+.footer{text-align:center;padding:24px;color:#94a3b8;font-size:0.82rem}
 </style>
 </head>
 <body>
-
-<div class="logo-bar"><img src="/marketboss-reports/assets/audit-logo.jpg" alt="Market Boss AI"></div>
-<div class="hero">
-  <div class="wrap">
-    <div class="badge">One-Page SEO Report</div>
-    <h1>Hampton Roads Liner Pros — SEO Audit</h1>
-    <p class="sub">Swimming pool liner replacement & installation — serving all of Hampton Roads</p>
-    <p class="meta">hrlinerpros.com · August 25, 2026</p>
-    <span class="phone">📞 Call or Text Jeff Wilson Direct: (757) 322-7171</span>
-  </div>
+<div class="header">
+<h1>🎩 Local SEO Audit</h1>
+<div class="sub">Hampton Roads Liner Pros · Poquoson, VA</div>
 </div>
-  <span style="color:#6B7280;font-size:.85rem;">Market Boss AI — Virginia Beach, VA</span>
+<div class="container">
+
+<div class="review-banner">⭐ If we helped you with your visibility and published your article, please <a href="https://search.google.com/local/writereview?placeid=ChIJBbqXfsO_uokRaTEPeNbe45o">leave Market Boss AI a review here</a> — it helps us continue helping local businesses like yours.</div>
+
+<div class="grade-card">
+<div class="grade-badge grade-na">N/A</div>
+<div class="grade-text"><span>Grade: N/A</span> — GBP not found via Google's database. This is the single biggest opportunity.</div>
+<div class="stat-row">
+<div class="stat-box"><div class="stat-num">?</div><div class="stat-lbl">GBP Rating</div></div>
+<div class="stat-box"><div class="stat-num">?</div><div class="stat-lbl">GBP Reviews</div></div>
+<div class="stat-box"><div class="stat-num">❌</div><div class="stat-lbl">In Map Pack?</div></div>
+<div class="stat-box"><div class="stat-num">Poquoson</div><div class="stat-lbl">Service Area</div></div>
 </div>
-
-
-
-<div class="grade-banner">
-  <div class="grade">
-    <div class="letter">D</div>
-    <div class="txt">
-      <strong>OVERALL GRADE: D</strong>
-      One page. One chance. Right now that one page is missing nearly every element Google needs to rank for local pool searches in Hampton Roads.
-    <span class="phone">📞 Call or Text Jeff Wilson Direct: (757) 322-7171</span>
-  </div>
 </div>
 
-<main>
+<div class="section" style="background:#fef9c3;border:1px solid #fde68a">
+<h2>⚠️ GBP Not Found Via API</h2>
+<p>I searched for Hampton Roads Liner Pros across Google's databases and was not able to find it returning results under that name. This can happen for a few reasons — the profile may be unverified, may need category or service area updates, or may not be fully indexed yet. Either way, <strong>this is the single biggest opportunity to get in front of homeowners searching for pool liners in Poquoson and Hampton Roads.</strong></p>
+</div>
 
-<section>
-  <h2><span class="icon">🏆</span> Overall SEO Grade</h2>
-  <div class="grade">
-    <div class="letter bad">D</div>
-    <div>
-      <div class="score">38/100</div>
-      <p style="color:var(--muted);font-size:.85rem;margin-top:.25rem;">No Google Business Profile at all — the single biggest gap. The website exists but has no SEO structure, no schema, no service pages, and no local content. Adding a GBP alone would be a 30-point jump. This is a ground-floor opportunity.</p>
-    </div>
-  </div>
-</section>
-<section class="why-audit">
-  <h2><span class="icon">🎯</span> Why You Need to Know Where You Stand</h2>
-  <div class="why-content">
-    <p>Here is a hard truth about local search in Hampton Roads.</p>
-    <p>Every morning, thousands of homeowners in Virginia Beach, Norfolk, Chesapeake, and Suffolk pull out their phones and type a search. "Roof repair near me." "HVAC contractor." "Laundry pickup." "Pool liner replacement."</p>
-    <p>Google shows them three businesses in the map pack. The first one gets the click. The second one gets the call. The third one gets the maybe.</p>
-    <p>Your business is either in that map pack, or it is not. There is no partial credit for having a website. There is no consolation prize for having a nice Facebook page. If Google cannot find your Google Business Profile, cannot match it to the search someone just typed, and cannot connect it to a website that tells a clear story about what you do and where you serve, you are invisible. And invisible means your competitor gets the call.</p>
-    <p>Most business owners do not know where they actually stand. They have a website. They have a Google profile. They assume that is enough. It is not. Google changes its algorithm hundreds of times a year. Your competitors are not standing still. And the business that was ranking second last month can vanish from the map pack overnight if their profile falls out of date, their reviews go quiet, or their website stops loading fast enough.</p>
-    <p>Knowing your exact position, your exact grade, and your exact gaps is not optional. It is the difference between being the first name a homeowner sees when they need help, and being the name they scroll past on page two.</p>
-    <p>That is what an SEO audit tells you. Not guesses. Not assumptions. A real, data-driven look at where your business stands in the neighborhoods that matter to you, and exactly what needs to change to get you where you want to be.</p>
-    <p>You cannot fix what you have not measured. And in local search, what you do not know is costing you calls, every single day.</p>
-  </div>
-</section>
-<section class="principle">
-  <h2><span class="icon">📌</span> The Principle: Your GBP Is Your New Homepage</h2>
-  <div style="background:rgba(55,181,255,.06); border-left:4px solid var(--blue); padding:1rem 1.25rem; border-radius:0 8px 8px 0; margin-bottom:1rem;">
-    <p style="font-size:1rem; font-weight:600; margin-bottom:.5rem;">"Google looks at your Business Profile first. Then it checks your website. If they don't match — what you call yourself, what services you offer, where you work — Google can't trust either of them. Your GBP is your front door. Your website is what's inside. They have to say the same thing."</p>
-    <p style="color:var(--muted); font-size:.85rem;">— Market Boss AI • Local Authority Blueprint</p>
-  </div>
-  <p style="color:var(--muted); font-size:.9rem;">This audit measures every gap between the two. Where they match, you're building trust with Google. Where they don't, you're leaving ranking potential on the table.</p>
-</section>
+<div class="section">
+<h2>✅ What's Working</h2>
+<div class="working-item"><span class="icon">✅</span><div><strong>Existing Spotlight Article</strong> — Feature published on VBSpotlight builds initial online presence.</div></div>
+<div class="working-item"><span class="icon">✅</span><div><strong>Local Market Demand</strong> — Poquoson/Yorktown area has strong pool ownership with limited competing pool liner services.</div></div>
+<div class="working-item"><span class="icon">✅</span><div><strong>Niche Service</strong> — Pool liners are a specialized, high-intent search. Customers searching are ready to buy.</div></div>
+</div>
 
-<section>
-  <h2>Business Snapshot</h2>
-  <table>
-    <tr><td>Business</td><td>Hampton Roads Liner Pros</td></tr>
-    <tr><td>Services</td><td>Vinyl pool liner replacement, in-ground pool builds, paver walkways, concrete</td></tr>
-    <tr><td>Location</td><td>Virginia Beach, VA (serves all Hampton Roads, roughly 2-hour radius)</td></tr>
-    <tr><td>Phone</td><td>(757) 713-4678</td></tr>
-    <tr><td>Email</td><td>hrlinerpros@gmail.com</td></tr>
-    <tr><td>Hours</td><td>Not listed on website</td></tr>
-    <tr><td>Pages</td><td>6 (home, contact form, finance app, gallery stub — essentially a single-page site)</td></tr>
-    <tr><td>Last updated</td><td>March 19, 2026 (5 months ago), copyright says 2018</td></tr>
-  </table>
-</section>
+<div class="section">
+<h2>❌ What's Missing</h2>
+<div class="missing-item"><span class="icon">✕</span><div><strong>No GBP Found</strong> — Your business may not have a Google Business Profile, or it may not be visible in search results. This is the #1 priority.</div></div>
+<div class="missing-item"><span class="icon">✕</span><div><strong>No Website Found</strong> — A dedicated website is essential for credibility and conversion. Even a simple 1-page site makes a difference.</div></div>
+<div class="missing-item"><span class="icon">✕</span><div><strong>No Online Reviews Visible</strong> — Without a GBP or web presence, there's no place for customers to leave reviews. This hurts trust.</div></div>
+<div class="missing-item"><span class="icon">✕</span><div><strong>No Social Media Presence</strong> — Pool liner businesses benefit from before/after photo content. Facebook and Instagram are essential.</div></div>
+<div class="missing-item"><span class="icon">✕</span><div><strong>No Local SEO Foundation</strong> — No schema, no local content, no citation building — the business is invisible to Google's local search algorithm.</div></div>
+</div>
 
-<section>
-  <h2>What's Missing / Broken</h2>
-  <ul>
-    <li><span class="bad">❌ META DESCRIPTIONS</span> — No meta description on any page.</li>
-    <li><span class="bad">❌ SINGLE-PAGE SITE</span> — Despite sitemap listing 6 URLs, they are Wix boilerplate. The site is effectively one page.</li>
-    <li><span class="bad">❌ NO SERVICE PAGES</span> — Zero dedicated pages for pool liner replacement, pool building, paver work, or concrete.</li>
-    <li><span class="bad">❌ NO LOCATION PAGES</span> — Serves all of Hampton Roads but has no pages for any individual city.</li>
-    <li><span class="bad">❌ TWO H1 TAGS</span> — Home page has two H1 elements, needs exactly one.</li>
-    <li><span class="bad">❌ NO BLOG / CONTENT</span> — Zero blog posts, zero articles, zero content strategy.</li>
-    <li><span class="bad">❌ STALE CONTENT</span> — Copyright still says 2018. Sitemap last touched March 2026.</li>
-    <li><span class="bad">❌ NO REVIEW SCHEMA</span> — LocalBusiness schema exists but has no aggregate rating.</li>
-    <li><span class="bad">❌ MISSING REVIEWS ON SITE</span> — No embedded Google reviews, no testimonial section.</li>
-    <li><span class="bad">❌ NO HOURS IN SCHEMA</span> — The LocalBusiness JSON-LD has no opening hours.</li>
-    <li><span class="bad">❌ WEAK ALT TEXT</span> — Images have generic alt text ("IMG_4729.jpeg", "Untitled").</li>
-    <li><span class="bad">❌ NO FAQ SCHEMA</span> — No FAQ markup.</li>
-    <li><span class="bad">❌ NO EMAIL CAPTURE</span> — No newsletter, no lead magnet.</li>
-  </ul>
-</section>
+<div class="section">
+<h2>🏛️ Local Authority Blueprint</h2>
+<p style="color:#64748b;font-size:0.9rem;margin-bottom:16px">How we build your online presence from the ground up.</p>
+<div class="pillar-grid">
+<div class="pillar-card">
+<h3>1. GBP Setup & Optimization</h3>
+<p>Create or claim your Google Business Profile. Complete every field. Add service areas: Poquoson, Yorktown, Hampton, Newport News, Virginia Beach.</p>
+</div>
+<div class="pillar-card">
+<h3>2. Website Built for Pool Liners</h3>
+<p>Custom LLF template site with before/after galleries, service areas, contact forms, and LocalBusiness schema. Live in 5 days.</p>
+</div>
+<div class="pillar-card">
+<h3>3. Review & Social Proof</h3>
+<p>Review request system via email/text. Facebook page with project photos. GBP posts with seasonal content.</p>
+</div>
+<div class="pillar-card">
+<h3>4. Local Search Visibility</h3>
+<p>Citation building across 50+ directories. Neighborhood content for Poquoson and surrounding areas. Map Pack targeting.</p>
+</div>
+</div>
+</div>
 
-<section>
-  <h2>What Works</h2>
-  <ul>
-    <li><span class="good">✓ TITLE TAG</span> — "Home | Hampton Roads Liner Pros" exists and includes business name.</li>
-    <li><span class="good">✓ LOCALBUSINESS SCHEMA</span> — JSON-LD present with name, URL, image, address, and phone.</li>
-    <li><span class="good">✓ SSL / HTTPS</span> — Valid SSL with HSTS.</li>
-    <li><span class="good">✓ SITEMAP</span> — Sitemap exists and is properly formatted.</li>
-    <li><span class="good">✓ SECURITY HEADERS</span> — X-Content-Type-Options present.</li>
-    <li><span class="good">✓ MOBILE</span> — Responsive design (Wix handles this).</li>
-    <li><span class="partial">◐ CONTACT INFO</span> — Phone and email are on the page. No physical address displayed.</li>
-  </ul>
-</section>
+<div class="pricing-card">
+<p>We would love to work with you. Here are our packages — we can show you how it works.</p>
+<a class="btn" href="https://marketbossai-ctrl.github.io/marketboss-reports/packages/">View Our Packages →</a>
+</div>
 
-<section>
-  <h2>The Fix List</h2>
-  <ul>
-    <li><span class="lbl immediate">Immediate</span><strong>Meta Descriptions</strong> — Add a compelling 150-160 character meta description with CTA on every page.</li>
-    <li><span class="lbl immediate">Immediate</span><strong>Fix H1 Structure</strong> — Reduce to exactly one H1 per page.</li>
-    <li><span class="lbl immediate">Immediate</span><strong>Complete LocalBusiness Schema</strong> — Add opening hours, service area, and SameAs social links.</li>
-    <li><span class="lbl immediate">Immediate</span><strong>Fix Copyright</strong> — Update to 2026.</li>
-    <li><span class="lbl week">This Week</span><strong>Build Service Pages</strong> — Dedicated pages for pool liner replacement, pool builds, paver work, concrete.</li>
-    <li><span class="lbl week">This Week</span><strong>Build Location Pages</strong> — One page per city served with unique copy and local schema.</li>
-    <li><span class="lbl week">This Week</span><strong>Add Review Schema</strong> — Mark up customer reviews with AggregateRating schema.</li>
-    <li><span class="lbl week">This Week</span><strong>Google Business Profile</strong> — Claim and fully optimize the GBP with all services and photos.</li>
-    <li><span class="lbl ongoing">Ongoing</span><strong>Blog / Content</strong> — 1-2 posts per month: liner replacement, vinyl vs fiberglass, pool maintenance.</li>
-    <li><span class="lbl ongoing">Ongoing</span><strong>Image SEO</strong> — Descriptive filenames and keyword-rich alt text.</li>
-    <li><span class="lbl ongoing">Ongoing</span><strong>Email Capture</strong> — Add a lead magnet and start building an email list.</li>
-  </ul>
-</section>
+<div class="cta-box">
+<h2>Schedule a Free Consultation</h2>
+<p>Let's walk through what building your online presence looks like.</p>
+<a class="btn" href="https://marketbossai.com/contact">Schedule a Free Consultation →</a>
+</div>
 
-<section>
-  <h2>GBP↔WEBSITE ALIGNMENT</h2>
-  <table>
-    <tr><td>Primary category</td><td>GBP not verified live. Should be "Pool Contractor" — website has no dedicated page targeting this term.</td></tr>
-    <tr><td>Services</td><td>Pool liner replacement, pool building, paver work, concrete — all on one page with zero dedicated URLs.</td></tr>
-    <tr><td>Service area</td><td>Hampton Roads, roughly 2-hour radius. Zero individual city pages exist.</td></tr>
-    <tr><td>NAP</td><td>Phone and email consistent. No physical address displayed on page.</td></tr>
-    <tr><td>Verdict</td><td><strong>MISALIGNED</strong> — The GBP has nothing to back it up on the website. Every service and city needs a matching website page.</td></tr>
-  </table>
-</section>
+<div class="review-banner">⭐ If we helped you with your visibility and published your article, please <a href="https://search.google.com/local/writereview?placeid=ChIJBbqXfsO_uokRaTEPeNbe45o">leave Market Boss AI a review here</a> — it helps us continue helping local businesses like yours.</div>
 
-<section>
-  <h2>Market Boss AI Opportunity</h2>
-  <span class="tier">Core — $750 setup / $375/mo</span> <span class="tier">Growth — $1,750 / $875</span>
-  <p style="margin-top:.7rem;">This is a young, hungry company with a great story and a real differentiator (speed + faith + integrity). But their online presence is a single Wix page Google barely sees.</p>
-  <h3 style="font-family:var(--font-display);margin:1rem 0 .4rem;font-size:1.05rem;color:var(--navy);">Pillar Assessment</h3>
-  <table>
-    <tr><td>GBP</td><td>Likely exists (business is 3 years old). Needs verification, category optimization, review strategy.</td></tr>
-    <tr><td>Website</td><td>Grade D. Single page. 6 URLs, all Wix boilerplate. Needs complete rebuild with 20+ pages.</td></tr>
-    <tr><td>Social</td><td>Facebook and Twitter links found. Activity level unknown.</td></tr>
-    <tr><td>Email</td><td>No capture, no newsletter, no lead magnet.</td></tr>
-  </table>
-</section>
+<div class="footer">
+<p>Prepared by Market Boss AI · jeff@vbspotlight.com · (757) 322-7171</p>
+<p><a href="https://marketbossai.com">marketbossai.com</a></p>
+</div>
 
-
-<section class="comp-section">
-  <h2><span class="icon">🏆</span> Competitor Comparison</h2>
-  <div class="comp-grid">
-    
-    <div class="comp-card highlight">
-      <div class="comp-name">⭐ Hampton Roads Liner Pros</div>
-      <div class="comp-rating" style="color:var(--gold);">★ N/A</div>
-      <div class="comp-stat">0 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Pools by Andrews</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 5</div>
-      <div class="comp-stat">7 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Aqua Leisure Pools</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.8</div>
-      <div class="comp-stat">41 reviews</div>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-name">Virginia Beach Pool Co</div>
-      <div class="comp-rating" style="color:var(--gold);">★ 4.7</div>
-      <div class="comp-stat">176 reviews</div>
-    </div>
-
-  </div>
-  
-  <table class="comp-table">
-    <tr><th>Metric</th><th>⭐ Hampton Roads Liner Pros</th><th>Pools by Andrews</th><th>Aqua Leisure Pools</th><th>Virginia Beach Pool </th></tr>
-<tr><td>GBP Rating</td><td><strong>N/A</strong></td><td>5</td><td>4.8</td><td>4.7</td></tr>
-<tr><td>Google Reviews</td><td><strong>0</strong></td><td>7</td><td>41</td><td>176</td></tr>
-<tr><td>GBP Category</td><td><strong>N/A</strong></td><td>swimming_pool</td><td>sporting_goods_store</td><td>service</td></tr>
-</table>
-  
-  <div class="comp-verdict">
-    <p><strong class="warn">The Gap:</strong> Virginia Beach Pool Co has 176 reviews and a 4.7-star rating. Your customers are finding them first. The Local Authority Blueprint closes this gap — starting with your GBP, then your website, then your content strategy.</p><p class="comp-cta"><a href="https://marketbossai.com/contact" style="color:var(--blue);font-weight:700;">Get a full competitor analysis from Market Boss AI →</a></p>
-  </div>
-</section>
-
-<section class="pitch">
-  <span class="tier-badge">Ready to Stop Being Invisible Online?</span>
-  <p class="quote">"Every month you're not in the Map Pack is a month of jobs going to someone else. We fix that."</p>
-  <hr class="hr">
-  <p>Market Boss AI builds your complete local marketing system — <strong>Google Business Profile, website, email, and social</strong> — all working together to put your business where your customers are searching.</p>
-  <p><strong>No contracts. Month-to-month. Three tiers to fit your budget.</strong></p>
-  <a href="/marketboss-reports/packages/" target="_blank" rel="noopener" class="pitch-cta">View Packages &amp; Pricing →</a>
-</section>
-
-</main>
-
-<footer>
-  Prepared by <a href="https://marketbossai.com">Market Boss AI</a> · <a href="https://www.facebook.com/share/1U6NkqcQuL/?mibextid=wwXIfr" target="_blank" rel="noopener" style="color:#37B5FF;text-decoration:none;">Follow on Facebook</a> — Local Authority Blueprint<br>
-  &copy; 2026 Market Boss AI &nbsp;·&nbsp; Month-to-month, no contracts.
-</footer>
-
+</div>
 </body>
 </html>
