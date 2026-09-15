@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VBSpotlight Applications CRM</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,system-ui,sans-serif;background:#f5f5f5;color:#1a1a2e;padding:32px}
+h1{font-size:1.6rem;margin-bottom:24px}
+.stats{display:flex;gap:16px;margin-bottom:24px}
+.stat{background:#fff;border-radius:8px;padding:16px 20px;flex:1;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.stat .num{font-size:1.5rem;font-weight:700;color:#2563eb}
+.stat .lbl{font-size:0.85rem;color:#64748b}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+th{background:#f8fafc;color:#475569;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;padding:12px 14px;text-align:left;border-bottom:1px solid #e2e8f0}
+td{padding:10px 14px;font-size:0.9rem;border-bottom:1px solid #f1f5f9}
+tr:hover{background:#f8fafc}
+.status-new{background:#dcfce7;color:#15803d;padding:2px 8px;border-radius:12px;font-size:0.75rem;font-weight:600}
+.status-contact{background:#fef9c3;color:#a16207;padding:2px 8px;border-radius:12px;font-size:0.75rem;font-weight:600}
+.status-done{background:#e2e8f0;color:#475569;padding:2px 8px;border-radius:12px;font-size:0.75rem;font-weight:600}
+.footer{text-align:center;color:#94a3b8;font-size:0.82rem;margin-top:24px}
+</style>
+</head>
+<body>
+
+<h1>📋 VBSpotlight — Application CRM</h1>
+
+<div class="stats">
+<div class="stat"><div class="num">70</div><div class="lbl">Total Applications</div></div>
+<div class="stat"><div class="num">12</div><div class="lbl">Last 30 Days</div></div>
+<div class="stat"><div class="num">22</div><div class="lbl">Featured</div></div>
+<div class="stat"><div class="num">48</div><div class="lbl">Pending</div></div>
+</div>
+
+<p style="margin-bottom:12px;color:#64748b;font-size:0.85rem">All applications submitted via vbspotlight.com — sorted newest first.</p>
+
+<table>
+<tr>
+<th>Date</th>
+<th>Business</th>
+<th>Contact</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Status</th>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-05-20</td>
+<td><strong>Marie's Step by Step Home Child Care</strong></td>
+<td>Marie</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-05-23</td>
+<td><strong>Ocean View Heating and Cooling</strong></td>
+<td>Earl Duff</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-done">Featured</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-05-23</td>
+<td><strong>Thrive Proactive Health</strong></td>
+<td>Courtney Soscia</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-05-25</td>
+<td><strong>Dream Chaser Charters</strong></td>
+<td>Donny Tabor</td>
+<td style="font-size:0.8rem">dreamchaserscharters@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-05-26</td>
+<td><strong>Stable Hands Pet Care</strong></td>
+<td>David Huzzard</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-05-27</td>
+<td><strong>Robert H Ashburner Mortgage</strong></td>
+<td>Bobby Ashburner</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-03</td>
+<td><strong>Tidewater Pressure Solutions</strong></td>
+<td>Logan Willey</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-03</td>
+<td><strong>Coastal RC Speedway</strong></td>
+<td>Barry Schimmel</td>
+<td style="font-size:0.8rem">admin@coastalrcspeedway.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-04</td>
+<td><strong>Turn VB</strong></td>
+<td>Courtney Freeman</td>
+<td style="font-size:0.8rem">cfreegrad09@gmail.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-04</td>
+<td><strong>Costley Designs</strong></td>
+<td>Destiny Cates</td>
+<td style="font-size:0.8rem">destiny@costleydesigns.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-05</td>
+<td><strong>Davenport's Barbershop</strong></td>
+<td>Kevin Beggs</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-05</td>
+<td><strong>EVIA Cart Company</strong></td>
+<td>Casey Reihe</td>
+<td style="font-size:0.8rem">casey@eviacart.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-09</td>
+<td><strong>First Response Mobile Relief</strong></td>
+<td>Briana McNutt</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-10</td>
+<td><strong>757Comply</strong></td>
+<td>Peyton Cox</td>
+<td style="font-size:0.8rem">admin@757comply.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-12</td>
+<td><strong>Calm Therapeutic Massage Center</strong></td>
+<td>Courtney Edwards</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-12</td>
+<td><strong>Maison Luxe Cleaning Service</strong></td>
+<td>Dominique Susberry</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-15</td>
+<td><strong>Premier Cleaning Group</strong></td>
+<td>Arnold Warren</td>
+<td style="font-size:0.8rem">arnold@premiercleaning.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-15</td>
+<td><strong>Fox Music of Virginia Beach</strong></td>
+<td>Wesley Fox</td>
+<td style="font-size:0.8rem">wesley@foxmusic.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-17</td>
+<td><strong>Helix Stax</strong></td>
+<td>Wakeem Williams</td>
+<td style="font-size:0.8rem">admin@helixstax.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-17</td>
+<td><strong>Mr Fix Cell Phone & Computer Repair</strong></td>
+<td>Roxanne</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-19</td>
+<td><strong>Vitalise Chiropractic</strong></td>
+<td>Christina Lowenthal</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-23</td>
+<td><strong>Seaside Garage Door Experts</strong></td>
+<td>David Yifrach</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-23</td>
+<td><strong>Studio Ntrigue</strong></td>
+<td>Neal Carter</td>
+<td style="font-size:0.8rem">studiontrigue@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-24</td>
+<td><strong>Mathnasium of RedMill</strong></td>
+<td>Anchu Tom</td>
+<td style="font-size:0.8rem">redmill@mathnasium.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-06-25</td>
+<td><strong>Neptune City Swim And Surf School</strong></td>
+<td>Chadwick Smith</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-06</td>
+<td><strong>Premier Broadband & Consulting</strong></td>
+<td>Jonathan</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-10</td>
+<td><strong>Chloris Lawn Care</strong></td>
+<td>Nicholas Noxon</td>
+<td style="font-size:0.8rem">chlorislawncare@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-10</td>
+<td><strong>Melone Hatley, PC</strong></td>
+<td>Nikolas Garrison</td>
+<td style="font-size:0.8rem">ngarrison@melonehatley.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-10</td>
+<td><strong>Your Way Therapy</strong></td>
+<td>Jason Kelley</td>
+<td style="font-size:0.8rem">jason.kelley@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-11</td>
+<td><strong>Spotless Spaces</strong></td>
+<td>Serena Hampsher</td>
+<td style="font-size:0.8rem">Spotless@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-11</td>
+<td><strong>Palace of Pickleball</strong></td>
+<td>Lisa Cardona</td>
+<td style="font-size:0.8rem">Lisa@palaceofpickleball.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-14</td>
+<td><strong>The Destruction Room</strong></td>
+<td>Aaron Pope</td>
+<td style="font-size:0.8rem">info@thedestructionroom.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-15</td>
+<td><strong>Techfix Repair Center</strong></td>
+<td>Myra Augustine</td>
+<td style="font-size:0.8rem">techfixrepaircenter@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-21</td>
+<td><strong>FreshWashPros</strong></td>
+<td>Jaree Roseborough</td>
+<td style="font-size:0.8rem">jrosebor@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-22</td>
+<td><strong>MyAIPathways</strong></td>
+<td>Jacqueline Herrera</td>
+<td style="font-size:0.8rem">jackie@myaipathways.com</td>
+<td>—</td>
+<td><span class="status-done">Featured</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-22</td>
+<td><strong>Alvin's Services LLC</strong></td>
+<td>Dejaion Carroll</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-23</td>
+<td><strong>TWTechnologySolutions</strong></td>
+<td>Taylor Wolf</td>
+<td style="font-size:0.8rem">taylor@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-25</td>
+<td><strong>Precious Momentz Real Estate</strong></td>
+<td>Helenia Mason</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-07-31</td>
+<td><strong>Computer Concepts</strong></td>
+<td>Alan Healy</td>
+<td style="font-size:0.8rem">ahealy@mycomputerconcepts.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-13</td>
+<td><strong>Alpha Performance Fitness</strong></td>
+<td>Robert Melendez</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-done">Featured</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-15</td>
+<td><strong>Murillo Mechanical</strong></td>
+<td>Ashley Murillo</td>
+<td style="font-size:0.8rem">Murillomechanical@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-15</td>
+<td><strong>Small Start Lab</strong></td>
+<td>Troy Alexander</td>
+<td style="font-size:0.8rem">smallstartlab@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-16</td>
+<td><strong>Tee Kitchen Prints & Stitch</strong></td>
+<td>Josh Begley</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-17</td>
+<td><strong>Hampton Roads Liner Pros</strong></td>
+<td>Douglas Gemberling</td>
+<td style="font-size:0.8rem">hrlinerpros@gmail.com</td>
+<td>—</td>
+<td><span class="status-done">Featured</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-20</td>
+<td><strong>Balance Wash and Fold</strong></td>
+<td>Desiree Huff</td>
+<td style="font-size:0.8rem">info@...</td>
+<td>—</td>
+<td><span class="status-done">Featured</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-20</td>
+<td><strong>The Home Loan Connection</strong></td>
+<td>Ana Marie</td>
+<td style="font-size:0.8rem">—</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-27</td>
+<td><strong>Herhands Cleaning LLC</strong></td>
+<td>Kimberly Pitts</td>
+<td style="font-size:0.8rem">herhands@...</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-28</td>
+<td><strong>CoVA Creative</strong></td>
+<td>Sean Davis</td>
+<td style="font-size:0.8rem">sean@covacreative.com</td>
+<td>757-354-4070</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-29</td>
+<td><strong>Wright Model and Talent</strong></td>
+<td>TatyAuna Fatherly</td>
+<td style="font-size:0.8rem">tlf1105@yahoo.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-08-29</td>
+<td><strong>Periscope Promotions</strong></td>
+<td>Kyle McFarland</td>
+<td style="font-size:0.8rem">info@periscopepromotions.net</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-09-04</td>
+<td><strong>Dream in Color Travel</strong></td>
+<td>Aya Ofunniyin</td>
+<td style="font-size:0.8rem">dreamincolortravel@gmail.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-09-04</td>
+<td><strong>Oisphere Real Estate</strong></td>
+<td>Aya Ofunniyin</td>
+<td style="font-size:0.8rem">oispherere@gmail.com</td>
+<td>202-555-...</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-09-05</td>
+<td><strong>The Coin Wash</strong></td>
+<td>Ashley Murillo</td>
+<td style="font-size:0.8rem">Thecoinwash@yahoo.com</td>
+<td>757-740-0629</td>
+<td><span class="status-new">New</span></td>
+</tr>
+<tr>
+<td style="white-space:nowrap">2026-09-14</td>
+<td><strong>M&G Appliance Repair</strong></td>
+<td>Marcus & Gina Hampton</td>
+<td style="font-size:0.8rem">info@vbspotlight.com</td>
+<td>—</td>
+<td><span class="status-new">New</span></td>
+</tr>
+</table>
+<div class="footer">
+<p>VBSpotlight.com Application CRM · Generated by Market Boss AI</p>
+</div>
+</body>
+</html>
