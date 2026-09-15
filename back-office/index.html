@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Boss AI — Back Office Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh}
+.header{background:#1e293b;padding:24px 32px;border-bottom:1px solid #334155}
+.header h1{font-size:1.3rem;font-weight:700;color:#f8fafc}
+.header p{font-size:0.85rem;color:#94a3b8;margin-top:4px}
+.container{max-width:1200px;margin:0 auto;padding:24px 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:32px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:20px;transition:border-color 0.15s}
+.card:hover{border-color:#475569}
+.card h2{font-size:0.95rem;font-weight:600;color:#f8fafc;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #334155;display:flex;align-items:center;gap:8px}
+.card p{font-size:0.82rem;color:#94a3b8;margin-bottom:14px;line-height:1.5}
+.btn{display:block;width:100%;padding:10px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;text-align:center;text-decoration:none;margin-bottom:8px;border:none;transition:all 0.12s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:#2563eb;color:#fff}
+.btn-primary:hover{background:#1d4ed8}
+.btn-success{background:#059669;color:#fff}
+.btn-success:hover{background:#047857}
+.btn-warning{background:#d97706;color:#fff}
+.btn-warning:hover{background:#b45309}
+.btn-outline{background:transparent;color:#94a3b8;border:1px solid #334155}
+.btn-outline:hover{color:#f8fafc;border-color:#475569}
+.btn-sm{padding:6px 12px;font-size:0.78rem;display:inline-block;width:auto}
+.section-title{font-size:1.1rem;font-weight:600;color:#f8fafc;margin-bottom:16px;margin-top:32px;display:flex;align-items:center;gap:10px}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:24px}
+.stat-card{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:16px;text-align:center}
+.stat-num{font-size:1.6rem;font-weight:700;color:#f8fafc}
+.stat-lbl{font-size:0.78rem;color:#94a3b8;margin-top:4px}
+.schedule-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #1e293b;font-size:0.85rem}
+.schedule-item:last-child{border-bottom:none}
+.schedule-time{color:#94a3b8;min-width:80px}
+.schedule-task{color:#e2e8f0;flex:1}
+.schedule-day{color:#fbbf24;font-weight:600;font-size:0.75rem;min-width:40px}
+.copy-prompt{font-size:0.72rem;color:#64748b;padding:6px 10px;background:#0f172a;border-radius:6px;margin:6px 0;font-family:monospace;word-break:break-all;cursor:pointer}
+.copy-prompt:hover{background:#1e293b}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🏪 Market Boss AI — Back Office</h1>
+<p>Dashboard v1.0 · Virginia Beach, VA · Eastern Time</p>
+</div>
+<div class="container">
+
+<div class="stats">
+<div class="stat-card"><div class="stat-num">70+</div><div class="stat-lbl">VBSpotlight Apps</div></div>
+<div class="stat-card"><div class="stat-num">13</div><div class="stat-lbl">Pending Tasks</div></div>
+<div class="stat-card"><div class="stat-num">13</div><div class="stat-lbl">ClickUp Leads</div></div>
+<div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">Sites Managed</div></div>
+</div>
+
+<div class="section-title">⚡ Quick Actions</div>
+<div class="grid">
+<div class="card">
+<h2>🔍 Run SEO Audit</h2>
+<p>Generate a full 4-driver audit for any business and push to GitHub Pages.</p>
+<a class="btn btn-primary" href="https://marketbossai-ctrl.github.io/marketboss-reports/packages">View Audit Packages</a>
+<div class="copy-prompt" onclick="navigator.clipboard.writeText('Run an audit on [business name] — their website is [url]')">📋 Tap to copy: "Run an audit on..."</div>
+</div>
+
+<div class="card">
+<h2>📝 Create FB Post</h2>
+<p>Generate a daily Facebook post for CrawlAnswers, VBSpotlight, or WCSpotlight.</p>
+<a class="btn btn-success" href="https://marketbossai-ctrl.github.io/marketboss-reports/crawlanswers-dk-ad/">Sample DK Article</a>
+<div class="copy-prompt" onclick="navigator.clipboard.writeText('Create a CrawlAnswers FB post with image prompt')">📋 "Create a CrawlAnswers FB post..."</div>
+</div>
+
+<div class="card">
+<h2>📧 Send Outreach</h2>
+<p>Draft and send 5 VBSpotlight spotlight pitch emails from prospecting data.</p>
+<a class="btn btn-warning" href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/">VBSpotlight CRM</a>
+<div class="copy-prompt" onclick="navigator.clipboard.writeText('Generate 5 VBSpotlight outreach emails for today')">📋 "Generate 5 outreach emails..."</div>
+</div>
+
+<div class="card">
+<h2>✉️ Audit Follow-Up</h2>
+<p>Send a VBSpotlight audit follow-up email to a featured business owner.</p>
+<a class="btn btn-outline" href="https://marketbossai-ctrl.github.io/marketboss-reports/smileys-hvac-audit/">Sample Audit Page</a>
+<div class="copy-prompt" onclick="navigator.clipboard.writeText('I need to send the audit email to [business name]')">📋 "Send audit email to..."</div>
+</div>
+
+<div class="card">
+<h2>📝 Write Blog</h2>
+<p>Generate a Sunday/Wednesday/Friday SEO blog for MarketBossAI.com.</p>
+<a class="btn btn-outline" href="https://marketbossai-ctrl.github.io/marketboss-reports/crawlanswers-lead-page/">Sample Lead Page</a>
+<div class="copy-prompt" onclick="navigator.clipboard.writeText('Write a Sunday educational blog for MarketBossAI.com about [topic]')">📋 "Write a blog about..."</div>
+</div>
+
+<div class="card">
+<h2>🏗️ Add Appointment</h2>
+<p>Add a new appointment to the to-do list and Google Calendar.</p>
+<a class="btn btn-outline" href="#">Just paste the details here</a>
+<div class="copy-prompt" onclick="navigator.clipboard.writeText('Add an appointment: [name], [date], [time], [location], [notes]')">📋 Tap to paste appointment</div>
+</div>
+</div>
+
+<div class="section-title">📅 This Week's Schedule</div>
+<div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:20px;margin-bottom:24px">
+<div class="schedule-item"><span class="schedule-day">WED</span><span class="schedule-time">7:55AM</span><span class="schedule-task">🩺 Marie PT</span></div>
+<div class="schedule-item"><span class="schedule-day">WED</span><span class="schedule-time">10AM</span><span class="schedule-task">🏠 Brian Simpkins</span></div>
+<div class="schedule-item"><span class="schedule-day">WED</span><span class="schedule-time">1PM</span><span class="schedule-task">🏠 Al Baki</span></div>
+<div class="schedule-item"><span class="schedule-day">THU</span><span class="schedule-time">10AM</span><span class="schedule-task">🏠 Harold Jones REVISIT</span></div>
+<div class="schedule-item"><span class="schedule-day">THU</span><span class="schedule-time">10AM</span><span class="schedule-task">🏠 Joseph Kulick</span></div>
+<div class="schedule-item"><span class="schedule-day">THU</span><span class="schedule-time">1PM</span><span class="schedule-task">🏠 Christopher — joist repair</span></div>
+<div class="schedule-item"><span class="schedule-day">THU</span><span class="schedule-time">3PM</span><span class="schedule-task">📞 Double Stack Huddle</span></div>
+<div class="schedule-item"><span class="schedule-day">FRI</span><span class="schedule-time">10AM</span><span class="schedule-task">🏠 Christopher Skipprt</span></div>
+<div class="schedule-item"><span class="schedule-day">FRI</span><span class="schedule-time">1PM</span><span class="schedule-task">🏠 Alanna Burns</span></div>
+<div class="schedule-item"><span class="schedule-day">FRI</span><span class="schedule-time">—</span><span class="schedule-task">📋 Newsom's appointment</span></div>
+<div class="schedule-item"><span class="schedule-day">MON</span><span class="schedule-time">10AM</span><span class="schedule-task">🏠 Dominic Lucero</span></div>
+</div>
+
+<div class="section-title">🔗 Quick Links</div>
+<div class="grid">
+<div class="card"><h2>🌐 Sites</h2><a class="btn btn-outline btn-sm" href="https://crawlanswers.com" target="_blank">CrawlAnswers.com</a><a class="btn btn-outline btn-sm" href="https://vbspotlight.com" target="_blank">VBSpotlight.com</a><a class="btn btn-outline btn-sm" href="https://wilsoncountyspotlight.com" target="_blank">WCSpotlight.com</a><a class="btn btn-outline btn-sm" href="https://marketbossai.com" target="_blank">MarketBossAI.com</a></div>
+<div class="card"><h2>📊 Reports</h2><a class="btn btn-outline btn-sm" href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/" target="_blank">VBSpotlight CRM</a><a class="btn btn-outline btn-sm" href="https://marketbossai-ctrl.github.io/marketboss-reports/smileys-hvac-audit/" target="_blank">Smiley's Audit</a><a class="btn btn-outline btn-sm" href="https://marketbossai-ctrl.github.io/marketboss-reports/crawlanswers-dk-ad/" target="_blank">DK Article</a><a class="btn btn-outline btn-sm" href="https://marketbossai-ctrl.github.io/marketboss-reports/crawlanswers-lead-page/" target="_blank">Lead Page</a></div>
+<div class="card"><h2>📋 Todos</h2><a class="btn btn-outline btn-sm" href="#">To-Do List (Telegram)</a><a class="btn btn-outline btn-sm" href="#">3:45 PM Recap</a><a class="btn btn-outline btn-sm" href="#">6 AM / 11 AM / 4 PM Reminders</a></div>
+<div class="card"><h2>⚙️ Tools</h2><a class="btn btn-outline btn-sm" href="https://marketbossai-ctrl.github.io/marketboss-reports/packages/" target="_blank">Pricing Packages</a><a class="btn btn-outline btn-sm" href="https://my.porteden.com" target="_blank">Porteden (Calendar)</a><a class="btn btn-outline btn-sm" href="https://app.clickup.com" target="_blank">ClickUp</a><a class="btn btn-outline btn-sm" href="https://marketbossai.com/contact" target="_blank">Free Consultation</a></div>
+</div>
+
+<div class="section-title">🤖 Say It To Me</div>
+<div style="background:#1e293b;border:1px solid #334155;border-radius:12px;padding:20px;font-size:0.85rem;color:#94a3b8;line-height:1.6;margin-bottom:32px">
+<p>Just say any of these in Telegram and I'll handle it:</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Run audit on [business]</strong>"</div>
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Create a CrawlAnswers post</strong>"</div>
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Send 5 outreach emails</strong>"</div>
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Add appointment: [details]</strong>"</div>
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Sync ClickUp leads</strong>"</div>
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Show my to-do list</strong>"</div>
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Run the morning routine</strong>"</div>
+<div style="padding:8px;background:#0f172a;border-radius:6px">"<strong>Generate a blog for today</strong>"</div>
+</div>
+</div>
+
+<div class="footer" style="text-align:center;padding:24px;color:#475569;font-size:0.78rem">
+<p>Market Boss AI Back Office · Updated automatically · Eastern Time</p>
+</div>
+
+</div>
+</body>
+</html>
