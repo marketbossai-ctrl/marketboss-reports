@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilson County Spotlight — Tennessee Flag Theme (Preview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --tn-red:#C8102E;
+  --tn-red-dark:#9e0c23;
+  --tn-blue:#002868;
+  --tn-blue-light:#003399;
+  --tn-white:#FFFFFF;
+  --tn-cream:#F5F0E8;
+  --tn-ink:#1a2540;
+  --radius:6px;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Source Sans 3',system-ui,sans-serif;
+}
+body{font-family:var(--font-body);background:var(--tn-cream);color:var(--tn-ink);line-height:1.55}
+.top-bar{background:var(--tn-blue);color:#fff;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:0.85rem}
+.top-bar a{color:#94a3d8;text-decoration:none;font-weight:600}
+.top-bar a:hover{color:#fff}
+header{background:linear-gradient(135deg,var(--tn-blue),var(--tn-blue-light));color:#fff;padding:20px 24px;text-align:center;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.02) 40px,rgba(255,255,255,0.02) 80px);pointer-events:none}
+header .logo{font-family:var(--font-display);font-size:1.8rem;font-weight:700;position:relative;letter-spacing:-0.01em}
+header .logo span{color:var(--tn-red)}
+header .tagline{font-size:0.85rem;color:#94a3d8;margin-top:4px;position:relative}
+nav{background:#fff;border-bottom:2px solid var(--tn-red);padding:0 24px;display:flex;gap:24px;align-items:center;position:sticky;top:0;z-index:10}
+nav a{padding:14px 0;text-decoration:none;color:var(--tn-ink);font-weight:600;font-size:0.9rem;border-bottom:3px solid transparent;transition:all 0.12s}
+nav a:hover{border-bottom-color:var(--tn-red);color:var(--tn-red)}
+nav .cta{margin-left:auto;background:var(--tn-red);color:#fff;padding:8px 18px;border-radius:var(--radius);font-size:0.85rem;text-decoration:none;font-weight:600}
+nav .cta:hover{background:var(--tn-red-dark);border-bottom-color:transparent}
+.hero{background:linear-gradient(135deg,var(--tn-blue) 0%,var(--tn-blue-light) 50%,var(--tn-blue) 100%);color:#fff;padding:64px 24px;text-align:center}
+.hero h1{font-family:var(--font-display);font-size:2.4rem;font-weight:700;margin-bottom:12px}
+.hero h1 span{color:var(--tn-red)}
+.hero p{font-size:1.1rem;color:#c7d2fe;max-width:600px;margin:0 auto 28px}
+.hero .btn{display:inline-block;background:var(--tn-red);color:#fff;padding:14px 32px;border-radius:var(--radius);text-decoration:none;font-weight:700;font-size:1rem;transition:background 0.12s}
+.hero .btn:hover{background:var(--tn-red-dark)}
+.hero .stars{color:var(--tn-red);font-size:0.85rem;margin-bottom:8px;letter-spacing:4px}
+.section{padding:64px 24px;max-width:1100px;margin:0 auto}
+.section h2{font-family:var(--font-display);font-size:1.8rem;margin-bottom:12px;color:var(--tn-blue)}
+.section .sub{color:#6b7280;margin-bottom:36px;font-size:1rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:transform 0.12s}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.card .panel{background:var(--tn-blue);height:120px;display:flex;align-items:center;justify-content:center;position:relative}
+.card .panel .initial{font-family:var(--font-display);font-size:2.5rem;color:rgba(255,255,255,0.3)}
+.card .panel .flag-star{position:absolute;top:12px;right:12px;color:var(--tn-red);font-size:1.2rem}
+.card .body{padding:18px}
+.card .body .cat{color:var(--tn-red);font-weight:700;font-size:0.78rem;margin-bottom:4px}
+.card .body h3{font-family:var(--font-display);font-size:1.1rem;margin-bottom:8px}
+.card .body p{font-size:0.88rem;color:#6b7280;margin-bottom:12px}
+.card .body a{color:var(--tn-blue);font-weight:600;text-decoration:none;font-size:0.88rem}
+.how-section{background:var(--tn-blue);color:#fff;padding:64px 24px;text-align:center}
+.how-section h2{color:#fff;font-family:var(--font-display);font-size:1.8rem;margin-bottom:8px}
+.how-section .sub{color:#94a3d8;margin-bottom:40px}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto}
+.how-step{background:rgba(255,255,255,0.08);border-radius:var(--radius);padding:28px}
+.how-step .num{display:inline-block;background:var(--tn-red);color:#fff;width:36px;height:36px;border-radius:50%;line-height:36px;font-weight:700;margin-bottom:10px;font-family:var(--font-display)}
+.how-step h3{font-family:var(--font-display);font-size:1.1rem;margin-bottom:6px}
+.how-step p{font-size:0.88rem;color:#94a3d8;line-height:1.5}
+footer{background:var(--tn-blue);color:#94a3d8;padding:32px 24px;text-align:center;border-top:4px solid var(--tn-red)}
+footer a{color:var(--tn-red);text-decoration:none;font-weight:600}
+.preview-banner{background:var(--tn-red);color:#fff;text-align:center;padding:12px;font-weight:600;font-size:0.9rem}
+@media(max-width:800px){.grid,.how-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="preview-banner">🎨 REDESIGN PREVIEW — Tennessee Flag Colors (not live on site)</div>
+<div class="top-bar">📍 Wilson County, Tennessee · <a href="/get-featured">Get Featured →</a></div>
+<header><div class="logo">Wilson County <span>Spotlight</span></div><div class="tagline">Your Story Belongs Here</div></header>
+<nav>
+<a href="#">Home</a><a href="#">Businesses</a><a href="#">About</a><a href="#">Contact</a>
+<a class="cta" href="#">Get Featured</a>
+</nav>
+<div class="hero">
+<div class="stars">★ ★ ★</div>
+<h1>Discover the <span>Best</span> of Wilson County</h1>
+<p>Free, invitation-only business listings for Lebanon, Mount Juliet, Watertown, and all of Wilson County, Tennessee.</p>
+<a class="btn" href="#">Apply to Be Featured →</a>
+</div>
+<div class="section">
+<h2>Hometown Favorites</h2>
+<p class="sub">Recently added local businesses you need to know about.</p>
+<div class="grid">
+<div class="card"><div class="panel"><div class="initial">M</div><div class="flag-star">⭑</div></div><div class="body"><div class="cat">Marketing</div><h3>Market Boss AI</h3><p>Digital marketing for local businesses in Wilson County.</p><a href="#">View Profile →</a></div></div>
+<div class="card"><div class="panel" style="background:var(--tn-red)"><div class="initial">R</div><div class="flag-star">⭑</div></div><div class="body"><div class="cat">HVAC</div><h3>Reliable Heating & Air</h3><p>Trusted HVAC service for Lebanon and surrounding areas.</p><a href="#">View Profile →</a></div></div>
+<div class="card"><div class="panel" style="background:var(--tn-blue-light)"><div class="initial">L</div><div class="flag-star">⭑</div></div><div class="body"><div class="cat">Landscaping</div><h3>Lawn & Order</h3><p>Professional landscaping and lawn care in Mount Juliet.</p><a href="#">View Profile →</a></div></div>
+</div>
+</div>
+<div class="how-section">
+<h2>How It Works</h2>
+<p class="sub">Getting featured is simple — and it's always free.</p>
+<div class="how-grid">
+<div class="how-step"><div class="num">1</div><h3>Apply</h3><p>Fill out a quick application. We're usually back to you within 24 hours.</p></div>
+<div class="how-step"><div class="num">2</div><h3>We Interview</h3><p>A 20-minute call to learn your story. We do the rest.</p></div>
+<div class="how-step"><div class="num">3</div><h3>You're Featured</h3><p>Published on Wilson County Spotlight. Share it everywhere.</p></div>
+</div>
+</div>
+<footer>
+<p>Wilson County Spotlight · Lebanon, Tennessee</p>
+<p><a href="#">Apply to be featured</a></p>
+</footer>
+</body>
+</html>
