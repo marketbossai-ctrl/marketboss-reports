@@ -11,102 +11,129 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0b0d11;color:#d1d5db;font-family:'Inter',system-ui,sans-serif;min-height:100vh;line-height:1.5}
 .container{max-width:1200px;margin:0 auto;padding:32px 24px 64px}
-.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;flex-wrap:wrap;gap:12px}
 .logo-area h1{font-size:1.15rem;font-weight:700;color:#f9fafb;letter-spacing:-0.02em}
 .logo-area span{color:#6b7280;font-size:0.82rem}
 .et{color:#f59e0b;font-size:0.78rem;font-weight:600;background:rgba(245,158,11,0.1);padding:6px 14px;border-radius:20px;border:1px solid rgba(245,158,11,0.2)}
-.quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:40px}
-.q-card{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:18px;transition:border-color 0.15s;cursor:pointer}
+.quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:36px}
+.q-card{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:16px;transition:border-color 0.15s;cursor:pointer}
 .q-card:hover{border-color:#374151}
-.q-card .icon{font-size:1.3rem;margin-bottom:6px}
-.q-card h3{font-size:0.85rem;font-weight:600;color:#f3f4f6;margin-bottom:4px}
-.q-card p{font-size:0.75rem;color:#6b7280;line-height:1.4}
-.section-title{display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:#d1d5db;margin-bottom:16px;margin-top:40px}
+.q-card .icon{font-size:1.2rem;margin-bottom:4px}
+.q-card h3{font-size:0.82rem;font-weight:600;color:#f3f4f6;margin-bottom:3px}
+.q-card p{font-size:0.72rem;color:#6b7280;line-height:1.4}
+.section-title{display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:#d1d5db;margin-bottom:14px;margin-top:36px}
 .section-title::after{content:'';flex:1;height:1px;background:#1f232b}
-.today-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px}
-.today-card{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:18px}
-.today-card .time{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#f59e0b;font-weight:500}
-.today-card .task{font-size:0.88rem;color:#f3f4f6;margin:4px 0}
-.today-card .loc{font-size:0.75rem;color:#6b7280}
-.week-list{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:0;overflow:hidden;margin-bottom:32px}
-.week-item{display:grid;grid-template-columns:56px 1fr;padding:12px 18px;border-bottom:1px solid #1f232b}
+.section-title:first-of-type{margin-top:0}
+.week-list{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:0;overflow:hidden;margin-bottom:12px}
+.week-item{display:grid;grid-template-columns:36px 1fr;padding:10px 16px;border-bottom:1px solid #1f232b;align-items:start}
 .week-item:last-child{border-bottom:none}
-.week-item .day{font-size:0.75rem;font-weight:600;color:#f59e0b;padding-top:2px}
-.week-item .info .title{font-size:0.88rem;color:#f3f4f6}
-.week-item .info .meta{font-size:0.75rem;color:#6b7280;margin-top:2px}
-.links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
-.link-card{background:#13161c;border:1px solid #1f232b;border-radius:8px;padding:14px;text-align:center;text-decoration:none;transition:border-color 0.15s;display:block}
+.week-item .day{font-size:0.85rem;padding-top:1px}
+.week-item .info .title{font-size:0.82rem;color:#f3f4f6;font-weight:500}
+.week-item .info .meta{font-size:0.72rem;color:#6b7280;margin-top:2px;line-height:1.5}
+.links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-bottom:32px}
+.link-card{background:#13161c;border:1px solid #1f232b;border-radius:8px;padding:12px;text-align:center;text-decoration:none;transition:border-color 0.15s;display:block}
 .link-card:hover{border-color:#374151}
-.link-card .label{font-size:0.8rem;color:#9ca3af;font-weight:500}
-.link-card .url{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#4b5563;margin-top:4px}
-.cmd-box{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:20px;margin-top:32px}
-.cmd-box h3{font-size:0.85rem;color:#f3f4f6;margin-bottom:12px}
-.cmd-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.cmd-item{padding:8px 12px;background:#0b0d11;border-radius:6px;font-size:0.78rem;color:#6b7280;font-family:'JetBrains Mono',monospace;cursor:pointer;transition:color 0.15s}
-.cmd-item:hover{color:#d1d5db}
-.footer{text-align:center;margin-top:48px;color:#374151;font-size:0.75rem}
-@media(max-width:700px){.today-grid,.cmd-grid{grid-template-columns:1fr}.quick-grid{grid-template-columns:1fr 1fr}.top{flex-direction:column;align-items:flex-start;gap:12px}}
+.link-card .label{font-size:0.78rem;color:#9ca3af;font-weight:500}
+.link-card .url{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:#4b5563;margin-top:3px}
+.footer{text-align:center;margin-top:48px;color:#374151;font-size:0.72rem}
+.tag{display:inline-block;font-size:0.6rem;padding:1px 6px;border-radius:8px;margin-right:3px;margin-bottom:2px;font-weight:500}
+.tag-new{background:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2)}
+.tag-core{background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2)}
+@media(max-width:700px){.quick-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="container">
 <div class="top">
-<div class="logo-area"><h1>Market Boss AI</h1><span>Back Office · Eastern Time</span></div>
-<div class="et">Virginia Beach, VA</div>
+<div class="logo-area"><h1>Market Boss AI · Back Office</h1><span>Virginia Beach, VA · Eastern Time</span></div>
+<div class="et">194 Skills Available</div>
 </div>
 
+<div class="section-title">⚡ Quick Actions</div>
 <div class="quick-grid">
-<div class="q-card"><div class="icon">🔍</div><h3>Run SEO Audit</h3><p>Full 4-driver audit → GitHub Pages</p></div>
-<div class="q-card"><div class="icon">📝</div><h3>Create FB Post</h3><p>CA / VB / WC with image prompt</p></div>
-<div class="q-card"><div class="icon">📧</div><h3>Send Outreach</h3><p>5 VBSpotlight spotlight emails</p></div>
-<div class="q-card"><div class="icon">✉️</div><h3>Audit Follow-Up</h3><p>Send audit to featured business</p></div>
-<div class="q-card"><div class="icon">📝</div><h3>Write Blog</h3><p>Sun/Wed/Fri for MarketBossAI</p></div>
+<div class="q-card"><div class="icon">🔍</div><h3>Run SEO Audit</h3><p>Full 4-driver audit → GH Pages</p></div>
+<div class="q-card"><div class="icon">📝</div><h3>Create FB Post</h3><p>CA / VB / WC w/ image prompt</p></div>
+<div class="q-card"><div class="icon">📧</div><h3>Send Outreach</h3><p>5 VBSpotlight pitch emails</p></div>
+<div class="q-card"><div class="icon">✉️</div><h3>Audit Follow-Up</h3><p>Send audit to featured biz</p></div>
+<div class="q-card"><div class="icon">📝</div><h3>Write Blog</h3><p>Sun/Wed/Fri for MBAI</p></div>
 <div class="q-card"><div class="icon">🏗️</div><h3>Add Appointment</h3><p>Paste → todo + calendar</p></div>
 </div>
 
-<div class="section-title">Today</div>
-<div class="today-grid">
-<div class="today-card"><div class="time">10:00 AM</div><div class="task">Brian Simpkins</div><div class="loc">ClickUp lead</div></div>
-<div class="today-card"><div class="time">1:00 PM</div><div class="task">Zoom call — Scott Allen</div><div class="loc">Google Meet</div></div>
-<div class="today-card"><div class="time">1:00 PM</div><div class="task">Al Baki</div><div class="loc">ClickUp lead</div></div>
-<div class="today-card"><div class="time" style="color:#6b7280">—</div><div class="task" style="color:#6b7280">HR Liner Pros audit email</div><div class="loc">To-do carryover</div></div>
-</div>
-
-<div class="section-title">This Week</div>
-<div class="week-list">
-<div class="week-item"><div class="day">THU</div><div class="info"><div class="title">Harold Jones REVISIT</div><div class="meta">10AM · 725 Broad St, Portsmouth</div></div></div>
-<div class="week-item"><div class="day">THU</div><div class="info"><div class="title">Christopher — joist repair</div><div class="meta">1PM · 1413 Highland Ave, Portsmouth</div></div></div>
-<div class="week-item"><div class="day">THU</div><div class="info"><div class="title">Final walkthrough — Kelly Mitchell</div><div class="meta">3PM · 716 Firethorn Rd, Chesapeake</div></div></div>
-<div class="week-item"><div class="day">THU</div><div class="info"><div class="title">Double Stack Huddle</div><div class="meta">3PM · Weekly call</div></div></div>
-<div class="week-item"><div class="day">FRI</div><div class="info"><div class="title">Christopher Skipprt — sagging floors</div><div class="meta">10AM · 22310 Thomaston Rd</div></div></div>
-<div class="week-item"><div class="day">FRI</div><div class="info"><div class="title">Alanna Burns — mold/structural</div><div class="meta">1PM · 3756 Lake Powhatan, Williamsburg</div></div></div>
-<div class="week-item"><div class="day">FRI</div><div class="info"><div class="title">Newsom's appointment</div><div class="meta"></div></div></div>
-<div class="week-item"><div class="day">MON</div><div class="info"><div class="title">Dominic Lucero</div><div class="meta">10AM</div></div></div>
-</div>
-
-<div class="section-title">Quick Links</div>
+<div class="section-title">🌐 Sites &amp; Reports</div>
 <div class="links-grid">
-<a class="link-card" href="https://crawlanswers.com" target="_blank"><div class="label">CrawlAnswers.com</div><div class="url">live site</div></a>
-<a class="link-card" href="https://vbspotlight.com" target="_blank"><div class="label">VBSpotlight.com</div><div class="url">live site</div></a>
-<a class="link-card" href="https://marketbossai.com" target="_blank"><div class="label">MarketBossAI.com</div><div class="url">live site</div></a>
-<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/back-office/" target="_blank"><div class="label">Back Office</div><div class="url">you are here</div></a>
-<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/" target="_blank"><div class="label">VBSpotlight CRM</div><div class="url">70 applications</div></a>
-<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/packages/" target="_blank"><div class="label">Pricing Packages</div><div class="url">service plans</div></a>
-<a class="link-card" href="https://wilsoncountyspotlight.com" target="_blank"><div class="label">Wilson County</div><div class="url">Spotlight</div></a>
+<a class="link-card" href="https://crawlanswers.com"><div class="label">CrawlAnswers.com</div><div class="url">live site</div></a>
+<a class="link-card" href="https://vbspotlight.com"><div class="label">VBSpotlight.com</div><div class="url">live site</div></a>
+<a class="link-card" href="https://wilsoncountyspotlight.com"><div class="label">WCSpotlight.com</div><div class="url">live site</div></a>
+<a class="link-card" href="https://marketbossai.com"><div class="label">MarketBossAI.com</div><div class="url">live site</div></a>
+<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/"><div class="label">VB Spotlight CRM</div><div class="url">72 applications</div></a>
+<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/smileys-hvac-audit/"><div class="label">Smiley's HVAC Audit</div><div class="url">Grade C</div></a>
+<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/hampton-roads-liner-pros-audit/"><div class="label">HR Liner Pros Audit</div><div class="url">Grade D</div></a>
+<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/crawlanswers-dk-ad/"><div class="label">Dan Kennedy Ad</div><div class="url">article demo</div></a>
 </div>
 
-<div class="section-title">🧰 All Skills Available</div>
+<div class="section-title">📋 This Week</div>
 <div class="week-list">
-<div class="week-item"><div class="day" style="color:#10b981">📝</div><div class="info"><div class="title">Copy & Content</div><div class="meta">copywriting · copy-editing · content-strategy · ad-creative · emails · sms · social · video</div></div></div>
-<div class="week-item"><div class="day" style="color:#f59e0b">🔍</div><div class="info"><div class="title">SEO & Growth</div><div class="meta">seo-audit · ai-seo · programmatic-seo · schema · site-architecture · directory-submissions · analytics</div></div></div>
-<div class="week-item"><div class="day" style="color:#6366f1">💼</div><div class="info"><div class="title">Sales & Conversion</div><div class="meta">cro · ab-testing · offers · pricing · signup · popups · onboarding · paywalls · sales-enablement</div></div></div>
-<div class="week-item"><div class="day" style="color:#ec4899">🎯</div><div class="info"><div class="title">Strategy & Research</div><div class="meta">marketing-plan · marketing-loops · competitor-profiling · attribution · customer-research · marketing-psychology · marketing-ideas</div></div></div>
-<div class="week-item"><div class="day" style="color:#14b8a6">🏪</div><div class="info"><div class="title">Operations & Outreach</div><div class="meta">revops · prospecting · cold-email · lead-magnets · public-relations · referrals · co-marketing · community-marketing</div></div></div>
-<div class="week-item"><div class="day" style="color:#f97316">🚀</div><div class="info"><div class="title">Product & Launch</div><div class="meta">product-marketing · launch · events · influencer-marketing · aso · free-tools · image</div></div></div>
-<div class="week-item"><div class="day" style="color:#22d3ee">🌐</div><div class="info"><div class="title">Our Current Work</div><div class="meta">Reef Copywriting · Blog Master · Blogburst · Case Study Builder · Brand Butler Audits · Marketing Agency Ops · Frontend Design · Proposal Generator</div></div></div>
+<div class="week-item"><div class="day" style="color:#f59e0b">W</div><div class="info"><div class="title">Brian Simpkins · Scott Allen · Al Baki</div><div class="meta">Today</div></div></div>
+<div class="week-item"><div class="day" style="color:#f59e0b">T</div><div class="info"><div class="title">Harold Jones R. 10AM · Christopher 1PM · Kelly FWT 3PM · DoubleStack 3PM</div><div class="meta">Portsmouth &amp; Chesapeake</div></div></div>
+<div class="week-item"><div class="day" style="color:#f59e0b">F</div><div class="info"><div class="title">Skipprt 10AM · Sherry QC · Newsom · Alanna Burns 1PM</div><div class="meta">Newsome's · Poquoson · Williamsburg</div></div></div>
+<div class="week-item"><div class="day" style="color:#6b7280">M</div><div class="info"><div class="title">Dominic Lucero 10AM</div><div class="meta">Sep 21</div></div></div>
 </div>
 
-<div class="footer">Market Boss AI · Virginia Beach, VA · Updated daily</div>
+<div class="section-title">🧰 Complete Skills Inventory <span class="tag tag-core">194 total</span></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">📝 Copy & Content <span class="tag tag-core">16</span></div>
+<div class="meta">copywriting · copy-editing · content-strategy · ad-creative · emails · sms · social · video · reef-copywriting · blog-master · blogburst · content-marketing · landing-page-copy-kit · writing · humanizer · songwriting-and-ai-music</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🔍 SEO & Local Search <span class="tag tag-core">17</span></div>
+<div class="meta">seo-audit · ai-seo · programmatic-seo · schema · site-architecture · directory-submissions · analytics · brand-butler-local-authority-engine · google-maps-places · local-business-pack · marketboss-local-audit · marketboss-local-seo-site-builder · competitor-profiling · competitors · prospect-analyzer · marketboss-prospecting-agent · lead-gen-website</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">💼 Agency Ops & CRM <span class="tag tag-core">16</span></div>
+<div class="meta">marketing-agency-ops · agency-client-reporting · agency-growth-automations · project-management-2 · productivity · note-taking · funnel-builder · brw-case-study-builder · contractor-marketing · postiz · marketboss-ai-command-center · marketing-council · revops · sales-enablement · prospect-analyzer · accountability-buddy</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">📧 Outreach & Email <span class="tag tag-core">12</span></div>
+<div class="meta">cold-email · cold-email-local-business · prospecting · lead-magnets · email-inbox-triage · himalaya · marketboss-email-triage · emails · referrals · co-marketing · community-marketing · public-relations</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🎯 Strategy & Research <span class="tag tag-core">14</span></div>
+<div class="meta">marketing-plan · marketing-loops · marketing-ideas · marketing-psychology · attribution · customer-research · competitor-profiling · marketboss-lead-finder · ab-testing · cro · offers · pricing · customer-research · content-strategy</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🚀 Product & Launch <span class="tag tag-core">12</span></div>
+<div class="meta">product-marketing · launch · events · influencer-marketing · aso · free-tools · ads · churn-prevention · paywalls · signup · onboarding · popups</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🌐 Web Dev & Design <span class="tag tag-core">20</span></div>
+<div class="meta">frontend-design · astro-to-wordpress-deploy · one-click-website · website-build · lead-gen-website · marketboss-local-seo-site-builder · architecture-diagram · excalidraw · p5js · sketch · claude-design · popular-web-designs · manim-video · ascii-art · baoyu-infographic · image-generation · comfyui · design-md · pretext · theme-factory</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">📄 Documents & Reports <span class="tag tag-core">10</span></div>
+<div class="meta">docx · pdf · pptx · xlsx · client-proposal-generator · ai-proposal-generator · nano-pdf · oc-daily-business-report · reporting · calendar-cli</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🤖 Agent & Workflow <span class="tag tag-core">18</span></div>
+<div class="meta">hermes-agent · automation-workflow · agentic-workflow-designer · personal-task-tracking · skill-package · autonomous-ai-agents · claude-code · codex · opencode · computer-use · gateway-troubleshooting · merge-reconciler · natural-language-reminder · cron-scheduling · skill-creator · mcp-builder · webapp-testing · portal</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🔧 Dev & GitHub <span class="tag tag-core">12</span></div>
+<div class="meta">github-auth · github-repo-management · github-code-review · github-issues · github-pr-workflow · github-issue-to-pr · codebase-inspection · software-development · systematic-debugging · test-driven-development · simplify-code · requesting-code-review</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🎓 ML & AI Tools <span class="tag tag-core">10</span></div>
+<div class="meta">huggingface-hub · llama-cpp · serving-llms-vllm · evaluating-llms-harness · weights-and-biases · arxiv · image-generation · comfyui · llm-wiki · research</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">🏪 VBSpotlight & WCSpotlight <span class="tag tag-core">8</span></div>
+<div class="meta">vb-spotlight-article · vbspotlight-audit-reminder · wilson-county-spotlight · facebook-spotlight-post · daily-morning-routine · marketboss-operations · accountability-buddy · blog-master</div></div></div>
+
+<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
+<div class="info"><div class="title" style="font-size:0.85rem">📱 Social & Media <span class="tag tag-core">12</span></div>
+<div class="meta">social-media · postiz · xurl · telegram-bot-ops · facebook-spotlight-post · youtube-content · gif-search · songsee · media · smart-home · openhue · apple-notes · apple-reminders · imessage · findmy</div></div></div>
+
+<div class="footer">Market Boss AI · Virginia Beach, VA · 194 skills · Updated daily</div>
 </div>
 </body>
 </html>
