@@ -16,124 +16,256 @@ body{background:#0b0d11;color:#d1d5db;font-family:'Inter',system-ui,sans-serif;m
 .logo-area span{color:#6b7280;font-size:0.82rem}
 .et{color:#f59e0b;font-size:0.78rem;font-weight:600;background:rgba(245,158,11,0.1);padding:6px 14px;border-radius:20px;border:1px solid rgba(245,158,11,0.2)}
 .quick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:36px}
-.q-card{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:16px;transition:border-color 0.15s;cursor:pointer}
-.q-card:hover{border-color:#374151}
+.q-card{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:16px;transition:all 0.15s;cursor:pointer;text-decoration:none;display:block;color:inherit}
+.q-card:hover{border-color:#f59e0b;transform:translateY(-1px)}
 .q-card .icon{font-size:1.2rem;margin-bottom:4px}
 .q-card h3{font-size:0.82rem;font-weight:600;color:#f3f4f6;margin-bottom:3px}
 .q-card p{font-size:0.72rem;color:#6b7280;line-height:1.4}
 .section-title{display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:#d1d5db;margin-bottom:14px;margin-top:36px}
 .section-title::after{content:'';flex:1;height:1px;background:#1f232b}
 .section-title:first-of-type{margin-top:0}
-.week-list{background:#13161c;border:1px solid #1f232b;border-radius:10px;padding:0;overflow:hidden;margin-bottom:12px}
-.week-item{display:grid;grid-template-columns:36px 1fr;padding:10px 16px;border-bottom:1px solid #1f232b;align-items:start}
-.week-item:last-child{border-bottom:none}
-.week-item .day{font-size:0.85rem;padding-top:1px}
-.week-item .info .title{font-size:0.82rem;color:#f3f4f6;font-weight:500}
-.week-item .info .meta{font-size:0.72rem;color:#6b7280;margin-top:2px;line-height:1.5}
+.week-list{background:#13161c;border:1px solid #1f232b;border-radius:10px;margin-bottom:12px;overflow:hidden}
+.skill-cat{background:#13161c;border:1px solid #1f232b;border-radius:10px;margin-bottom:10px;overflow:hidden}
+.skill-cat-header{padding:12px 16px;border-bottom:1px solid #1f232b;font-size:0.82rem;font-weight:600;color:#f3f4f6;display:flex;justify-content:space-between;align-items:center}
+.skill-cat-header span{color:#6b7280;font-size:0.7rem;font-weight:400}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px;padding:10px 14px}
+.skill-link{display:block;padding:8px 10px;background:#0b0d11;border:1px solid #1f232b;border-radius:6px;text-decoration:none;color:#9ca3af;font-size:0.75rem;font-weight:500;transition:all 0.12s;text-align:center}
+.skill-link:hover{background:#1a1e26;border-color:#f59e0b;color:#f59e0b}
+.skill-link-core{border-color:rgba(245,158,11,0.2)}
 .links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-bottom:32px}
-.link-card{background:#13161c;border:1px solid #1f232b;border-radius:8px;padding:12px;text-align:center;text-decoration:none;transition:border-color 0.15s;display:block}
+.link-card{background:#13161c;border:1px solid #1f232b;border-radius:8px;padding:12px;text-align:center;text-decoration:none;transition:border-color 0.15s;display:block;color:inherit}
 .link-card:hover{border-color:#374151}
 .link-card .label{font-size:0.78rem;color:#9ca3af;font-weight:500}
 .link-card .url{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:#4b5563;margin-top:3px}
 .footer{text-align:center;margin-top:48px;color:#374151;font-size:0.72rem}
-.tag{display:inline-block;font-size:0.6rem;padding:1px 6px;border-radius:8px;margin-right:3px;margin-bottom:2px;font-weight:500}
+.tag{display:inline-block;font-size:0.6rem;padding:1px 6px;border-radius:8px;margin-left:4px;font-weight:500}
 .tag-new{background:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2)}
 .tag-core{background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2)}
-@media(max-width:700px){.quick-grid{grid-template-columns:1fr 1fr}}
+.hint{font-size:0.7rem;color:#4b5563;margin-top:16px;margin-bottom:8px;text-align:center}
+@media(max-width:700px){.quick-grid,.skill-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="container">
 <div class="top">
 <div class="logo-area"><h1>Market Boss AI · Back Office</h1><span>Virginia Beach, VA · Eastern Time</span></div>
-<div class="et">194 Skills Available</div>
+<div class="et">Tap a skill → Telegram opens → I help</div>
 </div>
+
+<div class="hint">👇 Tap any skill button → Telegram opens with a pre-filled message. Just hit send and I'll take it from there.</div>
 
 <div class="section-title">⚡ Quick Actions</div>
 <div class="quick-grid">
-<div class="q-card"><div class="icon">🔍</div><h3>Run SEO Audit</h3><p>Full 4-driver audit → GH Pages</p></div>
-<div class="q-card"><div class="icon">📝</div><h3>Create FB Post</h3><p>CA / VB / WC w/ image prompt</p></div>
-<div class="q-card"><div class="icon">📧</div><h3>Send Outreach</h3><p>5 VBSpotlight pitch emails</p></div>
-<div class="q-card"><div class="icon">✉️</div><h3>Audit Follow-Up</h3><p>Send audit to featured biz</p></div>
-<div class="q-card"><div class="icon">📝</div><h3>Write Blog</h3><p>Sun/Wed/Fri for MBAI</p></div>
-<div class="q-card"><div class="icon">🏗️</div><h3>Add Appointment</h3><p>Paste → todo + calendar</p></div>
+<a class="q-card" href="tg://msg?text=Run%20an%20SEO%20audit%20for%20"><div class="icon">🔍</div><h3>Run SEO Audit</h3><p>Full 4-driver audit → GH Pages</p></div>
+<a class="q-card" href="tg://msg?text=Create%20a%20CrawlAnswers%20Facebook%20post%20with%20image%20prompt"><div class="icon">📝</div><h3>Create FB Post</h3><p>CA / VB / WC w/ image prompt</p></div>
+<a class="q-card" href="tg://msg?text=Generate%205%20VBSpotlight%20outreach%20emails%20for%20today"><div class="icon">📧</div><h3>Send Outreach</h3><p>5 VBSpotlight pitch emails</p></div>
+<a class="q-card" href="tg://msg?text=I%20need%20to%20send%20the%20audit%20email%20to%20"><div class="icon">✉️</div><h3>Audit Follow-Up</h3><p>Send audit to featured biz</p></div>
+<a class="q-card" href="tg://msg?text=Write%20a%20blog%20for%20MarketBossAI.com%20about%20"><div class="icon">📝</div><h3>Write Blog</h3><p>Sun/Wed/Fri for MBAI</p></div>
+<a class="q-card" href="tg://msg?text=Add%20an%20appointment%3A%20"><div class="icon">🏗️</div><h3>Add Appointment</h3><p>Paste → todo + calendar</p></div>
 </div>
 
-<div class="section-title">🌐 Sites &amp; Reports</div>
+<div class="section-title">🌐 Sites</div>
 <div class="links-grid">
-<a class="link-card" href="https://crawlanswers.com"><div class="label">CrawlAnswers.com</div><div class="url">live site</div></a>
-<a class="link-card" href="https://vbspotlight.com"><div class="label">VBSpotlight.com</div><div class="url">live site</div></a>
-<a class="link-card" href="https://wilsoncountyspotlight.com"><div class="label">WCSpotlight.com</div><div class="url">live site</div></a>
-<a class="link-card" href="https://marketbossai.com"><div class="label">MarketBossAI.com</div><div class="url">live site</div></a>
-<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/"><div class="label">VB Spotlight CRM</div><div class="url">72 applications</div></a>
-<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/smileys-hvac-audit/"><div class="label">Smiley's HVAC Audit</div><div class="url">Grade C</div></a>
-<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/hampton-roads-liner-pros-audit/"><div class="label">HR Liner Pros Audit</div><div class="url">Grade D</div></a>
-<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/crawlanswers-dk-ad/"><div class="label">Dan Kennedy Ad</div><div class="url">article demo</div></a>
+<a class="link-card" href="https://crawlanswers.com" target="_blank"><div class="label">CrawlAnswers.com</div></a>
+<a class="link-card" href="https://vbspotlight.com" target="_blank"><div class="label">VBSpotlight.com</div></a>
+<a class="link-card" href="https://wilsoncountyspotlight.com" target="_blank"><div class="label">WCSpotlight.com</div></a>
+<a class="link-card" href="https://marketbossai.com" target="_blank"><div class="label">MarketBossAI.com</div></a>
+<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/" target="_blank"><div class="label">VB Spotlight CRM</div></a>
+<a class="link-card" href="https://marketbossai-ctrl.github.io/marketboss-reports/back-office/" target="_blank"><div class="label">You Are Here</div></a>
 </div>
 
 <div class="section-title">📋 This Week</div>
-<div class="week-list">
-<div class="week-item"><div class="day" style="color:#f59e0b">W</div><div class="info"><div class="title">Brian Simpkins · Scott Allen · Al Baki</div><div class="meta">Today</div></div></div>
-<div class="week-item"><div class="day" style="color:#f59e0b">T</div><div class="info"><div class="title">Harold Jones R. 10AM · Christopher 1PM · Kelly FWT 3PM · DoubleStack 3PM</div><div class="meta">Portsmouth &amp; Chesapeake</div></div></div>
-<div class="week-item"><div class="day" style="color:#f59e0b">F</div><div class="info"><div class="title">Skipprt 10AM · Sherry QC · Newsom · Alanna Burns 1PM</div><div class="meta">Newsome's · Poquoson · Williamsburg</div></div></div>
-<div class="week-item"><div class="day" style="color:#6b7280">M</div><div class="info"><div class="title">Dominic Lucero 10AM</div><div class="meta">Sep 21</div></div></div>
+<div class="week-list" style="padding:14px 18px">
+<div style="display:grid;grid-template-columns:32px 1fr;gap:8px;margin-bottom:8px"><span style="color:#f59e0b;font-weight:700;font-size:0.8rem">W</span><span style="font-size:0.82rem;color:#d1d5db">Brian Simpkins · Scott Allen · Al Baki</span></div>
+<div style="display:grid;grid-template-columns:32px 1fr;gap:8px;margin-bottom:8px"><span style="color:#f59e0b;font-weight:700;font-size:0.8rem">T</span><span style="font-size:0.82rem;color:#d1d5db">Harold Jones R. 10AM · Christopher 1PM · Kelly FWT 3PM · DoubleStack 3PM</span></div>
+<div style="display:grid;grid-template-columns:32px 1fr;gap:8px;margin-bottom:8px"><span style="color:#f59e0b;font-weight:700;font-size:0.8rem">F</span><span style="font-size:0.82rem;color:#d1d5db">Skipprt 10AM · Sherry QC · Newsom · Alanna Burns 1PM</span></div>
+<div style="display:grid;grid-template-columns:32px 1fr;gap:0"><span style="color:#6b7280;font-weight:700;font-size:0.8rem">M</span><span style="font-size:0.82rem;color:#d1d5db">Dominic Lucero 10AM</span></div>
 </div>
 
-<div class="section-title">🧰 Complete Skills Inventory <span class="tag tag-core">194 total</span></div>
+<div class="section-title">🧰 All Skills <span class="tag tag-core">194</span></div>
+<div class="hint">Tap any skill → Telegram opens with "Let's do [skill]" → I ask the right questions</div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">📝 Copy & Content <span class="tag tag-core">16</span></div>
-<div class="meta">copywriting · copy-editing · content-strategy · ad-creative · emails · sms · social · video · reef-copywriting · blog-master · blogburst · content-marketing · landing-page-copy-kit · writing · humanizer · songwriting-and-ai-music</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">📝 Copy & Content <span>16 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link" href="tg://msg?text=Let%27s%20do%20copywriting%20for%20">copywriting</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20do%20copy-editing%20for%20">copy-editing</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20create%20a%20content%20strategy%20for%20">content-strategy</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20create%20an%20ad%20creative%20for%20">ad-creative</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20write%20an%20email%20for%20">emails</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20write%20an%20SMS%20for%20">sms</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20create%20a%20social%20post%20for%20">social</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20create%20a%20video%20for%20">video</a>
+<a class="skill-link skill-link-core" href="tg://msg?text=Use%20Reef%20Copywriting%20for%20">reef-copywriting</a>
+<a class="skill-link skill-link-core" href="tg://msg?text=Write%20an%20SEO%20blog%20post%20about%20">blog-master</a>
+<a class="skill-link" href="tg://msg?text=Use%20BlogBurst%20to%20generate%20blog%20topics%20about%20">blogburst</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20content%20calendar%20for%20">content-marketing</a>
+<a class="skill-link" href="tg://msg?text=Use%20the%20landing%20page%20copy%20kit%20for%20">landing-page-copy-kit</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20write%20something%20in%20my%20voice">writing</a>
+<a class="skill-link" href="tg://msg?text=Humanize%20this%20text">humanizer</a>
+<a class="skill-link" href="tg://msg?text=Let%27s%20write%20a%20song%20about%20">songwriting-and-ai-music</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🔍 SEO & Local Search <span class="tag tag-core">17</span></div>
-<div class="meta">seo-audit · ai-seo · programmatic-seo · schema · site-architecture · directory-submissions · analytics · brand-butler-local-authority-engine · google-maps-places · local-business-pack · marketboss-local-audit · marketboss-local-seo-site-builder · competitor-profiling · competitors · prospect-analyzer · marketboss-prospecting-agent · lead-gen-website</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">🔍 SEO & Local Search <span>17 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link skill-link-core" href="tg://msg?text=Run%20a%20full%20SEO%20audit%20on%20">seo-audit</a>
+<a class="skill-link" href="tg://msg?text=Optimize%20this%20content%20for%20AI%20search">ai-seo</a>
+<a class="skill-link" href="tg://msg?text=Set%20up%20programmatic%20SEO%20for%20">programmatic-seo</a>
+<a class="skill-link" href="tg://msg?text=Audit%20the%20schema%20for%20">schema</a>
+<a class="skill-link" href="tg://msg?text=Review%20site%20architecture%20for%20">site-architecture</a>
+<a class="skill-link" href="tg://msg?text=Submit%20to%20directories%20for%20">directory-submissions</a>
+<a class="skill-link" href="tg://msg?text=Set%20up%20analytics%20for%20">analytics</a>
+<a class="skill-link skill-link-core" href="tg://msg?text=Run%20a%20Brand%20Butler%20audit%20on%20">brand-butler-local-authority-engine</a>
+<a class="skill-link skill-link-core" href="tg://msg?text=Search%20Google%20Maps%20for%20leads%20in%20">google-maps-places</a>
+<a class="skill-link" href="tg://msg?text=Run%20the%20local%20business%20pack%20for%20">local-business-pack</a>
+<a class="skill-link" href="tg://msg?text=Run%20a%20local%20SEO%20audit%20for%20">marketboss-local-audit</a>
+<a class="skill-link" href="tg://msg?text=Build%20a%20local%20SEO%20site%20for%20">marketboss-local-seo-site-builder</a>
+<a class="skill-link" href="tg://msg?text=Profile%20competitors%20for%20">competitor-profiling</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20competitor%20comparison%20for%20">competitors</a>
+<a class="skill-link" href="tg://msg?text=Analyze%20a%20prospect%20for%20">prospect-analyzer</a>
+<a class="skill-link" href="tg://msg?text=Find%20prospects%20in%20">marketboss-prospecting-agent</a>
+<a class="skill-link" href="tg://msg?text=Build%20a%20lead%20gen%20site%20for%20">lead-gen-website</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">💼 Agency Ops & CRM <span class="tag tag-core">16</span></div>
-<div class="meta">marketing-agency-ops · agency-client-reporting · agency-growth-automations · project-management-2 · productivity · note-taking · funnel-builder · brw-case-study-builder · contractor-marketing · postiz · marketboss-ai-command-center · marketing-council · revops · sales-enablement · prospect-analyzer · accountability-buddy</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">💼 Agency Ops & CRM <span>16 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link" href="tg://msg?text=Run%20the%20agency%20operations%20daily%20routine">marketing-agency-ops</a>
+<a class="skill-link" href="tg://msg?text=Generate%20a%20client%20report%20for%20">agency-client-reporting</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20growth%20plan%20for%20">agency-growth-automations</a>
+<a class="skill-link" href="tg://msg?text=Show%20my%20project%20management%20dashboard">project-management-2</a>
+<a class="skill-link" href="tg://msg?text=List%20my%20notes">note-taking</a>
+<a class="skill-link" href="tg://msg?text=Build%20a%20funnel%20for%20">funnel-builder</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20case%20study%20for%20">brw-case-study-builder</a>
+<a class="skill-link" href="tg://msg?text=Create%20marketing%20for%20this%20contractor">contractor-marketing</a>
+<a class="skill-link" href="tg://msg?text=Schedule%20a%20social%20post">postiz</a>
+<a class="skill-link" href="tg://msg?text=Run%20the%20MarketBoss%20AI%20stack">marketboss-ai-command-center</a>
+<a class="skill-link" href="tg://msg?text=Set%20up%20marketing%20council%20for%20">marketing-council</a>
+<a class="skill-link" href="tg://msg?text=Audit%20our%20revops">revops</a>
+<a class="skill-link" href="tg://msg?text=Create%20sales%20enablement%20for%20">sales-enablement</a>
+<a class="skill-link" href="tg://msg?text=Run%20the%20accountability%20check-in">accountability-buddy</a>
+<a class="skill-link" href="tg://msg?text=Analyze%20this%20prospect">prospect-analyzer</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">📧 Outreach & Email <span class="tag tag-core">12</span></div>
-<div class="meta">cold-email · cold-email-local-business · prospecting · lead-magnets · email-inbox-triage · himalaya · marketboss-email-triage · emails · referrals · co-marketing · community-marketing · public-relations</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">📧 Outreach & Email <span>12 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link skill-link-core" href="tg://msg?text=Generate%20cold%20emails%20for%20">cold-email</a>
+<a class="skill-link" href="tg://msg?text=Write%20a%20personalized%20cold%20email%20to%20">cold-email-local-business</a>
+<a class="skill-link skill-link-core" href="tg://msg?text=Generate%205%20prospects%20for%20today">prospecting</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20lead%20magnet%20for%20">lead-magnets</a>
+<a class="skill-link" href="tg://msg?text=Triage%20my%20email%20inbox">email-inbox-triage</a>
+<a class="skill-link" href="tg://msg?text=Triage%20Jeff%27s%20Gmail">marketboss-email-triage</a>
+<a class="skill-link" href="tg://msg?text=Create%20an%20email%20sequence%20for%20">emails</a>
+<a class="skill-link" href="tg://msg?text=Build%20a%20referral%20program%20for%20">referrals</a>
+<a class="skill-link" href="tg://msg?text=Find%20co-marketing%20partners%20for%20">co-marketing</a>
+<a class="skill-link" href="tg://msg?text=Build%20a%20community%20for%20">community-marketing</a>
+<a class="skill-link" href="tg://msg?text=Write%20a%20press%20release%20for%20">public-relations</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🎯 Strategy & Research <span class="tag tag-core">14</span></div>
-<div class="meta">marketing-plan · marketing-loops · marketing-ideas · marketing-psychology · attribution · customer-research · competitor-profiling · marketboss-lead-finder · ab-testing · cro · offers · pricing · customer-research · content-strategy</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">🎯 Strategy & Research <span>14 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link" href="tg://msg?text=Create%20a%20marketing%20plan%20for%20">marketing-plan</a>
+<a class="skill-link" href="tg://msg?text=Build%20a%20marketing%20loop%20for%20">marketing-loops</a>
+<a class="skill-link" href="tg://msg?text=Brainstorm%20marketing%20ideas%20for%20">marketing-ideas</a>
+<a class="skill-link" href="tg://msg?text=Apply%20marketing%20psychology%20to%20">marketing-psychology</a>
+<a class="skill-link" href="tg://msg?text=Set%20up%20attribution%20for%20">attribution</a>
+<a class="skill-link" href="tg://msg?text=Do%20customer%20research%20for%20">customer-research</a>
+<a class="skill-link" href="tg://msg?text=Profile%20competitors%20for%20">competitor-profiling</a>
+<a class="skill-link" href="tg://msg?text=Run%20an%20A/B%20test%20for%20">ab-testing</a>
+<a class="skill-link" href="tg://msg?text=Optimize%20conversions%20for%20">cro</a>
+<a class="skill-link" href="tg://msg?text=Create%20an%20offer%20for%20">offers</a>
+<a class="skill-link" href="tg://msg?text=Set%20pricing%20for%20">pricing</a>
+<a class="skill-link" href="tg://msg?text=Find%20leads%20in%20">marketboss-lead-finder</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🚀 Product & Launch <span class="tag tag-core">12</span></div>
-<div class="meta">product-marketing · launch · events · influencer-marketing · aso · free-tools · ads · churn-prevention · paywalls · signup · onboarding · popups</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">🚀 Product & Launch <span>12 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link" href="tg://msg?text=Plan%20product%20marketing%20for%20">product-marketing</a>
+<a class="skill-link" href="tg://msg?text=Plan%20a%20launch%20for%20">launch</a>
+<a class="skill-link" href="tg://msg?text=Plan%20an%20event%20for%20">events</a>
+<a class="skill-link" href="tg://msg?text=Plan%20influencer%20marketing%20for%20">influencer-marketing</a>
+<a class="skill-link" href="tg://msg?text=Audit%20our%20app%20store%20presence">aso</a>
+<a class="skill-link" href="tg://msg?text=Build%20a%20free%20tool%20for%20">free-tools</a>
+<a class="skill-link" href="tg://msg?text=Set%20up%20ads%20for%20">ads</a>
+<a class="skill-link" href="tg://msg?text=Reduce%20churn%20for%20">churn-prevention</a>
+<a class="skill-link" href="tg://msg?text=Optimize%20our%20pricing%20page">paywalls</a>
+<a class="skill-link" href="tg://msg?text=Optimize%20signup%20flow%20for%20">signup</a>
+<a class="skill-link" href="tg://msg?text=Improve%20onboarding%20for%20">onboarding</a>
+<a class="skill-link" href="tg://msg?text=Optimize%20popups%20for%20">popups</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🌐 Web Dev & Design <span class="tag tag-core">20</span></div>
-<div class="meta">frontend-design · astro-to-wordpress-deploy · one-click-website · website-build · lead-gen-website · marketboss-local-seo-site-builder · architecture-diagram · excalidraw · p5js · sketch · claude-design · popular-web-designs · manim-video · ascii-art · baoyu-infographic · image-generation · comfyui · design-md · pretext · theme-factory</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">🌐 Web Dev & Design <span>20 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link" href="tg://msg?text=Redesign%20this%20page%20using%20frontend%20design%20for%20">frontend-design</a>
+<a class="skill-link" href="tg://msg?text=Convert%20Astro%20to%20WordPress%20for%20">astro-to-wordpress-deploy</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20website%20for%20">website-build</a>
+<a class="skill-link" href="tg://msg?text=Design%20an%20architecture%20diagram%20for%20">architecture-diagram</a>
+<a class="skill-link" href="tg://msg?text=Create%20an%20Excalidraw%20diagram%20for%20">excalidraw</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20p5.js%20sketch%20for%20">p5js</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20quick%20mockup%20for%20">sketch</a>
+<a class="skill-link" href="tg://msg?text=Design%20a%20prototype%20for%20">claude-design</a>
+<a class="skill-link" href="tg://msg?text=Generate%20an%20image%20of%20">image-generation</a>
+<a class="skill-link" href="tg://msg?text=Create%20ASCII%20art%20of%20">ascii-art</a>
+<a class="skill-link" href="tg://msg?text=Create%20an%20infographic%20about%20">baoyu-infographic</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">📄 Documents & Reports <span class="tag tag-core">10</span></div>
-<div class="meta">docx · pdf · pptx · xlsx · client-proposal-generator · ai-proposal-generator · nano-pdf · oc-daily-business-report · reporting · calendar-cli</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">📄 Documents & Reports <span>10 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link" href="tg://msg?text=Create%20a%20Word%20document%20for%20">docx</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20PDF%20for%20">pdf</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20PowerPoint%20for%20">pptx</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20spreadsheet%20for%20">xlsx</a>
+<a class="skill-link" href="tg://msg?text=Generate%20a%20proposal%20for%20">client-proposal-generator</a>
+<a class="skill-link" href="tg://msg?text=Generate%20an%20AI%20proposal%20for%20">ai-proposal-generator</a>
+<a class="skill-link" href="tg://msg?text=Edit%20a%20PDF%20for%20">nano-pdf</a>
+<a class="skill-link" href="tg://msg?text=Run%20the%20daily%20business%20report">oc-daily-business-report</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🤖 Agent & Workflow <span class="tag tag-core">18</span></div>
-<div class="meta">hermes-agent · automation-workflow · agentic-workflow-designer · personal-task-tracking · skill-package · autonomous-ai-agents · claude-code · codex · opencode · computer-use · gateway-troubleshooting · merge-reconciler · natural-language-reminder · cron-scheduling · skill-creator · mcp-builder · webapp-testing · portal</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">🤖 Agent & Automation <span>18 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link skill-link-core" href="tg://msg?text=Run%20my%20daily%20morning%20routine">hermes-agent</a>
+<a class="skill-link skill-link-core" href="tg://msg?text=Sync%20ClickUp%20leads">personal-task-tracking</a>
+<a class="skill-link" href="tg://msg?text=Automate%20this%20workflow%20for%20">automation-workflow</a>
+<a class="skill-link" href="tg://msg?text=Design%20a%20workflow%20for%20">agentic-workflow-designer</a>
+<a class="skill-link" href="tg://msg?text=Set%20a%20reminder%20for%20">natural-language-reminder</a>
+<a class="skill-link" href="tg://msg?text=Schedule%20a%20cron%20job%20for%20">cron-scheduling</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20new%20skill%20for%20">skill-creator</a>
+<a class="skill-link" href="tg://msg?text=Build%20an%20MCP%20server%20for%20">mcp-builder</a>
+<a class="skill-link" href="tg://msg?text=Test%20a%20web%20app">webapp-testing</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20portal%20for%20">portal</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🔧 Dev & GitHub <span class="tag tag-core">12</span></div>
-<div class="meta">github-auth · github-repo-management · github-code-review · github-issues · github-pr-workflow · github-issue-to-pr · codebase-inspection · software-development · systematic-debugging · test-driven-development · simplify-code · requesting-code-review</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">🔧 Dev & GitHub <span>12 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link" href="tg://msg?text=Configure%20GitHub%20auth">github-auth</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20GitHub%20repo%20for%20">github-repo-management</a>
+<a class="skill-link" href="tg://msg?text=Review%20a%20pull%20request">github-code-review</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20GitHub%20issue%20for%20">github-issues</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20pull%20request%20for%20">github-pr-workflow</a>
+<a class="skill-link" href="tg://msg?text=Inspect%20a%20codebase">codebase-inspection</a>
+<a class="skill-link" href="tg://msg?text=Debug%20this%20issue">systematic-debugging</a>
+<a class="skill-link" href="tg://msg?text=Run%20tests%20for%20">test-driven-development</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🎓 ML & AI Tools <span class="tag tag-core">10</span></div>
-<div class="meta">huggingface-hub · llama-cpp · serving-llms-vllm · evaluating-llms-harness · weights-and-biases · arxiv · image-generation · comfyui · llm-wiki · research</div></div></div>
+<div class="skill-cat">
+<div class="skill-cat-header">🏪 VBSpotlight & WCSpotlight <span>8 skills</span></div>
+<div class="skill-grid">
+<a class="skill-link skill-link-core" href="tg://msg?text=Create%20a%20VBSpotlight%20article%20for%20">vb-spotlight-article</a>
+<a class="skill-link" href="tg://msg?text=Run%20the%20daily%20Facebook%20post%20for%20VBSpotlight">facebook-spotlight-post</a>
+<a class="skill-link" href="tg://msg?text=Run%20my%20morning%20routine">daily-morning-routine</a>
+<a class="skill-link" href="tg://msg?text=Create%20a%20WCSpotlight%20article%20for%20">wilson-county-spotlight</a>
+<a class="skill-link" href="tg://msg?text=Run%20the%20daily%20FB%20post%20for%20WCSpotlight">wcspotlight-daily-post</a>
+</div></div>
 
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">🏪 VBSpotlight & WCSpotlight <span class="tag tag-core">8</span></div>
-<div class="meta">vb-spotlight-article · vbspotlight-audit-reminder · wilson-county-spotlight · facebook-spotlight-post · daily-morning-routine · marketboss-operations · accountability-buddy · blog-master</div></div></div>
-
-<div class="week-item" style="background:#13161c;border:1px solid #1f232b;border-radius:10px;display:block;padding:16px;margin-bottom:10px">
-<div class="info"><div class="title" style="font-size:0.85rem">📱 Social & Media <span class="tag tag-core">12</span></div>
-<div class="meta">social-media · postiz · xurl · telegram-bot-ops · facebook-spotlight-post · youtube-content · gif-search · songsee · media · smart-home · openhue · apple-notes · apple-reminders · imessage · findmy</div></div></div>
-
-<div class="footer">Market Boss AI · Virginia Beach, VA · 194 skills · Updated daily</div>
+<div class="footer">Market Boss AI · Tap any skill → Telegram opens → I ask questions and execute · Virginia Beach, VA</div>
 </div>
 </body>
 </html>
