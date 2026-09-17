@@ -56,12 +56,12 @@ body{background:#0b0d11;color:#d1d5db;font-family:'Inter',system-ui,sans-serif;m
 
 <div class="section-title">⚡ Quick Actions</div>
 <div class="quick-grid">
-<a class="q-card" href="tg://msg?text=Run%20an%20SEO%20audit%20for%20"><div class="icon">🔍</div><h3>Run SEO Audit</h3><p>Full 4-driver audit → GH Pages</p></div>
-<a class="q-card" href="tg://msg?text=Create%20a%20CrawlAnswers%20Facebook%20post%20with%20image%20prompt"><div class="icon">📝</div><h3>Create FB Post</h3><p>CA / VB / WC w/ image prompt</p></div>
-<a class="q-card" href="tg://msg?text=Generate%205%20VBSpotlight%20outreach%20emails%20for%20today"><div class="icon">📧</div><h3>Send Outreach</h3><p>5 VBSpotlight pitch emails</p></div>
-<a class="q-card" href="tg://msg?text=I%20need%20to%20send%20the%20audit%20email%20to%20"><div class="icon">✉️</div><h3>Audit Follow-Up</h3><p>Send audit to featured biz</p></div>
-<a class="q-card" href="tg://msg?text=Write%20a%20blog%20for%20MarketBossAI.com%20about%20"><div class="icon">📝</div><h3>Write Blog</h3><p>Sun/Wed/Fri for MBAI</p></div>
-<a class="q-card" href="tg://msg?text=Add%20an%20appointment%3A%20"><div class="icon">🏗️</div><h3>Add Appointment</h3><p>Paste → todo + calendar</p></div>
+<a class="q-card" onclick="doSkill('Run an SEO audit for ')" style="cursor:pointer"><div class="icon">🔍</div><h3>Run SEO Audit</h3><p>Full 4-driver audit → GH Pages</p></div>
+<a class="q-card" onclick="doSkill('Create a CrawlAnswers Facebook post with image prompt')" style="cursor:pointer"><div class="icon">📝</div><h3>Create FB Post</h3><p>CA / VB / WC w/ image prompt</p></div>
+<a class="q-card" onclick="doSkill('Generate 5 VBSpotlight outreach emails for today')" style="cursor:pointer"><div class="icon">📧</div><h3>Send Outreach</h3><p>5 VBSpotlight pitch emails</p></div>
+<a class="q-card" onclick="doSkill('I need to send the audit email to ')" style="cursor:pointer"><div class="icon">✉️</div><h3>Audit Follow-Up</h3><p>Send audit to featured biz</p></div>
+<a class="q-card" onclick="doSkill('Write a blog for MarketBossAI.com about ')" style="cursor:pointer"><div class="icon">📝</div><h3>Write Blog</h3><p>Sun/Wed/Fri for MBAI</p></div>
+<a class="q-card" onclick="doSkill('Add an appointment: ')" style="cursor:pointer"><div class="icon">🏗️</div><h3>Add Appointment</h3><p>Paste → todo + calendar</p></div>
 </div>
 
 <div class="section-title">🌐 Sites</div>
@@ -88,183 +88,187 @@ body{background:#0b0d11;color:#d1d5db;font-family:'Inter',system-ui,sans-serif;m
 <div class="skill-cat">
 <div class="skill-cat-header">📝 Copy & Content <span>16 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link" href="tg://msg?text=Let%27s%20do%20copywriting%20for%20">copywriting</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20do%20copy-editing%20for%20">copy-editing</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20create%20a%20content%20strategy%20for%20">content-strategy</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20create%20an%20ad%20creative%20for%20">ad-creative</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20write%20an%20email%20for%20">emails</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20write%20an%20SMS%20for%20">sms</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20create%20a%20social%20post%20for%20">social</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20create%20a%20video%20for%20">video</a>
-<a class="skill-link skill-link-core" href="tg://msg?text=Use%20Reef%20Copywriting%20for%20">reef-copywriting</a>
-<a class="skill-link skill-link-core" href="tg://msg?text=Write%20an%20SEO%20blog%20post%20about%20">blog-master</a>
-<a class="skill-link" href="tg://msg?text=Use%20BlogBurst%20to%20generate%20blog%20topics%20about%20">blogburst</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20content%20calendar%20for%20">content-marketing</a>
-<a class="skill-link" href="tg://msg?text=Use%20the%20landing%20page%20copy%20kit%20for%20">landing-page-copy-kit</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20write%20something%20in%20my%20voice">writing</a>
-<a class="skill-link" href="tg://msg?text=Humanize%20this%20text">humanizer</a>
-<a class="skill-link" href="tg://msg?text=Let%27s%20write%20a%20song%20about%20">songwriting-and-ai-music</a>
+<a class="skill-link" onclick="doSkill('Let's do copywriting for ')" style="cursor:pointer">copywriting</a>
+<a class="skill-link" onclick="doSkill('Let's do copy-editing for ')" style="cursor:pointer">copy-editing</a>
+<a class="skill-link" onclick="doSkill('Let's create a content strategy for ')" style="cursor:pointer">content-strategy</a>
+<a class="skill-link" onclick="doSkill('Let's create an ad creative for ')" style="cursor:pointer">ad-creative</a>
+<a class="skill-link" onclick="doSkill('Let's write an email for ')" style="cursor:pointer">emails</a>
+<a class="skill-link" onclick="doSkill('Let's write an SMS for ')" style="cursor:pointer">sms</a>
+<a class="skill-link" onclick="doSkill('Let's create a social post for ')" style="cursor:pointer">social</a>
+<a class="skill-link" onclick="doSkill('Let's create a video for ')" style="cursor:pointer">video</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Use Reef Copywriting for ')" style="cursor:pointer">reef-copywriting</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Write an SEO blog post about ')" style="cursor:pointer">blog-master</a>
+<a class="skill-link" onclick="doSkill('Use BlogBurst to generate blog topics about ')" style="cursor:pointer">blogburst</a>
+<a class="skill-link" onclick="doSkill('Create a content calendar for ')" style="cursor:pointer">content-marketing</a>
+<a class="skill-link" onclick="doSkill('Use the landing page copy kit for ')" style="cursor:pointer">landing-page-copy-kit</a>
+<a class="skill-link" onclick="doSkill('Let's write something in my voice')" style="cursor:pointer">writing</a>
+<a class="skill-link" onclick="doSkill('Humanize this text')" style="cursor:pointer">humanizer</a>
+<a class="skill-link" onclick="doSkill('Let's write a song about ')" style="cursor:pointer">songwriting-and-ai-music</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">🔍 SEO & Local Search <span>17 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link skill-link-core" href="tg://msg?text=Run%20a%20full%20SEO%20audit%20on%20">seo-audit</a>
-<a class="skill-link" href="tg://msg?text=Optimize%20this%20content%20for%20AI%20search">ai-seo</a>
-<a class="skill-link" href="tg://msg?text=Set%20up%20programmatic%20SEO%20for%20">programmatic-seo</a>
-<a class="skill-link" href="tg://msg?text=Audit%20the%20schema%20for%20">schema</a>
-<a class="skill-link" href="tg://msg?text=Review%20site%20architecture%20for%20">site-architecture</a>
-<a class="skill-link" href="tg://msg?text=Submit%20to%20directories%20for%20">directory-submissions</a>
-<a class="skill-link" href="tg://msg?text=Set%20up%20analytics%20for%20">analytics</a>
-<a class="skill-link skill-link-core" href="tg://msg?text=Run%20a%20Brand%20Butler%20audit%20on%20">brand-butler-local-authority-engine</a>
-<a class="skill-link skill-link-core" href="tg://msg?text=Search%20Google%20Maps%20for%20leads%20in%20">google-maps-places</a>
-<a class="skill-link" href="tg://msg?text=Run%20the%20local%20business%20pack%20for%20">local-business-pack</a>
-<a class="skill-link" href="tg://msg?text=Run%20a%20local%20SEO%20audit%20for%20">marketboss-local-audit</a>
-<a class="skill-link" href="tg://msg?text=Build%20a%20local%20SEO%20site%20for%20">marketboss-local-seo-site-builder</a>
-<a class="skill-link" href="tg://msg?text=Profile%20competitors%20for%20">competitor-profiling</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20competitor%20comparison%20for%20">competitors</a>
-<a class="skill-link" href="tg://msg?text=Analyze%20a%20prospect%20for%20">prospect-analyzer</a>
-<a class="skill-link" href="tg://msg?text=Find%20prospects%20in%20">marketboss-prospecting-agent</a>
-<a class="skill-link" href="tg://msg?text=Build%20a%20lead%20gen%20site%20for%20">lead-gen-website</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Run a full SEO audit on ')" style="cursor:pointer">seo-audit</a>
+<a class="skill-link" onclick="doSkill('Optimize this content for AI search')" style="cursor:pointer">ai-seo</a>
+<a class="skill-link" onclick="doSkill('Set up programmatic SEO for ')" style="cursor:pointer">programmatic-seo</a>
+<a class="skill-link" onclick="doSkill('Audit the schema for ')" style="cursor:pointer">schema</a>
+<a class="skill-link" onclick="doSkill('Review site architecture for ')" style="cursor:pointer">site-architecture</a>
+<a class="skill-link" onclick="doSkill('Submit to directories for ')" style="cursor:pointer">directory-submissions</a>
+<a class="skill-link" onclick="doSkill('Set up analytics for ')" style="cursor:pointer">analytics</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Run a Brand Butler audit on ')" style="cursor:pointer">brand-butler-local-authority-engine</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Search Google Maps for leads in ')" style="cursor:pointer">google-maps-places</a>
+<a class="skill-link" onclick="doSkill('Run the local business pack for ')" style="cursor:pointer">local-business-pack</a>
+<a class="skill-link" onclick="doSkill('Run a local SEO audit for ')" style="cursor:pointer">marketboss-local-audit</a>
+<a class="skill-link" onclick="doSkill('Build a local SEO site for ')" style="cursor:pointer">marketboss-local-seo-site-builder</a>
+<a class="skill-link" onclick="doSkill('Profile competitors for ')" style="cursor:pointer">competitor-profiling</a>
+<a class="skill-link" onclick="doSkill('Create a competitor comparison for ')" style="cursor:pointer">competitors</a>
+<a class="skill-link" onclick="doSkill('Analyze a prospect for ')" style="cursor:pointer">prospect-analyzer</a>
+<a class="skill-link" onclick="doSkill('Find prospects in ')" style="cursor:pointer">marketboss-prospecting-agent</a>
+<a class="skill-link" onclick="doSkill('Build a lead gen site for ')" style="cursor:pointer">lead-gen-website</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">💼 Agency Ops & CRM <span>16 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link" href="tg://msg?text=Run%20the%20agency%20operations%20daily%20routine">marketing-agency-ops</a>
-<a class="skill-link" href="tg://msg?text=Generate%20a%20client%20report%20for%20">agency-client-reporting</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20growth%20plan%20for%20">agency-growth-automations</a>
-<a class="skill-link" href="tg://msg?text=Show%20my%20project%20management%20dashboard">project-management-2</a>
-<a class="skill-link" href="tg://msg?text=List%20my%20notes">note-taking</a>
-<a class="skill-link" href="tg://msg?text=Build%20a%20funnel%20for%20">funnel-builder</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20case%20study%20for%20">brw-case-study-builder</a>
-<a class="skill-link" href="tg://msg?text=Create%20marketing%20for%20this%20contractor">contractor-marketing</a>
-<a class="skill-link" href="tg://msg?text=Schedule%20a%20social%20post">postiz</a>
-<a class="skill-link" href="tg://msg?text=Run%20the%20MarketBoss%20AI%20stack">marketboss-ai-command-center</a>
-<a class="skill-link" href="tg://msg?text=Set%20up%20marketing%20council%20for%20">marketing-council</a>
-<a class="skill-link" href="tg://msg?text=Audit%20our%20revops">revops</a>
-<a class="skill-link" href="tg://msg?text=Create%20sales%20enablement%20for%20">sales-enablement</a>
-<a class="skill-link" href="tg://msg?text=Run%20the%20accountability%20check-in">accountability-buddy</a>
-<a class="skill-link" href="tg://msg?text=Analyze%20this%20prospect">prospect-analyzer</a>
+<a class="skill-link" onclick="doSkill('Run the agency operations daily routine')" style="cursor:pointer">marketing-agency-ops</a>
+<a class="skill-link" onclick="doSkill('Generate a client report for ')" style="cursor:pointer">agency-client-reporting</a>
+<a class="skill-link" onclick="doSkill('Create a growth plan for ')" style="cursor:pointer">agency-growth-automations</a>
+<a class="skill-link" onclick="doSkill('Show my project management dashboard')" style="cursor:pointer">project-management-2</a>
+<a class="skill-link" onclick="doSkill('List my notes')" style="cursor:pointer">note-taking</a>
+<a class="skill-link" onclick="doSkill('Build a funnel for ')" style="cursor:pointer">funnel-builder</a>
+<a class="skill-link" onclick="doSkill('Create a case study for ')" style="cursor:pointer">brw-case-study-builder</a>
+<a class="skill-link" onclick="doSkill('Create marketing for this contractor')" style="cursor:pointer">contractor-marketing</a>
+<a class="skill-link" onclick="doSkill('Schedule a social post')" style="cursor:pointer">postiz</a>
+<a class="skill-link" onclick="doSkill('Run the MarketBoss AI stack')" style="cursor:pointer">marketboss-ai-command-center</a>
+<a class="skill-link" onclick="doSkill('Set up marketing council for ')" style="cursor:pointer">marketing-council</a>
+<a class="skill-link" onclick="doSkill('Audit our revops')" style="cursor:pointer">revops</a>
+<a class="skill-link" onclick="doSkill('Create sales enablement for ')" style="cursor:pointer">sales-enablement</a>
+<a class="skill-link" onclick="doSkill('Run the accountability check-in')" style="cursor:pointer">accountability-buddy</a>
+<a class="skill-link" onclick="doSkill('Analyze this prospect')" style="cursor:pointer">prospect-analyzer</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">📧 Outreach & Email <span>12 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link skill-link-core" href="tg://msg?text=Generate%20cold%20emails%20for%20">cold-email</a>
-<a class="skill-link" href="tg://msg?text=Write%20a%20personalized%20cold%20email%20to%20">cold-email-local-business</a>
-<a class="skill-link skill-link-core" href="tg://msg?text=Generate%205%20prospects%20for%20today">prospecting</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20lead%20magnet%20for%20">lead-magnets</a>
-<a class="skill-link" href="tg://msg?text=Triage%20my%20email%20inbox">email-inbox-triage</a>
-<a class="skill-link" href="tg://msg?text=Triage%20Jeff%27s%20Gmail">marketboss-email-triage</a>
-<a class="skill-link" href="tg://msg?text=Create%20an%20email%20sequence%20for%20">emails</a>
-<a class="skill-link" href="tg://msg?text=Build%20a%20referral%20program%20for%20">referrals</a>
-<a class="skill-link" href="tg://msg?text=Find%20co-marketing%20partners%20for%20">co-marketing</a>
-<a class="skill-link" href="tg://msg?text=Build%20a%20community%20for%20">community-marketing</a>
-<a class="skill-link" href="tg://msg?text=Write%20a%20press%20release%20for%20">public-relations</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Generate cold emails for ')" style="cursor:pointer">cold-email</a>
+<a class="skill-link" onclick="doSkill('Write a personalized cold email to ')" style="cursor:pointer">cold-email-local-business</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Generate 5 prospects for today')" style="cursor:pointer">prospecting</a>
+<a class="skill-link" onclick="doSkill('Create a lead magnet for ')" style="cursor:pointer">lead-magnets</a>
+<a class="skill-link" onclick="doSkill('Triage my email inbox')" style="cursor:pointer">email-inbox-triage</a>
+<a class="skill-link" onclick="doSkill('Triage Jeff's Gmail')" style="cursor:pointer">marketboss-email-triage</a>
+<a class="skill-link" onclick="doSkill('Create an email sequence for ')" style="cursor:pointer">emails</a>
+<a class="skill-link" onclick="doSkill('Build a referral program for ')" style="cursor:pointer">referrals</a>
+<a class="skill-link" onclick="doSkill('Find co-marketing partners for ')" style="cursor:pointer">co-marketing</a>
+<a class="skill-link" onclick="doSkill('Build a community for ')" style="cursor:pointer">community-marketing</a>
+<a class="skill-link" onclick="doSkill('Write a press release for ')" style="cursor:pointer">public-relations</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">🎯 Strategy & Research <span>14 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link" href="tg://msg?text=Create%20a%20marketing%20plan%20for%20">marketing-plan</a>
-<a class="skill-link" href="tg://msg?text=Build%20a%20marketing%20loop%20for%20">marketing-loops</a>
-<a class="skill-link" href="tg://msg?text=Brainstorm%20marketing%20ideas%20for%20">marketing-ideas</a>
-<a class="skill-link" href="tg://msg?text=Apply%20marketing%20psychology%20to%20">marketing-psychology</a>
-<a class="skill-link" href="tg://msg?text=Set%20up%20attribution%20for%20">attribution</a>
-<a class="skill-link" href="tg://msg?text=Do%20customer%20research%20for%20">customer-research</a>
-<a class="skill-link" href="tg://msg?text=Profile%20competitors%20for%20">competitor-profiling</a>
-<a class="skill-link" href="tg://msg?text=Run%20an%20A/B%20test%20for%20">ab-testing</a>
-<a class="skill-link" href="tg://msg?text=Optimize%20conversions%20for%20">cro</a>
-<a class="skill-link" href="tg://msg?text=Create%20an%20offer%20for%20">offers</a>
-<a class="skill-link" href="tg://msg?text=Set%20pricing%20for%20">pricing</a>
-<a class="skill-link" href="tg://msg?text=Find%20leads%20in%20">marketboss-lead-finder</a>
+<a class="skill-link" onclick="doSkill('Create a marketing plan for ')" style="cursor:pointer">marketing-plan</a>
+<a class="skill-link" onclick="doSkill('Build a marketing loop for ')" style="cursor:pointer">marketing-loops</a>
+<a class="skill-link" onclick="doSkill('Brainstorm marketing ideas for ')" style="cursor:pointer">marketing-ideas</a>
+<a class="skill-link" onclick="doSkill('Apply marketing psychology to ')" style="cursor:pointer">marketing-psychology</a>
+<a class="skill-link" onclick="doSkill('Set up attribution for ')" style="cursor:pointer">attribution</a>
+<a class="skill-link" onclick="doSkill('Do customer research for ')" style="cursor:pointer">customer-research</a>
+<a class="skill-link" onclick="doSkill('Profile competitors for ')" style="cursor:pointer">competitor-profiling</a>
+<a class="skill-link" onclick="doSkill('Run an A/B test for ')" style="cursor:pointer">ab-testing</a>
+<a class="skill-link" onclick="doSkill('Optimize conversions for ')" style="cursor:pointer">cro</a>
+<a class="skill-link" onclick="doSkill('Create an offer for ')" style="cursor:pointer">offers</a>
+<a class="skill-link" onclick="doSkill('Set pricing for ')" style="cursor:pointer">pricing</a>
+<a class="skill-link" onclick="doSkill('Find leads in ')" style="cursor:pointer">marketboss-lead-finder</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">🚀 Product & Launch <span>12 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link" href="tg://msg?text=Plan%20product%20marketing%20for%20">product-marketing</a>
-<a class="skill-link" href="tg://msg?text=Plan%20a%20launch%20for%20">launch</a>
-<a class="skill-link" href="tg://msg?text=Plan%20an%20event%20for%20">events</a>
-<a class="skill-link" href="tg://msg?text=Plan%20influencer%20marketing%20for%20">influencer-marketing</a>
-<a class="skill-link" href="tg://msg?text=Audit%20our%20app%20store%20presence">aso</a>
-<a class="skill-link" href="tg://msg?text=Build%20a%20free%20tool%20for%20">free-tools</a>
-<a class="skill-link" href="tg://msg?text=Set%20up%20ads%20for%20">ads</a>
-<a class="skill-link" href="tg://msg?text=Reduce%20churn%20for%20">churn-prevention</a>
-<a class="skill-link" href="tg://msg?text=Optimize%20our%20pricing%20page">paywalls</a>
-<a class="skill-link" href="tg://msg?text=Optimize%20signup%20flow%20for%20">signup</a>
-<a class="skill-link" href="tg://msg?text=Improve%20onboarding%20for%20">onboarding</a>
-<a class="skill-link" href="tg://msg?text=Optimize%20popups%20for%20">popups</a>
+<a class="skill-link" onclick="doSkill('Plan product marketing for ')" style="cursor:pointer">product-marketing</a>
+<a class="skill-link" onclick="doSkill('Plan a launch for ')" style="cursor:pointer">launch</a>
+<a class="skill-link" onclick="doSkill('Plan an event for ')" style="cursor:pointer">events</a>
+<a class="skill-link" onclick="doSkill('Plan influencer marketing for ')" style="cursor:pointer">influencer-marketing</a>
+<a class="skill-link" onclick="doSkill('Audit our app store presence')" style="cursor:pointer">aso</a>
+<a class="skill-link" onclick="doSkill('Build a free tool for ')" style="cursor:pointer">free-tools</a>
+<a class="skill-link" onclick="doSkill('Set up ads for ')" style="cursor:pointer">ads</a>
+<a class="skill-link" onclick="doSkill('Reduce churn for ')" style="cursor:pointer">churn-prevention</a>
+<a class="skill-link" onclick="doSkill('Optimize our pricing page')" style="cursor:pointer">paywalls</a>
+<a class="skill-link" onclick="doSkill('Optimize signup flow for ')" style="cursor:pointer">signup</a>
+<a class="skill-link" onclick="doSkill('Improve onboarding for ')" style="cursor:pointer">onboarding</a>
+<a class="skill-link" onclick="doSkill('Optimize popups for ')" style="cursor:pointer">popups</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">🌐 Web Dev & Design <span>20 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link" href="tg://msg?text=Redesign%20this%20page%20using%20frontend%20design%20for%20">frontend-design</a>
-<a class="skill-link" href="tg://msg?text=Convert%20Astro%20to%20WordPress%20for%20">astro-to-wordpress-deploy</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20website%20for%20">website-build</a>
-<a class="skill-link" href="tg://msg?text=Design%20an%20architecture%20diagram%20for%20">architecture-diagram</a>
-<a class="skill-link" href="tg://msg?text=Create%20an%20Excalidraw%20diagram%20for%20">excalidraw</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20p5.js%20sketch%20for%20">p5js</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20quick%20mockup%20for%20">sketch</a>
-<a class="skill-link" href="tg://msg?text=Design%20a%20prototype%20for%20">claude-design</a>
-<a class="skill-link" href="tg://msg?text=Generate%20an%20image%20of%20">image-generation</a>
-<a class="skill-link" href="tg://msg?text=Create%20ASCII%20art%20of%20">ascii-art</a>
-<a class="skill-link" href="tg://msg?text=Create%20an%20infographic%20about%20">baoyu-infographic</a>
+<a class="skill-link" onclick="doSkill('Redesign this page using frontend design for ')" style="cursor:pointer">frontend-design</a>
+<a class="skill-link" onclick="doSkill('Convert Astro to WordPress for ')" style="cursor:pointer">astro-to-wordpress-deploy</a>
+<a class="skill-link" onclick="doSkill('Create a website for ')" style="cursor:pointer">website-build</a>
+<a class="skill-link" onclick="doSkill('Design an architecture diagram for ')" style="cursor:pointer">architecture-diagram</a>
+<a class="skill-link" onclick="doSkill('Create an Excalidraw diagram for ')" style="cursor:pointer">excalidraw</a>
+<a class="skill-link" onclick="doSkill('Create a p5.js sketch for ')" style="cursor:pointer">p5js</a>
+<a class="skill-link" onclick="doSkill('Create a quick mockup for ')" style="cursor:pointer">sketch</a>
+<a class="skill-link" onclick="doSkill('Design a prototype for ')" style="cursor:pointer">claude-design</a>
+<a class="skill-link" onclick="doSkill('Generate an image of ')" style="cursor:pointer">image-generation</a>
+<a class="skill-link" onclick="doSkill('Create ASCII art of ')" style="cursor:pointer">ascii-art</a>
+<a class="skill-link" onclick="doSkill('Create an infographic about ')" style="cursor:pointer">baoyu-infographic</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">📄 Documents & Reports <span>10 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link" href="tg://msg?text=Create%20a%20Word%20document%20for%20">docx</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20PDF%20for%20">pdf</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20PowerPoint%20for%20">pptx</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20spreadsheet%20for%20">xlsx</a>
-<a class="skill-link" href="tg://msg?text=Generate%20a%20proposal%20for%20">client-proposal-generator</a>
-<a class="skill-link" href="tg://msg?text=Generate%20an%20AI%20proposal%20for%20">ai-proposal-generator</a>
-<a class="skill-link" href="tg://msg?text=Edit%20a%20PDF%20for%20">nano-pdf</a>
-<a class="skill-link" href="tg://msg?text=Run%20the%20daily%20business%20report">oc-daily-business-report</a>
+<a class="skill-link" onclick="doSkill('Create a Word document for ')" style="cursor:pointer">docx</a>
+<a class="skill-link" onclick="doSkill('Create a PDF for ')" style="cursor:pointer">pdf</a>
+<a class="skill-link" onclick="doSkill('Create a PowerPoint for ')" style="cursor:pointer">pptx</a>
+<a class="skill-link" onclick="doSkill('Create a spreadsheet for ')" style="cursor:pointer">xlsx</a>
+<a class="skill-link" onclick="doSkill('Generate a proposal for ')" style="cursor:pointer">client-proposal-generator</a>
+<a class="skill-link" onclick="doSkill('Generate an AI proposal for ')" style="cursor:pointer">ai-proposal-generator</a>
+<a class="skill-link" onclick="doSkill('Edit a PDF for ')" style="cursor:pointer">nano-pdf</a>
+<a class="skill-link" onclick="doSkill('Run the daily business report')" style="cursor:pointer">oc-daily-business-report</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">🤖 Agent & Automation <span>18 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link skill-link-core" href="tg://msg?text=Run%20my%20daily%20morning%20routine">hermes-agent</a>
-<a class="skill-link skill-link-core" href="tg://msg?text=Sync%20ClickUp%20leads">personal-task-tracking</a>
-<a class="skill-link" href="tg://msg?text=Automate%20this%20workflow%20for%20">automation-workflow</a>
-<a class="skill-link" href="tg://msg?text=Design%20a%20workflow%20for%20">agentic-workflow-designer</a>
-<a class="skill-link" href="tg://msg?text=Set%20a%20reminder%20for%20">natural-language-reminder</a>
-<a class="skill-link" href="tg://msg?text=Schedule%20a%20cron%20job%20for%20">cron-scheduling</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20new%20skill%20for%20">skill-creator</a>
-<a class="skill-link" href="tg://msg?text=Build%20an%20MCP%20server%20for%20">mcp-builder</a>
-<a class="skill-link" href="tg://msg?text=Test%20a%20web%20app">webapp-testing</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20portal%20for%20">portal</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Run my daily morning routine')" style="cursor:pointer">hermes-agent</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Sync ClickUp leads')" style="cursor:pointer">personal-task-tracking</a>
+<a class="skill-link" onclick="doSkill('Automate this workflow for ')" style="cursor:pointer">automation-workflow</a>
+<a class="skill-link" onclick="doSkill('Design a workflow for ')" style="cursor:pointer">agentic-workflow-designer</a>
+<a class="skill-link" onclick="doSkill('Set a reminder for ')" style="cursor:pointer">natural-language-reminder</a>
+<a class="skill-link" onclick="doSkill('Schedule a cron job for ')" style="cursor:pointer">cron-scheduling</a>
+<a class="skill-link" onclick="doSkill('Create a new skill for ')" style="cursor:pointer">skill-creator</a>
+<a class="skill-link" onclick="doSkill('Build an MCP server for ')" style="cursor:pointer">mcp-builder</a>
+<a class="skill-link" onclick="doSkill('Test a web app')" style="cursor:pointer">webapp-testing</a>
+<a class="skill-link" onclick="doSkill('Create a portal for ')" style="cursor:pointer">portal</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">🔧 Dev & GitHub <span>12 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link" href="tg://msg?text=Configure%20GitHub%20auth">github-auth</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20GitHub%20repo%20for%20">github-repo-management</a>
-<a class="skill-link" href="tg://msg?text=Review%20a%20pull%20request">github-code-review</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20GitHub%20issue%20for%20">github-issues</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20pull%20request%20for%20">github-pr-workflow</a>
-<a class="skill-link" href="tg://msg?text=Inspect%20a%20codebase">codebase-inspection</a>
-<a class="skill-link" href="tg://msg?text=Debug%20this%20issue">systematic-debugging</a>
-<a class="skill-link" href="tg://msg?text=Run%20tests%20for%20">test-driven-development</a>
+<a class="skill-link" onclick="doSkill('Configure GitHub auth')" style="cursor:pointer">github-auth</a>
+<a class="skill-link" onclick="doSkill('Create a GitHub repo for ')" style="cursor:pointer">github-repo-management</a>
+<a class="skill-link" onclick="doSkill('Review a pull request')" style="cursor:pointer">github-code-review</a>
+<a class="skill-link" onclick="doSkill('Create a GitHub issue for ')" style="cursor:pointer">github-issues</a>
+<a class="skill-link" onclick="doSkill('Create a pull request for ')" style="cursor:pointer">github-pr-workflow</a>
+<a class="skill-link" onclick="doSkill('Inspect a codebase')" style="cursor:pointer">codebase-inspection</a>
+<a class="skill-link" onclick="doSkill('Debug this issue')" style="cursor:pointer">systematic-debugging</a>
+<a class="skill-link" onclick="doSkill('Run tests for ')" style="cursor:pointer">test-driven-development</a>
 </div></div>
 
 <div class="skill-cat">
 <div class="skill-cat-header">🏪 VBSpotlight & WCSpotlight <span>8 skills</span></div>
 <div class="skill-grid">
-<a class="skill-link skill-link-core" href="tg://msg?text=Create%20a%20VBSpotlight%20article%20for%20">vb-spotlight-article</a>
-<a class="skill-link" href="tg://msg?text=Run%20the%20daily%20Facebook%20post%20for%20VBSpotlight">facebook-spotlight-post</a>
-<a class="skill-link" href="tg://msg?text=Run%20my%20morning%20routine">daily-morning-routine</a>
-<a class="skill-link" href="tg://msg?text=Create%20a%20WCSpotlight%20article%20for%20">wilson-county-spotlight</a>
-<a class="skill-link" href="tg://msg?text=Run%20the%20daily%20FB%20post%20for%20WCSpotlight">wcspotlight-daily-post</a>
+<a class="skill-link skill-link-core" onclick="doSkill('Create a VBSpotlight article for ')" style="cursor:pointer">vb-spotlight-article</a>
+<a class="skill-link" onclick="doSkill('Run the daily Facebook post for VBSpotlight')" style="cursor:pointer">facebook-spotlight-post</a>
+<a class="skill-link" onclick="doSkill('Run my morning routine')" style="cursor:pointer">daily-morning-routine</a>
+<a class="skill-link" onclick="doSkill('Create a WCSpotlight article for ')" style="cursor:pointer">wilson-county-spotlight</a>
+<a class="skill-link" onclick="doSkill('Run the daily FB post for WCSpotlight')" style="cursor:pointer">wcspotlight-daily-post</a>
 </div></div>
 
+<div id="toast" style="position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#13161c;border:1px solid #f59e0b;color:#f59e0b;padding:12px 20px;border-radius:8px;font-size:0.82rem;z-index:999;opacity:0;transition:opacity 0.3s;max-width:90vw;text-align:center;pointer-events:none"></div>
+<script>
+function doSkill(cmd){var m=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);if(m){window.location.href="onclick="doSkill('Let\'s do this')" style="cursor:pointer"+encodeURIComponent(cmd)}else{navigator.clipboard.writeText(cmd).then(function(){var t=document.getElementById("toast");t.textContent="\u2705 Copied: paste this in Telegram";t.style.opacity="1";setTimeout(function(){t.style.opacity="0"},3000)})}}
+</script>
 <div class="footer">Market Boss AI · Tap any skill → Telegram opens → I ask questions and execute · Virginia Beach, VA</div>
 </div>
 </body>
