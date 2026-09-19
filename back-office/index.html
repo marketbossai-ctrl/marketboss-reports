@@ -4,63 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Market Boss AI — Back Office</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0b0d11;color:#d1d5db;font-size:0.82rem;line-height:1.6}
+body{font-family:'Inter',sans-serif;background:#0b0d11;color:#d1d5db;font-size:.82rem;line-height:1.6}
 .container{max-width:1000px;margin:0 auto;padding:24px 16px 48px}
 h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
-.sub{color:#6b7280;font-size:0.78rem;margin-bottom:20px}
+.sub{color:#6b7280;font-size:.78rem;margin-bottom:20px}
 .q{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:20px}
 .qi{background:#13161c;border:1px solid #1f232b;border-radius:8px;padding:12px;text-align:center;cursor:pointer}
 .qi:hover{border-color:#f59e0b}
-.qi .n{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:700;color:#f59e0b}
-.qi .l{font-size:0.65rem;color:#6b7280;margin-top:2px}
+.qi .n{font-family:monospace;font-size:1rem;font-weight:700;color:#f59e0b}
+.qi .l{font-size:.65rem;color:#6b7280;margin-top:2px}
 .lg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:20px}
-.lg a{background:#13161c;border:1px solid #1f232b;border-radius:6px;padding:10px;text-align:center;color:#d1d5db;text-decoration:none;font-size:0.72rem;font-weight:500}
+.lg a{background:#13161c;border:1px solid #1f232b;border-radius:6px;padding:10px;text-align:center;color:#d1d5db;text-decoration:none;font-size:.72rem;font-weight:500}
 .lg a:hover{border-color:#f59e0b;color:#f59e0b}
-.st{font-size:0.85rem;font-weight:600;color:#f59e0b;margin-bottom:12px;padding:0 0 8px;border-bottom:1px solid #1f232b}
-.cmd-box{background:#13161c;border:1px solid #1f232b;border-radius:8px;padding:16px;margin-bottom:20px}
-.cmd-box h3{font-size:0.78rem;color:#9ca3af;margin-bottom:8px;font-weight:500}
-.cmd-input{width:100%;background:#0b0d11;border:1px solid #1f232b;border-radius:6px;padding:10px 12px;color:#d1d5db;font-size:0.8rem;outline:none}
-.cmd-input:focus{border-color:#f59e0b}
-.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:20px}
-.sg span{background:#13161c;border:1px solid #1f232b;border-radius:6px;padding:8px;font-size:0.7rem;text-align:center;cursor:pointer;color:#d1d5db}
+.st{font-size:.85rem;font-weight:600;color:#f59e0b;margin-bottom:12px;padding:0 0 8px;border-bottom:1px solid #1f232b}
+.sg{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:20px}
+.sg span{background:#13161c;border:1px solid #1f232b;border-radius:4px;padding:5px 8px;font-size:.65rem;cursor:pointer;color:#d1d5db}
 .sg span:hover{border-color:#f59e0b;color:#f59e0b}
-.ft{margin-top:24px;text-align:center;color:#374151;font-size:0.7rem}
-@media(max-width:700px){.q{grid-template-columns:repeat(3,1fr)}.lg{grid-template-columns:repeat(2,1fr)}.sg{grid-template-columns:repeat(2,1fr)}}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#10b981;color:#fff;padding:10px 18px;border-radius:8px;font-size:.8rem;z-index:999;font-family:sans-serif;display:none;max-width:90vw;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.5)}
+.ft{margin-top:24px;text-align:center;color:#374151;font-size:.7rem}
+@media(max-width:700px){.q{grid-template-columns:repeat(3,1fr)}.lg{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <div class="container">
 <h1>Market Boss AI · Back Office</h1>
-<p class="sub">Tap any button to send a command to Jeff's Agent via Telegram</p>
-<div class="q"><div class="qi" onclick="t('Run an SEO audit for ')"><div class="n">🔍</div><div class="l">Run Audit</div></div><div class="qi" onclick="t('Create a CrawlAnswers post about ')"><div class="n">📝</div><div class="l">FB Post</div></div><div class="qi" onclick="t('Generate 5 VBSpotlight outreach emails')"><div class="n">📧</div><div class="l">Outreach</div></div><div class="qi" onclick="t('Show me my CRM for VBSpotlight')"><div class="n">📊</div><div class="l">CRM</div></div><div class="qi" onclick="t('What is my schedule for tomorrow')"><div class="n">📅</div><div class="l">Schedule</div></div></div>
+<p class="sub">Tap any button to send a command. I'll handle the rest.</p>
+<div class="q">
+<div class="qi" onclick="t('Run an SEO audit for ')"><div class="n">🔍</div><div class="l">Run Audit</div></div>
+<div class="qi" onclick="t('Create a CrawlAnswers post about ')"><div class="n">📝</div><div class="l">FB Post</div></div>
+<div class="qi" onclick="t('Prospect for 5 home service businesses in ')"><div class="n">🎯</div><div class="l">Prospect</div></div>
+<div class="qi" onclick="t('Show me my VBSpotlight CRM')"><div class="n">📊</div><div class="l">CRM</div></div>
+<div class="qi" onclick="t('What is my schedule for tomorrow')"><div class="n">📅</div><div class="l">Schedule</div></div>
+</div>
 <div class="st">🌐 Quick Links</div>
-<div class="lg"><a href="https://crawlanswers.com" target="_blank">CrawlAnswers</a><a href="https://vbspotlight.com" target="_blank">VBSpotlight</a><a href="https://wilsoncountyspotlight.com" target="_blank">WCSpotlight</a><a href="https://marketbossai.com" target="_blank">MarketBossAI</a><a href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/" target="_blank">VB CRM</a><a href="https://marketbossai-ctrl.github.io/marketboss-reports/packages/" target="_blank">📦 Packages</a><a href="https://marketbossai-ctrl.github.io/marketboss-reports/client-interview-question-sheet/" target="_blank">📋 Interview Sheet</a><a href="https://marketbossai-ctrl.github.io/marketboss-reports/trimmers-shears-audit/" target="_blank">SEO Audit</a></div>
-<div class="st">🧰 Skills &amp; Commands</div>
-<div class="cmd-box"><h3>Type your own command, then press Enter:</h3><input class="cmd-input" id="ci" placeholder="e.g. Run a full SEO audit on example.com" onkeydown="if(event.key=='Enter'&&this.value.trim())t(this.value)"></div>
+<div class="lg">
+<a href="https://crawlanswers.com" target="_blank">CrawlAnswers</a>
+<a href="https://vbspotlight.com" target="_blank">VBSpotlight</a>
+<a href="https://wilsoncountyspotlight.com" target="_blank">WCSpotlight</a>
+<a href="https://marketbossai.com" target="_blank">MarketBossAI</a>
+<a href="https://marketbossai-ctrl.github.io/marketboss-reports/vbspotlight-crm/" target="_blank">VB CRM</a>
+<a href="https://marketbossai-ctrl.github.io/marketboss-reports/packages/" target="_blank">📦 Packages</a>
+<a href="https://marketbossai-ctrl.github.io/marketboss-reports/client-interview-question-sheet/" target="_blank">📋 Interview Sheet</a>
+<a href="https://marketbossai-ctrl.github.io/marketboss-reports/" target="_blank">📁 All Reports</a>
+</div>
+<div class="st">🧰 All Skills</div>
 <div class="sg" id="sk"></div>
-<div id="ta" style="display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#10b981;color:#fff;padding:10px 18px;border-radius:8px;font-size:0.82rem;z-index:999;font-family:sans-serif;max-width:90vw;text-align:center"></div>
+<div id="toast"></div>
 <div class="ft">Market Boss AI · Virginia Beach, VA · Eastern Time</div>
 </div>
 <script>
-function t(cmd){
-  navigator.clipboard.writeText(cmd);
-  var d=document.getElementById("ta");
-  d.textContent='✅ Command copied: "'+cmd+'" — open Telegram, paste in chat (Ctrl+V)';
-  d.style.display="block";
-  setTimeout(function(){window.location.href="https://web.telegram.org/a/#8560926270"},1200);
-}
-var skills=["Prospecting","Cold Email","Copywriting","SEO Audit","Content Strategy","Marketing Plan","Ads","Analytics","CRO","Email Sequence","Social Media","Video","SMS","Offer Design","Pricing","Launch Plan","Brand Guidelines","Customer Research","Competitor Intel","Referral Program","Co-Marketing","Community","Events","PR","Influencer","Lead Magnet","Sales Enablement","Onboarding","Signup","Paywalls","Popups","A/B Testing","Attribution","Free Tools","Product Launch"];ts","PR","Influencer","Lead Magnet","Sales Enablement","Onboarding","Signup","Paywalls","Popups","A/B Testing","Attribution","Free Tools","Product Launch"];
-var r=document.getElementById("sk");
+var skills=[
+"Prospecting","Cold Email","Copywriting","SEO Audit","Content Strategy","Marketing Plan",
+"Ads Management","Analytics Setup","CRO Optimization","Email Sequence","Social Media Mgmt",
+"Video Marketing","SMS Campaign","Offer Design","Pricing Strategy","Launch Plan",
+"Brand Guidelines","Customer Research","Competitor Intel","Referral Program","Co-Marketing",
+"Community Building","Event Marketing","PR Outreach","Influencer Marketing","Lead Magnet",
+"Sales Enablement","Onboarding Flow","Signup Optimization","Paywall Setup","Popup Design",
+"A/B Testing","Attribution Model","Free Tools Strategy","Product Launch","Frontend Design",
+"Google Maps SEO","Schema Markup","GBP Optimization","Site Architecture","Programmatic SEO",
+"Directory Submissions","Analytics Audit","Copy Editing","Customer Journey Map","Video Script",
+"Social Media Audit","Review Strategy","FAQ Content","Service Page Copy","About Page Copy",
+"Case Study Builder","Brand Butler Audit","Local Authority Blueprint","Website Build",
+"Blog Post Writing","WCSpotlight Article","VBSpotlight Article","Audit Report",
+"Tidewater Route Mapping","Client Interview Prep","Client Proposal","Scheduling Engine",
+"AI Proposal Gen","Reef Copywriting","Landing Page Copy","Funnel Builder",
+"Marketing Agency Ops","Marketing Council","AB Testing","Attribution",
+"Content Marketing","Community Marketing","Contractor Marketing","Co-Marketing",
+"Customer Research","Directory Submissions","Email Marketing","Events","Free Tools",
+"Influencer Marketing","Launch Strategy","Lead Magnets","Marketing Ideas",
+"Marketing Loops","Marketing Plan","Marketing Psychology","Offers Strategy",
+"Onboarding UX","Paywalls","Popups","Pricing Strategy","Product Marketing",
+"Programmatic SEO","Prospecting","Public Relations","Referrals","RevOps",
+"Sales Enablement","Schema Setup","SEO Audit","Signup Flow","Site Architecture",
+"SMS Marketing","Video Marketing"
+];
+var s=document.getElementById("sk");
 for(var i=0;i<skills.length;i++){
- var s=document.createElement("span");
- s.textContent=skills[i];
- s.onclick=function(){t("Let's do "+this.textContent+" for ");};
- r.appendChild(s);
+ var e=document.createElement("span");
+ e.textContent=skills[i];
+ e.onclick=function(){t("Let's do "+this.textContent+" for ");};
+ s.appendChild(e);
+}
+function t(cmd){
+ window.location.href="https://web.telegram.org/a/#8560926270";
+ navigator.clipboard.writeText(cmd);
+ var d=document.getElementById("toast");
+ d.textContent='✅ Copied "'+cmd.substring(0,40)+'..." — paste in Telegram';
+ d.style.display="block";
+ setTimeout(function(){d.style.display="none"},2500);
 }
 </script>
 </body>
