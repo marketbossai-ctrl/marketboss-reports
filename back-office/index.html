@@ -172,12 +172,11 @@ h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
 </div>
 <script>
 function t(cmd){
- window.location.href="https://web.telegram.org/a/#8560926270";
  navigator.clipboard.writeText(cmd);
  var d=document.getElementById("toast");
- d.textContent='✅ Copied: "'+cmd.substring(0,35)+'..."';
+ d.textContent='✅ Copied: "'+cmd.substring(0,35)+'..." — now paste in Telegram (Ctrl+V)';
  d.style.display="block";
- setTimeout(function(){d.style.display="none"},2500);
+ setTimeout(function(){window.open("https://web.telegram.org/a/#8560926270","_blank")},800);
 }
 </script>
 </body>
