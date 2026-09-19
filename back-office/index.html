@@ -172,17 +172,12 @@ h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
 </div>
 <script>
 function t(cmd){
- navigator.clipboard.writeText(cmd).then(function(){
-  var d=document.getElementById("toast");
-  d.innerHTML='✅ <b>Copied:</b> "'+cmd.substring(0,30)+'..."<br><span style="font-size:0.7rem">Open Telegram, press Ctrl+V, then Send</span>';
-  d.style.display="block";
-  setTimeout(function(){window.open("https://web.telegram.org/a/#8560926270","_blank")},1000);
- }).catch(function(){
-  var d=document.getElementById("toast");
-  d.innerHTML='❌ Clipboard blocked. Try clicking again.';
-  d.style.display="block";
-  setTimeout(function(){d.style.display="none"},2000);
- });
+ var d=document.getElementById("toast");
+ d.innerHTML='<div style="margin-bottom:4px">✅ Press <b>Ctrl+C</b> to copy, then paste in Telegram:</div>'+
+  '<input id="cc" value="'+cmd.replace(/"/g,'&quot;')+'" readonly style="width:100%;background:#0b0d11;border:1px solid #1f232b;border-radius:4px;padding:6px 8px;color:#d1d5db;font-size:0.75rem;outline:none" onfocus="this.select()">';
+ d.style.display="block";
+ setTimeout(function(){var i=document.getElementById("cc");if(i){i.focus();i.select()}},100);
+ setTimeout(function(){window.open("https://web.telegram.org/a/#8560926270","_blank")},2000);
 }
 </script>
 </body>
