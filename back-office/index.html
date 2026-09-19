@@ -268,10 +268,16 @@ body{background:#0b0d11;color:#d1d5db;font-family:'Inter',system-ui,sans-serif;m
 <div id="toast" style="position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#13161c;border:1px solid #f59e0b;color:#f59e0b;padding:12px 20px;border-radius:8px;font-size:0.82rem;z-index:999;opacity:0;transition:opacity 0.3s;max-width:90vw;text-align:center;pointer-events:none"></div>
 <script>
 function doSkill(cmd) {
-  var url = "https://t.me/share/url?url=&text=" + encodeURIComponent(cmd);
-  window.open(url, "_blank");
+  window.open("https://t.me/share/url?url=&text=" + encodeURIComponent(cmd), "_blank");
   navigator.clipboard.writeText(cmd).catch(function(){});
-},4000)})}}n.doSkill('Let\'s do this')" style="cursor:pointer"+encodeURIComponent(cmd)}else{navigator.clipboard.writeText(cmd).then(function(){var t=document.getElementById("toast");t.textContent="\u2705 Copied: paste this in Telegram";t.style.opacity="1";setTimeout(function(){t.style.opacity="0"},3000)})}}
+}
+document.addEventListener("DOMContentLoaded",function(){
+  var s=document.querySelectorAll(".skill-link");
+  for(var i=0;i<s.length;i++){
+    var t=s[i].textContent.trim();
+    s[i].onclick=function(){doSkill("Let's do " + this.textContent.trim() + " for ");};
+  }
+});
 </script>
 <div class="footer">Market Boss AI · Tap any skill → Telegram opens → I ask questions and execute · Virginia Beach, VA</div>
 </div>
