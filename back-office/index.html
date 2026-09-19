@@ -172,10 +172,15 @@ h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
 </div>
 <script>
 function t(cmd){
- navigator.clipboard.writeText(cmd);
  var d=document.getElementById("toast");
- d.innerHTML='<b>✅ Copied:</b> "'+cmd+'"<br><span style="font-size:0.7rem">Open Telegram, Ctrl+V, Send</span>';
  d.style.display="block";
+ d.innerHTML='<div style="margin-bottom:6px">👇 <b>Ctrl+C</b> this, then paste in Telegram:</div>'+
+  '<textarea id="cc" readonly style="width:100%;background:#0b0d11;border:1px solid #374151;border-radius:4px;padding:8px;color:#f3f4f6;font-size:0.78rem;outline:none;resize:none;height:50px">'+cmd.replace(/"/g,'&quot;')+'</textarea>'+
+  '<div style="margin-top:6px;font-size:0.7rem;color:#6b7280">1. Ctrl+C above → 2. Open Telegram → 3. Ctrl+V → 4. Send</div>';
+ setTimeout(function(){
+  var i=document.getElementById("cc");
+  if(i){i.focus();i.select()}
+ },100);
 }
 </script>
 </body>
