@@ -13,17 +13,18 @@ h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
 .sub{color:#6b7280;font-size:.78rem;margin-bottom:20px}
 .q{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:20px}
 .qi{background:#13161c;border:1px solid #1f232b;border-radius:8px;padding:12px;text-align:center;cursor:pointer}
-.qi:hover{border-color:#f59e0b}
+.qi:hover{border-color:#f59e0b;transition:.15s}
 .qi .n{font-family:monospace;font-size:1rem;font-weight:700;color:#f59e0b}
 .qi .l{font-size:.65rem;color:#6b7280;margin-top:2px}
 .lg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:20px}
 .lg a{background:#13161c;border:1px solid #1f232b;border-radius:6px;padding:10px;text-align:center;color:#d1d5db;text-decoration:none;font-size:.72rem;font-weight:500}
-.lg a:hover{border-color:#f59e0b;color:#f59e0b}
-.st{font-size:.85rem;font-weight:600;color:#f59e0b;margin-bottom:12px;padding:0 0 8px;border-bottom:1px solid #1f232b}
-.sg{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:20px}
-.sg span{background:#13161c;border:1px solid #1f232b;border-radius:4px;padding:5px 8px;font-size:.65rem;cursor:pointer;color:#d1d5db}
-.sg span:hover{border-color:#f59e0b;color:#f59e0b}
-#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#10b981;color:#fff;padding:10px 18px;border-radius:8px;font-size:.8rem;z-index:999;font-family:sans-serif;display:none;max-width:90vw;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.5)}
+.lg a:hover{border-color:#f59e0b;color:#f59e0b;transition:.15s}
+.st{font-size:.85rem;font-weight:600;color:#f59e0b;margin-bottom:8px;margin-top:16px;padding:0 0 6px;border-bottom:1px solid #1f232b}
+.st:first-of-type{margin-top:0}
+.sg{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.sg span{background:#13161c;border:1px solid #1f232b;border-radius:4px;padding:4px 8px;font-size:.64rem;cursor:pointer;color:#d1d5db}
+.sg span:hover{border-color:#f59e0b;color:#f59e0b;transition:.1s}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#10b981;color:#fff;padding:10px 18px;border-radius:8px;font-size:.8rem;z-index:999;display:none;max-width:90vw;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.5)}
 .ft{margin-top:24px;text-align:center;color:#374151;font-size:.7rem}
 @media(max-width:700px){.q{grid-template-columns:repeat(3,1fr)}.lg{grid-template-columns:repeat(2,1fr)}}
 </style>
@@ -31,7 +32,8 @@ h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
 <body>
 <div class="container">
 <h1>Market Boss AI · Back Office</h1>
-<p class="sub">Tap any button to send a command. I'll handle the rest.</p>
+<p class="sub">Tap any button to send a command to your Telegram agent. Commands come from your clipboard.</p>
+
 <div class="q">
 <div class="qi" onclick="t('Run an SEO audit for ')"><div class="n">🔍</div><div class="l">Run Audit</div></div>
 <div class="qi" onclick="t('Create a CrawlAnswers post about ')"><div class="n">📝</div><div class="l">FB Post</div></div>
@@ -39,6 +41,7 @@ h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
 <div class="qi" onclick="t('Show me my VBSpotlight CRM')"><div class="n">📊</div><div class="l">CRM</div></div>
 <div class="qi" onclick="t('What is my schedule for tomorrow')"><div class="n">📅</div><div class="l">Schedule</div></div>
 </div>
+
 <div class="st">🌐 Quick Links</div>
 <div class="lg">
 <a href="https://crawlanswers.com" target="_blank">CrawlAnswers</a>
@@ -50,49 +53,129 @@ h1{font-size:1.15rem;color:#f9fafb;margin-bottom:4px;font-weight:700}
 <a href="https://marketbossai-ctrl.github.io/marketboss-reports/client-interview-question-sheet/" target="_blank">📋 Interview Sheet</a>
 <a href="https://marketbossai-ctrl.github.io/marketboss-reports/" target="_blank">📁 All Reports</a>
 </div>
-<div class="st">🧰 All Skills</div>
-<div class="sg" id="sk"></div>
+
+<div class="st">📝 Copy & Content</div>
+<div class="sg">
+<span onclick="t('Let\'s do About Page Copy for ')">About Page Copy</span>
+<span onclick="t('Let\'s do AI Proposal Gen for ')">AI Proposal Gen</span>
+<span onclick="t('Let\'s do Blog Post Writing for ')">Blog Post Writing</span>
+<span onclick="t('Let\'s do Case Study Builder for ')">Case Study Builder</span>
+<span onclick="t('Let\'s do Copy Editing for ')">Copy Editing</span>
+<span onclick="t('Let\'s do Copywriting for ')">Copywriting</span>
+<span onclick="t('Let\'s do Customer Journey Map for ')">Customer Journey Map</span>
+<span onclick="t('Let\'s do FAQ Content for ')">FAQ Content</span>
+<span onclick="t('Let\'s do Landing Page Copy for ')">Landing Page Copy</span>
+<span onclick="t('Let\'s do Reef Copywriting for ')">Reef Copywriting</span>
+<span onclick="t('Let\'s do Service Page Copy for ')">Service Page Copy</span>
+<span onclick="t('Let\'s do VBSpotlight Article for ')">VBSpotlight Article</span>
+<span onclick="t('Let\'s do Video Script for ')">Video Script</span>
+<span onclick="t('Let\'s do WCSpotlight Article for ')">WCSpotlight Article</span>
+</div>
+
+<div class="st">🔍 SEO & Audits</div>
+<div class="sg">
+<span onclick="t('Let\'s do AI SEO for ')">AI SEO</span>
+<span onclick="t('Let\'s do Analytics Audit for ')">Analytics Audit</span>
+<span onclick="t('Let\'s do Analytics Setup for ')">Analytics Setup</span>
+<span onclick="t('Let\'s do Brand Butler Audit for ')">Brand Butler Audit</span>
+<span onclick="t('Let\'s do Directory Submissions for ')">Directory Submissions</span>
+<span onclick="t('Let\'s do GBP Optimization for ')">GBP Optimization</span>
+<span onclick="t('Let\'s do Google Maps SEO for ')">Google Maps SEO</span>
+<span onclick="t('Let\'s do Local Authority Blueprint for ')">Local Authority Blueprint</span>
+<span onclick="t('Let\'s do Programmatic SEO for ')">Programmatic SEO</span>
+<span onclick="t('Let\'s do Schema Markup for ')">Schema Markup</span>
+<span onclick="t('Let\'s do SEO Audit for ')">SEO Audit</span>
+<span onclick="t('Let\'s do Site Architecture for ')">Site Architecture</span>
+<span onclick="t('Let\'s do Social Media Audit for ')">Social Media Audit</span>
+</div>
+
+<div class="st">📧 Email & Outreach</div>
+<div class="sg">
+<span onclick="t('Let\'s do Cold Email for ')">Cold Email</span>
+<span onclick="t('Let\'s do Email Marketing for ')">Email Marketing</span>
+<span onclick="t('Let\'s do Email Sequence for ')">Email Sequence</span>
+<span onclick="t('Let\'s do Lead Magnet for ')">Lead Magnet</span>
+<span onclick="t('Let\'s do SMS Campaign for ')">SMS Campaign</span>
+<span onclick="t('Let\'s do SMS Marketing for ')">SMS Marketing</span>
+</div>
+
+<div class="st">📈 Marketing & Growth</div>
+<div class="sg">
+<span onclick="t('Let\'s do AB Testing for ')">AB Testing</span>
+<span onclick="t('Let\'s do Ads Management for ')">Ads Management</span>
+<span onclick="t('Let\'s do Attribution Model for ')">Attribution Model</span>
+<span onclick="t('Let\'s do Content Strategy for ')">Content Strategy</span>
+<span onclick="t('Let\'s do CRO Optimization for ')">CRO Optimization</span>
+<span onclick="t('Let\'s do Free Tools Strategy for ')">Free Tools Strategy</span>
+<span onclick="t('Let\'s do Launch Plan for ')">Launch Plan</span>
+<span onclick="t('Let\'s do Marketing Agency Ops for ')">Marketing Agency Ops</span>
+<span onclick="t('Let\'s do Marketing Council for ')">Marketing Council</span>
+<span onclick="t('Let\'s do Marketing Ideas for ')">Marketing Ideas</span>
+<span onclick="t('Let\'s do Marketing Loops for ')">Marketing Loops</span>
+<span onclick="t('Let\'s do Marketing Plan for ')">Marketing Plan</span>
+<span onclick="t('Let\'s do Marketing Psychology for ')">Marketing Psychology</span>
+<span onclick="t('Let\'s do Offers Strategy for ')">Offers Strategy</span>
+<span onclick="t('Let\'s do Pricing Strategy for ')">Pricing Strategy</span>
+<span onclick="t('Let\'s do Product Launch for ')">Product Launch</span>
+<span onclick="t('Let\'s do Product Marketing for ')">Product Marketing</span>
+</div>
+
+<div class="st">🎯 Sales & Prospecting</div>
+<div class="sg">
+<span onclick="t('Let\'s do Client Interview Prep for ')">Client Interview Prep</span>
+<span onclick="t('Let\'s do Client Proposal for ')">Client Proposal</span>
+<span onclick="t('Let\'s do Prospecting for ')">Prospecting</span>
+<span onclick="t('Let\'s do Sales Enablement for ')">Sales Enablement</span>
+<span onclick="t('Let\'s do Scheduling Engine for ')">Scheduling Engine</span>
+</div>
+
+<div class="st">🎨 Design & Brand</div>
+<div class="sg">
+<span onclick="t('Let\'s do Brand Guidelines for ')">Brand Guidelines</span>
+<span onclick="t('Let\'s do Frontend Design for ')">Frontend Design</span>
+<span onclick="t('Let\'s do Funnel Builder for ')">Funnel Builder</span>
+<span onclick="t('Let\'s do Website Build for ')">Website Build</span>
+</div>
+
+<div class="st">👥 Community & PR</div>
+<div class="sg">
+<span onclick="t('Let\'s do Co-Marketing for ')">Co-Marketing</span>
+<span onclick="t('Let\'s do Community Building for ')">Community Building</span>
+<span onclick="t('Let\'s do Community Marketing for ')">Community Marketing</span>
+<span onclick="t('Let\'s do Contractor Marketing for ')">Contractor Marketing</span>
+<span onclick="t('Let\'s do Events for ')">Events</span>
+<span onclick="t('Let\'s do Influencer Marketing for ')">Influencer Marketing</span>
+<span onclick="t('Let\'s do PR Outreach for ')">PR Outreach</span>
+<span onclick="t('Let\'s do Public Relations for ')">Public Relations</span>
+<span onclick="t('Let\'s do Referral Program for ')">Referral Program</span>
+</div>
+
+<div class="st">📊 Research & Intel</div>
+<div class="sg">
+<span onclick="t('Let\'s do Competitor Intel for ')">Competitor Intel</span>
+<span onclick="t('Let\'s do Customer Research for ')">Customer Research</span>
+</div>
+
+<div class="st">⚙️ Operations & UX</div>
+<div class="sg">
+<span onclick="t('Let\'s do Onboarding Flow for ')">Onboarding Flow</span>
+<span onclick="t('Let\'s do Onboarding UX for ')">Onboarding UX</span>
+<span onclick="t('Let\'s do Paywall Setup for ')">Paywall Setup</span>
+<span onclick="t('Let\'s do Popup Design for ')">Popup Design</span>
+<span onclick="t('Let\'s do Signup Flow for ')">Signup Flow</span>
+<span onclick="t('Let\'s do Signup Optimization for ')">Signup Optimization</span>
+<span onclick="t('Let\'s do Tidewater Route Mapping for ')">Tidewater Route Mapping</span>
+</div>
+
 <div id="toast"></div>
 <div class="ft">Market Boss AI · Virginia Beach, VA · Eastern Time</div>
 </div>
 <script>
-var skills=[
-"Prospecting","Cold Email","Copywriting","SEO Audit","Content Strategy","Marketing Plan",
-"Ads Management","Analytics Setup","CRO Optimization","Email Sequence","Social Media Mgmt",
-"Video Marketing","SMS Campaign","Offer Design","Pricing Strategy","Launch Plan",
-"Brand Guidelines","Customer Research","Competitor Intel","Referral Program","Co-Marketing",
-"Community Building","Event Marketing","PR Outreach","Influencer Marketing","Lead Magnet",
-"Sales Enablement","Onboarding Flow","Signup Optimization","Paywall Setup","Popup Design",
-"A/B Testing","Attribution Model","Free Tools Strategy","Product Launch","Frontend Design",
-"Google Maps SEO","Schema Markup","GBP Optimization","Site Architecture","Programmatic SEO",
-"Directory Submissions","Analytics Audit","Copy Editing","Customer Journey Map","Video Script",
-"Social Media Audit","Review Strategy","FAQ Content","Service Page Copy","About Page Copy",
-"Case Study Builder","Brand Butler Audit","Local Authority Blueprint","Website Build",
-"Blog Post Writing","WCSpotlight Article","VBSpotlight Article","Audit Report",
-"Tidewater Route Mapping","Client Interview Prep","Client Proposal","Scheduling Engine",
-"AI Proposal Gen","Reef Copywriting","Landing Page Copy","Funnel Builder",
-"Marketing Agency Ops","Marketing Council","AB Testing","Attribution",
-"Content Marketing","Community Marketing","Contractor Marketing","Co-Marketing",
-"Customer Research","Directory Submissions","Email Marketing","Events","Free Tools",
-"Influencer Marketing","Launch Strategy","Lead Magnets","Marketing Ideas",
-"Marketing Loops","Marketing Plan","Marketing Psychology","Offers Strategy",
-"Onboarding UX","Paywalls","Popups","Pricing Strategy","Product Marketing",
-"Programmatic SEO","Prospecting","Public Relations","Referrals","RevOps",
-"Sales Enablement","Schema Setup","SEO Audit","Signup Flow","Site Architecture",
-"SMS Marketing","Video Marketing"
-];
-var s=document.getElementById("sk");
-for(var i=0;i<skills.length;i++){
- var e=document.createElement("span");
- e.textContent=skills[i];
- e.onclick=function(){t("Let's do "+this.textContent+" for ");};
- s.appendChild(e);
-}
 function t(cmd){
  window.location.href="https://web.telegram.org/a/#8560926270";
  navigator.clipboard.writeText(cmd);
  var d=document.getElementById("toast");
- d.textContent='✅ Copied "'+cmd.substring(0,40)+'..." — paste in Telegram';
+ d.textContent='✅ Copied: "'+cmd.substring(0,35)+'..."';
  d.style.display="block";
  setTimeout(function(){d.style.display="none"},2500);
 }
