@@ -3,36 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Local Biz Engine — Website Examples</title>
+<title>Local Biz Engine — Website Examples for Review</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:system-ui,sans-serif;background:#f5f7fa;color:#1a1a2e;padding:2rem}
-h1{text-align:center;margin-bottom:0.5rem;font-size:1.8rem}
-p.sub{text-align:center;color:#666;margin-bottom:2rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+h1{text-align:center;font-size:1.5rem;margin-bottom:0.25rem}
+p.sub{text-align:center;color:#666;margin-bottom:0.25rem;font-size:0.9rem}
+.note{text-align:center;color:#c44;font-size:0.85rem;margin-bottom:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:1.5rem;max-width:1200px;margin:0 auto}
 .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.08)}
 .card img{width:100%;height:auto;display:block}
-.card-body{padding:1rem}
-.card-body h2{font-size:1rem;margin-bottom:0.25rem}
-.card-body p{font-size:0.85rem;color:#666;margin-bottom:0.5rem}
-.card-body a{color:#013a6b;font-weight:600;font-size:0.85rem}
+.card-body{padding:0.75rem 1rem 1rem}
+.card-body h2{font-size:0.95rem;margin-bottom:0.15rem}
+.card-body .city{font-size:0.8rem;color:#888;margin-bottom:0.5rem}
+.card-body a{color:#013a6b;font-weight:600;font-size:0.82rem}
 </style>
 </head>
 <body>
-<h1>🏪 Local Biz Engine</h1>
-<p class="sub">Website template examples for 10 home service niches</p>
+<h1>🏪 Local Biz Engine — Website Examples</h1>
+<p class="sub">10 home service niches built with the Local Service Astro template</p>
+<p class="note">⚠️ HVAC uses the actual Ocean View Heating & Cooling build (above the fold)</p>
 <div class="grid">
-<div class="card"><a href="./auto.html"><img src="./auto.png" alt="QuickFix Auto Care | Auto Repair & Maintenance"><div class="card-body"><h2>QuickFix Auto Care | Auto Repair & Maintenance</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./cleaning.html"><img src="./cleaning.png" alt="Clean Sweep Pro | Home Cleaning & Maintenance"><div class="card-body"><h2>Clean Sweep Pro | Home Cleaning & Maintenance</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./dental.html"><img src="./dental.png" alt="ClearSmile Dental | Family & Cosmetic Dentistry"><div class="card-body"><h2>ClearSmile Dental | Family & Cosmetic Dentistry</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./electrician.html"><img src="./electrician.png" alt="BrightSpark Electric | Electrical Services"><div class="card-body"><h2>BrightSpark Electric | Electrical Services</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./hvac.html"><img src="./hvac.png" alt="Bay Breeze HVAC | Heating & Air Conditioning"><div class="card-body"><h2>Bay Breeze HVAC | Heating & Air Conditioning</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./landscaper.html"><img src="./landscaper.png" alt="GreenScape Pros | Landscaping & Lawn Care"><div class="card-body"><h2>GreenScape Pros | Landscaping & Lawn Care</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./legal.html"><img src="./legal.png" alt="Justice Legal Group | Personal Injury & Family Law"><div class="card-body"><h2>Justice Legal Group | Personal Injury & Family Law</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./plumber.html"><img src="./plumber.png" alt="FlowRight Plumbing | Emergency Plumbing"><div class="card-body"><h2>FlowRight Plumbing | Emergency Plumbing</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./restaurant.html"><img src="./restaurant.png" alt="Harvest Table Kitchen | Farm-to-Table Dining"><div class="card-body"><h2>Harvest Table Kitchen | Farm-to-Table Dining</h2><p>View full page &raquo;</p></div></a></div>
-<div class="card"><a href="./roofer.html"><img src="./roofer.png" alt="Shield Roofing Co. | Roof Repair & Installation"><div class="card-body"><h2>Shield Roofing Co. | Roof Repair & Installation</h2><p>View full page &raquo;</p></div></a></div>
+
+<div class="card">
+  <img src="./hvac.png" alt="Ocean View Heating & Cooling">
+  <div class="card-body">
+    <h2>Ocean View Heating & Cooling</h2>
+    <div class="city">Norfolk, VA</div>
+    <a href="./hvac.html">View full page &raquo;</a>
+  </div>
 </div>
-<p style="text-align:center;margin-top:2rem;color:#888;font-size:0.85rem">&copy; 2026 Local Biz Engine</p>
+<div class="card">
+  <img src="./plumber.png" alt="FlowRight Plumbing">
+  <div class="card-body">
+    <h2>FlowRight Plumbing</h2>
+    <div class="city">Norfolk, VA</div>
+    <a href="./plumber.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./landscaper.png" alt="GreenScape Pros">
+  <div class="card-body">
+    <h2>GreenScape Pros</h2>
+    <div class="city">Chesapeake, VA</div>
+    <a href="./landscaper.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./electrician.png" alt="BrightSpark Electric">
+  <div class="card-body">
+    <h2>BrightSpark Electric</h2>
+    <div class="city">Portsmouth, VA</div>
+    <a href="./electrician.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./roofer.png" alt="Shield Roofing Co.">
+  <div class="card-body">
+    <h2>Shield Roofing Co.</h2>
+    <div class="city">Richmond, VA</div>
+    <a href="./roofer.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./auto.png" alt="QuickFix Auto Care">
+  <div class="card-body">
+    <h2>QuickFix Auto Care</h2>
+    <div class="city">Newport News, VA</div>
+    <a href="./auto.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./dental.png" alt="ClearSmile Dental">
+  <div class="card-body">
+    <h2>ClearSmile Dental</h2>
+    <div class="city">Harrisonburg, VA</div>
+    <a href="./dental.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./legal.png" alt="Justice Legal Group">
+  <div class="card-body">
+    <h2>Justice Legal Group</h2>
+    <div class="city">Richmond, VA</div>
+    <a href="./legal.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./restaurant.png" alt="Harvest Table Kitchen">
+  <div class="card-body">
+    <h2>Harvest Table Kitchen</h2>
+    <div class="city">Williamsburg, VA</div>
+    <a href="./restaurant.html">View full page &raquo;</a>
+  </div>
+</div>
+<div class="card">
+  <img src="./cleaning.png" alt="Clean Sweep Pro">
+  <div class="card-body">
+    <h2>Clean Sweep Pro</h2>
+    <div class="city">Suffolk, VA</div>
+    <a href="./cleaning.html">View full page &raquo;</a>
+  </div>
+</div>
+</div>
+<p style="text-align:center;margin-top:2rem;color:#888;font-size:0.82rem">&copy; 2026 Local Biz Engine &middot; Examples for review — not live</p>
 </body>
 </html>

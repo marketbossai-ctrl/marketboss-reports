@@ -2,44 +2,76 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Harvest Table Kitchen | Farm-to-Table Dining</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1a1a2e;line-height:1.5;max-width:1100px;margin:0 auto;background:#fff}
-.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px28px;background:#922b21;color:#fff}
-.hdr-logo{display:flex;align-items:center;gap:10px}
-.hdr-logo-icon{width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#fff}
-.hdr-logo-text{font-weight:800;font-size:1.15rem}
-.hdr-nav{display:flex;gap:18px;font-size:0.85rem;opacity:0.85}
-.hdr-nav span{cursor:default}
-.hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;padding:48px 28px;background:#922b21;color:#fff;min-height:380px;align-items:center}
-.hero-text{display:flex;flex-direction:column;gap:6px}
-.hero-kicker{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;opacity:0.7}
-.hero-h1{font-size:2.2rem;font-weight:800;line-height:1.08;letter-spacing:-0.5px}
-.hero-p{font-size:0.95rem;opacity:0.82;line-height:1.55;margin-top:8px}
-.hero-btn{display:inline-block;padding:12px28px;border-radius:6px;background:#f39c12;color:#fff;font-weight:700;font-size:0.9rem;text-decoration:none;margin-top:10px;align-self:flex-start}
-.hero-form{background:rgba(255,255,255,.1);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px}
-.hero-form h3{font-size:1rem;margin-bottom:4px}
-.hero-form input{padding:10px14px;border:none;border-radius:6px;font-size:0.85rem;background:rgba(255,255,255,.9);font-family:inherit}
-.hero-form button{padding:10px;border:none;border-radius:6px;background:#f39c12;color:#fff;font-weight:700;font-size:0.85rem;cursor:default}
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:28px;background:rgba(1,1,1,.03)}
-.feat{background:#fff;border-radius:8px;padding:16px;border:1px solid #eee}
-.feat-icon{width:36px;height:36px;border-radius:8px;background:#922b21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;margin-bottom:8px}
-.feat h3{font-size:0.9rem;margin-bottom:4px}
-.feat p{font-size:0.78rem;color:#555;margin:0}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:24px28px;background:#922b21}
-.review{background:rgba(255,255,255,.08);border-radius:8px;padding:14px;text-align:center}
-.review .stars{color:#f39c12;font-size:1rem}
-.review .text{font-size:0.78rem;color:rgba(255,255,255,.8);font-style:italic;margin-top:4px}
-.ftr{display:flex;align-items:center;justify-content:space-between;padding:14px28px;background:#922b21;color:rgba(255,255,255,.7);font-size:0.8rem}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1a1a2e;line-height:1.5;max-width:1100px;margin:0 auto;background:#f5f5f5}
+
+/* Nav */
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:#922b21;color:#fff}
+.hdr-l{display:flex;align-items:center;gap:10px}
+.hdr-icon{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#fff}
+.hdr-name{font-weight:800;font-size:1.1rem}
+.hdr-r{display:flex;gap:16px;font-size:0.82rem;opacity:0.85}
+.hdr-r span{cursor:default}
+
+/* Hero with background image */
+.hero{position:relative;overflow:hidden;color:#fff;min-height:420px;display:grid;align-items:center}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg, #922b21ee 30%, #922b2199 70%, transparent);}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:end;padding:clamp(3rem,8vw,6rem) 28px}
+
+.hero-text{display:flex;flex-direction:column;gap:8px}
+.hero-kicker{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;opacity:0.75}
+.hero-h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.08;letter-spacing:-0.5px;max-width:16ch}
+.hero-p{font-size:1rem;opacity:0.82;line-height:1.55;max-width:38ch}
+.hero-btn{display:inline-block;padding:12px 28px;border-radius:6px;background:#f39c12;color:#fff;font-weight:700;font-size:0.9rem;text-decoration:none;margin-top:8px;align-self:flex-start}
+
+/* Review card */
+.hero-review{background:#fff;color:#922b21;border-radius:12px;border-top:5px solid #f39c12;padding:1.25rem;max-width:400px;justify-self:end;transform:rotate(-1deg);box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+.hero-review .stars{color:#f39c12;font-size:1rem}
+.hero-review blockquote{margin:0.5rem 0 0.75rem}
+.hero-review blockquote p{margin:0;font-size:0.95rem;line-height:1.5;color:#555;font-style:italic}
+.hero-review .author{font-size:0.8rem;color:#888}
+
+/* Trust bar */
+.trust{display:flex;align-items:center;gap:0.75rem;margin-top:1.25rem;font-size:0.85rem;opacity:0.8}
+.trust-stars{color:#f39c12}
+
+.ftr{display:flex;align-items:center;justify-content:space-between;padding:12px 28px;background:#922b21;color:rgba(255,255,255,.7);font-size:0.78rem}
 </style>
 </head>
 <body>
-<div class="hdr"><div class="hdr-logo"><div class="hdr-logo-icon">HT</div><div class="hdr-logo-text">Harvest Table Kitchen</div></div><div class="hdr-nav"><span>Home</span><span>Services</span><span>About</span><span>Contact</span></div></div>
-<div class="hero"><div class="hero-text"><span class="hero-kicker">Farm-to-Table Dining in Williamsburg, VA</span><h1class="hero-h1">Trusted Farm-to-Table Dining You Can Count On</h1><p class="hero-p">Reliable, professional service with fast response times and fair pricing. Serving Williamsburg, VA and surrounding areas. Licensed, insured, and ready to help.</p><a class="hero-btn" href="#">Get Your Free Estimate</a></div><div class="hero-form"><h3>Request Service</h3><input type="text" placeholder="Your Name" value="John D." readonly><input type="text" placeholder="Phone" value="(757) 555-1234" readonly><input type="text" placeholder="Service Needed" value="Emergency repair" readonly><button type="button">Send Request</button></div></div>
-<div class="feats"><div class="feat"><div class="feat-icon">1</div><h3>Residential</h3><p>Complete home service solutions tailored to your needs.</p></div><div class="feat"><div class="feat-icon">2</div><h3>Commercial</h3><p>Reliable service for businesses of all sizes.</p></div><div class="feat"><div class="feat-icon">3</div><h3>Emergency 24/7</h3><p>Available around the clock for urgent situations.</p></div></div>
-<div class="reviews"><div class="review"><div class="stars">★★★★★</div><div class="text">"Prompt, professional, and solved our issue quickly."</div></div><div class="review"><div class="stars">★★★★★</div><div class="text">"Fair pricing and excellent work. Highly recommend!"</div></div><div class="review"><div class="stars">★★★★★</div><div class="text">"Consistently great service and honest recommendations."</div></div></div>
-<div class="ftr"><span>&copy; 2026 Harvest Table Kitchen &middot; Licensed & Insured</span><span>(757) 555-0109</span></div>
+
+<div class="hdr">
+<div class="hdr-l"><div class="hdr-icon">HT</div><div class="hdr-name">Harvest Table Kitchen</div></div>
+<div class="hdr-r"><span>Home</span><span>Services</span><span>About</span><span>Contact</span></div>
+</div>
+
+<div class="hero">
+<div class="hero-bg"><img src="hero-images/restaurant.jpg" alt="Harvest Table Kitchen"><div class="hero-bg::after"></div></div>
+<div class="hero-inner">
+<div class="hero-text">
+<span class="hero-kicker">Farm-to-Table Dining in Williamsburg, VA</span>
+<h1 class="hero-h1">Trusted Farm-to-Table Dining You Can Count On</h1>
+<p class="hero-p">Reliable, professional service with fast response times and fair, transparent pricing. Serving Williamsburg, VA and surrounding areas for over 15 years.</p>
+<a class="hero-btn" href="#">Get Your Free Estimate</a>
+<div class="trust"><span class="trust-stars">★★★★★</span> <span>4.9 (127 reviews)</span></div>
+</div>
+<div class="hero-review">
+<div class="stars">★★★★★</div>
+<blockquote><p>They were prompt, professional, and solved our issue quickly. Fair pricing and excellent work. Highly recommend to anyone needing farm-to-table dining.</p></blockquote>
+<div class="author">- Sarah M., Williamsburg</div>
+</div>
+</div>
+</div>
+
+<div class="ftr">
+<span>&copy; 2026 Harvest Table Kitchen &middot; Licensed &amp; Insured</span>
+<span>(757) 555-0109</span>
+</div>
+
 </body>
 </html>
